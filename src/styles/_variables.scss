@@ -1,0 +1,25 @@
+// Colors
+$primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+
+$glass-bg-scrolled: rgba(255, 255, 255, 0.12);
+
+$glass-border: rgba(255, 255, 255, 0.2);
+
+// Spacing
+$header-top: 20px;
+$header-top-scrolled: 15px;
+$header-width: 95%;
+$header-width-scrolled: 70%;
+$header-max-width: 1400px;
+$header-max-width-scrolled: 900px;
+
+// Border radius
+$border-radius-large: 30px;
+$border-radius-medium: 25px;
+
+// Transitions
+$transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-fast: all 0.3s ease;
+
+// Breakpoints
+$mobile: 768px;

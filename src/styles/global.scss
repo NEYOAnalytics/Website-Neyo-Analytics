@@ -1,0 +1,241 @@
+@import './variables';
+
+/* =========================
+   THEME VARIABLES (CERVEAU)
+   ========================= */
+:root {
+  --bg-color: white;
+  --text-color: white;
+}
+
+body.light {
+  --bg-main:
+    radial-gradient(circle at 20% 40%, rgba(255, 255, 255) 0%, transparent 100%),
+    radial-gradient(circle at 80% 80%, rgba(255, 140, 255, 0.35) 0%, transparent 100%),
+    radial-gradient(circle at 40% 20%, rgba(1, 162, 173) 0%, transparent 100%);
+  --text-main: rgba(0, 21, 52);
+  --text-second: white;
+}
+
+
+body.dark {
+  --bg-main: #001534;
+  --text-main: white;
+  --text-second: rgba(0, 21, 52);
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background 0.4s ease, color 0.4s ease;
+
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+  }
+
+  &.dark::before {
+    background: #001534;
+    animation: gradientShift 15s ease infinite;
+  }
+}
+
+@keyframes gradientShift {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+.content {
+  padding-top: 140px;
+  text-align: center;
+  color: var(--text-main);
+
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(650px, 950px) 1fr; // texte étroit + image libre
+    align-items: start;
+
+    max-width: 1600px; // largeur maîtrisée
+    margin: 0 auto; // 🔥 centre horizontalement
+    padding: 0 20px;
+  }
+
+  .hero-text {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; // espace entre h1 et p
+    max-width: 600px;
+  }
+
+  .hero h1 {
+    font-size: 55px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    max-width: 900px;
+    width: 600px;
+    margin-left: 13%;
+    margin-top: 1px;
+    line-height: 1.1;
+    animation: fadeInUp 1s ease;
+  }
+
+  .hero p {
+    font-size: 20px;
+    font-weight: 300;
+    max-width: 600px;
+    text-align: justify;
+    width: 700px;
+    margin-left: 15%;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease 0.2s backwards;
+    margin-bottom: 30px;
+  }
+}
+
+.section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-main);
+  padding: 50px 20px;
+
+  &-content {
+    max-width: 800px;
+    text-align: center;
+
+    h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 20px;
+      opacity: 0.8;
+      line-height: 1.6;
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .content {
+    padding-top: 80px;
+
+    .hero {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 40px;
+    }
+
+    .hero-text {
+      align-items: center;
+      max-width: 100%;
+      padding-top: 0;
+    }
+
+    h1 {
+      font-size: 38px !important;
+      width: 100% !important;
+      margin-left: 0 !important;
+      padding: 0 10px;
+    }
+
+    p {
+      font-size: 18px !important;
+      width: 100% !important;
+      margin-left: 0 !important;
+      padding: 0 10px;
+      margin-bottom: 20px !important;
+    }
+  }
+
+  .hero-buttons {
+    margin-left: 0 !important;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .template {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    h1 {
+      font-size: 24px !important;
+    }
+
+    p {
+      font-size: 14px !important;
+    }
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+
+    .btn-primary,
+    .btn-secondary {
+      width: 100%;
+      max-width: 280px;
+    }
+  }
+
+  .section-content {
+    h2 {
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
