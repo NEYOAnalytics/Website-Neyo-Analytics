@@ -11,18 +11,18 @@ import dataScienceImg from "../../assets/services/data-science.png";
 import palantirImg from "../../assets/services/palantir.png";
 import dataGovernanceImg from "../../assets/services/data-governance.png";
 import powerbiLogo from "../../assets/images/powerbi_logo.png";
-import tableauLogo from "../../assets/images/Tableau_Logo.jpg";
+import tableauLogo from "../../assets/images/tableau_logo.jpg";
 import palantirLogo from "../../assets/images/palantir_logo.png";
-import dataBricksLogo from "../../assets/images/Databricks_Logo.png";
-import snowflakeLogo from "../../assets/images/Snowflake_Logo.png";
-import denodoLogo from "../../assets/images/Denodo_logo.png";
-import airflowLogo from "../../assets/images/Airflow_Logo.png";
+import dataBricksLogo from "../../assets/images/databricks_logo.png";
+import snowflakeLogo from "../../assets/images/snowflake_logo.png";
+import denodoLogo from "../../assets/images/denodo_logo.png";
+import airflowLogo from "../../assets/images/airflow_Logo.png";
 import mlflowLogo from "../../assets/images/mlflow_logo.png";
-import teamcityLogo from "../../assets/images/TeamCity_logo.png";
-import pythonLogo from "../../assets/images/Python_logo.png";
+import teamcityLogo from "../../assets/images/teamcity_logo.png";
+import pythonLogo from "../../assets/images/python_logo.png";
 import sqlLogo from "../../assets/images/sql_logo.png";
 import pysparkLogo from "../../assets/images/apachespark_logo.png";
-import typescriptLogo from "../../assets/images/Typescript_logo.png";
+import typescriptLogo from "../../assets/images/typescript_logo.png";
 
 export default function Services() {
     const trans = useTranslation();
