@@ -20,7 +20,7 @@ import airflowLogo from "../../assets/images/Airflow_Logo.png";
 import mlflowLogo from "../../assets/images/mlflow_Logo.png";
 import teamcityLogo from "../../assets/images/TeamCity_logo.png";
 import pythonLogo from "../../assets/images/Python_logo.png";
-import sqlLogo from "../../assets/images/Sql_Logo.png";
+import sqlLogo from "../../assets/images/sql_Logo.png";
 import pysparkLogo from "../../assets/images/ApacheSpark_Logo.png";
 import typescriptLogo from "../../assets/images/Typescript_logo.png";
 
