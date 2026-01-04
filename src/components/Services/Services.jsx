@@ -21,7 +21,7 @@ import mlflowLogo from "../../assets/images/mlflow_logo.png";
 import teamcityLogo from "../../assets/images/TeamCity_logo.png";
 import pythonLogo from "../../assets/images/Python_logo.png";
 import sqlLogo from "../../assets/images/sql_logo.png";
-import pysparkLogo from "../../assets/images/ApacheSpark_Logo.png";
+import pysparkLogo from "../../assets/images/apachespark_logo.png";
 import typescriptLogo from "../../assets/images/Typescript_logo.png";
 
 export default function Services() {
