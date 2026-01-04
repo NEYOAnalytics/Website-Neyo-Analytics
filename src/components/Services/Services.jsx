@@ -17,7 +17,7 @@ import dataBricksLogo from "../../assets/images/Databricks_Logo.png";
 import snowflakeLogo from "../../assets/images/Snowflake_Logo.png";
 import denodoLogo from "../../assets/images/Denodo_logo.png";
 import airflowLogo from "../../assets/images/Airflow_Logo.png";
-import mlflowLogo from "../../assets/images/mlflow_Logo.png";
+import mlflowLogo from "../../assets/images/mlflow_logo.png";
 import teamcityLogo from "../../assets/images/TeamCity_logo.png";
 import pythonLogo from "../../assets/images/Python_logo.png";
 import sqlLogo from "../../assets/images/sql_Logo.png";
