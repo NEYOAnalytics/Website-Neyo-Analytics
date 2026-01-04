@@ -163,6 +163,27 @@ export const translations = {
                 "Intelligence Artificielle et Machine Learning"
             ]
         },
+        // Contact Form
+        contactForm: {
+            title: "Contactez-nous",
+            subtitle: "Transformons ensemble vos données en succès. Discutons de votre projet.",
+            name: "Nom complet",
+            email: "Email",
+            company: "Entreprise",
+            subject: "Sujet",
+            message: "Message",
+            placeholders: {
+                name: "Votre nom",
+                email: "votre.email@exemple.com",
+                company: "Nom de votre entreprise",
+                subject: "Comment pouvons-nous vous aider ?",
+                message: "Parlez-nous de votre projet..."
+            },
+            send: "Envoyer le message",
+            sending: "Envoi en cours...",
+            success: "Message envoyé avec succès !",
+            error: "Erreur lors de l'envoi. Veuillez réessayer."
+        },
         // FAQ
         faq: {
             title: "Foire aux questions",
@@ -358,6 +379,27 @@ export const translations = {
                 "Data Pipeline Optimization",
                 "Artificial Intelligence and Machine Learning"
             ]
+        },
+        // Contact Form
+        contactForm: {
+            title: "Contact Us",
+            subtitle: "Let's transform your data into success together. Let's discuss your project.",
+            name: "Full Name",
+            email: "Email",
+            company: "Company",
+            subject: "Subject",
+            message: "Message",
+            placeholders: {
+                name: "Your name",
+                email: "your.email@example.com",
+                company: "Your company name",
+                subject: "How can we help you?",
+                message: "Tell us about your project..."
+            },
+            send: "Send Message",
+            sending: "Sending...",
+            success: "Message sent successfully!",
+            error: "Error sending message. Please try again."
         },
         // FAQ
         faq: {

@@ -7,6 +7,7 @@ import Services from "../components/Services/Services";
 import About from "../components/About/About";
 import ExpertiseToggle from "../components/ExpertiseToggle/ExpertiseToggle";
 import FAQ from "../components/FAQ/FAQ";
+import ContactForm from "../components/ContactForm/ContactForm";
 import BackgroundArrow from '../components/BackgroundArrow/BackgroundArrow';
 
 export default function Home() {
@@ -53,6 +54,7 @@ export default function Home() {
 
                 <About />
                 <FAQ />
+                <ContactForm />
 
             </div >
         </>
