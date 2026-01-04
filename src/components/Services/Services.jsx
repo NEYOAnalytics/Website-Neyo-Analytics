@@ -16,7 +16,7 @@ import palantirLogo from "../../assets/images/palantir_logo.png";
 import dataBricksLogo from "../../assets/images/databricks_logo.png";
 import snowflakeLogo from "../../assets/images/snowflake_logo.png";
 import denodoLogo from "../../assets/images/denodo_logo.png";
-import airflowLogo from "../../assets/images/airflow_Logo.png";
+import airflowLogo from "../../assets/images/airflow_logo.png";
 import mlflowLogo from "../../assets/images/mlflow_logo.png";
 import teamcityLogo from "../../assets/images/teamcity_logo.png";
 import pythonLogo from "../../assets/images/python_logo.png";
