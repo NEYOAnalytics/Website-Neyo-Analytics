@@ -7,6 +7,7 @@ import Services from "../components/Services/Services";
 import About from "../components/About/About";
 import ExpertiseToggle from "../components/ExpertiseToggle/ExpertiseToggle";
 import FAQ from "../components/FAQ/FAQ";
+import ContactForm from "../components/ContactForm/ContactForm";
 import BackgroundArrow from '../components/BackgroundArrow/BackgroundArrow';
 
 export default function Home() {
@@ -32,8 +33,8 @@ export default function Home() {
                             </p>
 
                             <div className="hero-buttons">
-                                <a href="mailto:contact@neyo-analytics.com" aria-label="Email"><button className="btn-primary">{t.hero.cta1}</button></a>
-                                <a href="mailto:contact@neyo-analytics.com" aria-label="Email"><button className="btn-secondary">{t.hero.cta2}</button></a>
+                                <a href="#contact" aria-label="Contact"><button className="btn-primary">{t.hero.cta1}</button></a>
+                                <a href="#contact" aria-label="Contact"><button className="btn-secondary">{t.hero.cta2}</button></a>
                             </div>
                         </div >
 
@@ -53,6 +54,7 @@ export default function Home() {
 
                 <About />
                 <FAQ />
+                <ContactForm />
 
             </div >
         </>

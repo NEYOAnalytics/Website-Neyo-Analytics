@@ -4,12 +4,12 @@ import { Plus, Minus } from "lucide-react";
 import { useTranslation } from "../../hooks/useTranslation";
 import "./Services.scss";
 
-import dataAnalyticsImg from "../../assets/services/data-analytics.png";
-import biImg from "../../assets/services/business-intelligence.png";
-import dataEngineeringImg from "../../assets/services/data-engineering.png";
-import dataScienceImg from "../../assets/services/data-science.png";
+import dataAnalyticsImg from "../../assets/services/data-analytics-real.png";
+import biImg from "../../assets/services/business-intelligence-real.png";
+import dataEngineeringImg from "../../assets/services/data-engineering-real.png";
+import dataScienceImg from "../../assets/services/data-science-real.png";
 import palantirImg from "../../assets/services/palantir.png";
-import dataGovernanceImg from "../../assets/services/data-governance.png";
+import dataGovernanceImg from "../../assets/services/data-governance-real.png";
 import powerbiLogo from "../../assets/images/powerbi_logo.png";
 import tableauLogo from "../../assets/images/tableau_logo.jpg";
 import palantirLogo from "../../assets/images/palantir_logo.png";

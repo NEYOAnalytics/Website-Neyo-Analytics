@@ -1,4 +1,10 @@
+import { image } from 'framer-motion/client';
 import PowerBI_ROI from '../assets/PowerBI_ROI.pdf';
+import Neyo_GIF from '../assets/images/Neyo_noBackground.gif';
+import Tableauimg from '../assets/images/Tableau.png';
+import PBIimg from '../assets/images/PowerBIimg.png';
+import Palantirimg from '../assets/images/Palantirimg.png';
+import dataEngineering from '../assets/images/Dataenginerimg.png';
 
 export const translations = {
     fr: {
@@ -7,6 +13,7 @@ export const translations = {
             services: "Services",
             secteurs: "Expertises",
             about: "A propos",
+            contact: "Contactez-nous",
             blog: "Blog",
             language: "Français"
         },
@@ -29,24 +36,41 @@ export const translations = {
         carousel: {
             slides: [
                 {
-                    value: "77%",
-                    text: "des entreprises data-driven améliorent leur prise de décision",
-                    source: "Source : études McKinsey & Gartner"
+                    value: "70%",
+                    text: "Des entreprises déclarent qu’elles ont du mal à exploiter efficacement leurs données, ce qui freine leur capacité d’innovation.",
+                    source: {
+                        text: "Source : Digitalisation World",
+                        url: "https://m.digitalisationworld.com/news/63947/70-of-organisations-struggling-to-innovate-due-to-inability-to-use-data-effectively"
+                    }
                 },
                 {
-                    value: "5x",
-                    text: "augmentation de la vitesse d'analyse avec des pipelines optimisés",
-                    source: "Retour terrain & benchmarks data"
+                    value: "8/10",
+                    text: "Des dirigeants d’entreprise affirment que les données sont critiques pour la prise de décision au sein de leur organisation aujourd’hui.",
+                    source: {
+                        text: "Source : Salesforce - Untapped Data Report",
+                        url: "https://www.salesforce.com/news/stories/data-skills-research/"
+                    }
                 },
                 {
-                    value: "90%",
-                    text: "des problèmes data viennent de pipelines mal conçus",
-                    source: "Observations projets BI"
+                    value: "68%",
+                    text: "Des données disponibles dans les entreprises ne sont tout simplement jamais exploitées, ce qui signifie qu’à peine un tiers du potentiel data est réellement utilisé aujourd’hui.",
+                    source: {
+                        text: "Source : Seagate Rethink Data Report – Business Wire",
+                        url: "https://www.businesswire.com/news/home/20200715005130/en/Seagates-Rethink-Data-Report-Reveals-That-68-of-Data-Available-to-Businesses-Goes-Unleveraged"
+                    }
                 },
                 {
                     value: "Multi-Cloud",
                     text: "AWS · Azure · GCP · On-Prem",
                     source: "Expertise Neyo Analytics"
+                },
+                {
+                    value: "55%",
+                    text: "Des employés n’ont aucune compétence sur des outils d’analyse comme Power BI ou Tableau, alors qu’ils passent pourtant une partie importante de leur temps sur des tâches liées aux données.",
+                    source: {
+                        text: "Source : TechrSeries",
+                        url: "https://techrseries.com/employee-wellness/data-skills-gap-costs-businesses-nearly-a-month-of-productivity-per-employee-annually-multiverse-skills-diagnosis-reveals/"
+                    }
                 }
             ]
         },
@@ -150,17 +174,283 @@ export const translations = {
             rights: "Tous droits réservés."
         },
         // Blog
+        // Blog
         blog: {
-            title: "Blog Neyo Analytics",
-            intro: "Découvrez nos articles, insights et actualités sur la data, l'intelligence artificielle et les technologies cloud.",
-            comingSoon: "Contenu à venir",
-            description: "Cette section sera prochainement enrichie avec des articles de blog optimisés pour le SEO, couvrant les sujets suivants :",
-            topics: [
-                "Meilleures pratiques en Data Engineering",
-                "Tendances en Business Intelligence",
-                "Cas d'usage Palantir",
-                "Optimisation des pipelines de données",
-                "Intelligence Artificielle et Machine Learning"
+            title: "BLOG",
+            subtitle: "De l'analyse de données à l'intelligence artificielle.",
+            readMore: "Lire plus",
+            categories: {
+                all: "Tous",
+                data: "Data Analytics",
+                ai: "Intelligence Artificielle",
+                bi: "Business Intelligence",
+                cloud: "Cloud Computing",
+                palantir: "Palantir"
+            },
+            posts: [
+                {
+                    id: 1,
+                    title: "La puissance de la data visualisation : comment Power BI et Tableau transforment la prise de décision",
+                    excerpt: "Découvrez comment transformer vos données brutes en tableaux de bord intuitifs pour prendre des décisions stratégiques plus rapidement.",
+                    category: "Data Analytics",
+                    date: "15 Jan 2026",
+                    author: "Abdelhamid ELMANSOURI",
+                    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+                    content: [
+                        { type: 'lead', text: "Dans un monde où le volume de données explose, la capacité à synthétiser l'information est devenue critique. La Data Visualization n'est pas qu'une affaire d'esthétique, c'est un outil de performance." },
+                        { type: 'heading', text: "Quand les données freinent la décision au lieu de l’accélérer" },
+                        {
+                            type: 'paragraph', text: "Dans de nombreuses PME comme dans les grandes entreprises, la réalité est souvent la même : "
+                                + "des fichiers Excel dispersés, des reportings manuels chronophages et des indicateurs mis à jour trop tard. Les équipes passent plus de temps à consolider les données qu’à les analyser, "
+                                + "et les décisions stratégiques sont prises avec retard ou sur la base d’intuitions plutôt que de faits. Dans un contexte économique où l’agilité et la rapidité sont devenues des avantages concurrentiels majeurs,"
+                                + " cette situation n’est plus tenable. C’est ici que la data visualisation s’impose comme un levier clé de transformation : elle permet de convertir des volumes de données complexes en informations claires, "
+                                + "actionnables et directement exploitables par les décideurs."
+                        },
+                        { type: 'quote', text: "Une image vaut mille mots, mais une bonne visualisation vaut mille lignes de données." },
+                        { type: 'heading', text: "Qu’est-ce que la data visualisation ?" },
+                        {
+                            type: 'paragraph', text: "La data visualisation regroupe l’ensemble des graphiques, tableaux de bord et visualisations interactives qui permettent de représenter visuellement les données."
+                                + " L’objectif n’est pas seulement esthétique : il s’agit avant tout de rendre l’information compréhensible, lisible et immédiatement interprétable par les métiers. Un bon visuel permet de :"
+                                + "\n\n• Simplifier des jeux de données complexes, \n\n• Mettre en évidence des tendances, corrélations ou anomalies invisibles dans un tableau brut, "
+                                + "\n\n• Faciliter la compréhension pour des profils non techniques. \n\nSelon la Syracuse University iSchool, la data visualisation joue un rôle central dans la capacité des organisations à "
+                                + "transformer la donnée en connaissance exploitable. Elle agit comme un pont entre la donnée brute et la décision business."
+                        },
+                        { type: 'heading', text: "Les bénéfices business concrets de la data visualisation" },
+                        { type: 'quote', text: "Des décisions plus rapides et mieux informées" },
+                        {
+                            type: 'paragraph', text: "Plusieurs études montrent que les managers utilisant des outils de data visualisation sont 28 % plus susceptibles d’obtenir l’information à temps pour "
+                                + "prendre une décision (All Consulting Firms, Yellowfin BI). Grâce à des tableaux de bord dynamiques, les indicateurs clés sont accessibles en temps réel, sans dépendre de reportings"
+                                + " manuels ou de multiples allers-retours entre équipes."
+                        },
+                        { type: 'quote', text: "Un meilleur alignement et une communication renforcée" },
+                        {
+                            type: 'paragraph', text: "La data visualisation améliore considérablement la communication interne. Des indicateurs clairs et partagés facilitent l’alignement entre directions, "
+                                + "équipes métiers et fonctions support. Selon Lighthouse Analytics, les visuels favorisent une compréhension commune des enjeux et réduisent les interprétations divergentes des chiffres "
+                                + "(Lighthouse Analytics)."
+                        },
+                        { type: 'quote', text: "Des gains mesurables de productivité" },
+                        {
+                            type: 'paragraph', text: "Les organisations utilisant des outils de data visualisation observent des bénéfices concrets : "
+                                + "\n\n- jusqu’à +43 % d’amélioration de la rapidité d’analyse ad hoc, \n\n- +36 % de self-service data pour les utilisateurs métiers, "
+                                + "\n\n- 20 % d’économie de temps sur les tâches de reporting et d’analyse (Yellowfin BI, Tristate Technology)."
+                        },
+                        { type: 'heading', text: "Power BI : la data visualisation au cœur de l’écosystème Microsoft" },
+                        { image: PBIimg, size: 'large' },
+                        {
+                            type: 'paragraph', text: "Power BI est la solution de business intelligence développée par Microsoft. Elle permet de créer des rapports et tableaux de bord interactifs, "
+                                + "connectés à des centaines de sources de données : ERP, CRM, bases SQL, fichiers Excel, solutions cloud, etc. Son principal atout réside dans son intégration native avec l’écosystème "
+                                + "Microsoft (Excel, Azure, Teams, SharePoint), ce qui en fait un outil particulièrement adapté aux PME comme aux grandes entreprises. En 2025, Power BI est utilisé par environ 8 % des "
+                                + "organisations disposant d’un outil de BI, avec un taux d’adoption de 12 % dans les grandes entreprises, confirmant sa position dominante sur le marché (Ramp, ElectroIQ). "
+                                + "Power BI est également reconnu pour : \n\n• Son excellent rapport coût / fonctionnalités, \n\n• Sa capacité à démocratiser l’accès à la donnée, \n\n• Ses possibilités avancées de "
+                                + "modélisation et de calcul via DAX."
+                        },
+                        { type: 'heading', text: "Tableau : l’excellence en visualisation analytique" },
+                        { image: Tableauimg, size: 'large' },
+                        {
+                            type: 'paragraph', text: "Tableau est historiquement reconnu pour la richesse et la finesse de ses visualisations. Très apprécié des équipes data, analystes et profils avancés, il permet "
+                                + "d’explorer les données de manière très intuitive et visuelle. Selon plusieurs analyses de marché, Tableau détient entre 12,88 % et 16,99 % de part de marché dans la BI, avec plus "
+                                + "de 49 000 entreprises utilisatrices dans le monde, ce qui témoigne de sa maturité et de sa large adoption (Ramp, Intuition Labs). Tableau se distingue notamment par "
+                                + ": \n\n• La liberté d’exploration des données, \n\n• La qualité visuelle des dashboards, \n\n• Sa capacité à traiter des analyses complexes à grande échelle."
+                        },
+                        { type: 'heading', text: "Pourquoi investir dans la data visualisation aujourd’hui ?" },
+                        { type: 'paragraph', text: "Les entreprises qui exploitent efficacement les données comportementales de leurs clients pour piloter leurs décisions peuvent atteindre jusqu’à 85 % de croissance des ventes supplémentaire par rapport à leurs concurrents moins data-driven (Black Label, Imarticus). Dans un monde où la donnée est omniprésente, la capacité à la comprendre rapidement devient un avantage stratégique durable." },
+                        { type: 'heading', text: "Comment Neyo Analytics vous accompagne" },
+                        { image: Neyo_GIF },
+                        { type: 'paragraph', text: "Chez Neyo Analytics, nous accompagnons les PME et les grandes entreprises à chaque étape de leur transformation data : \n\n• Cadrage des besoins business et des indicateurs clés \n\n• Mise en place de tableaux de bord Power BI et Tableau adaptés aux métiers \n\n• Connexion, modélisation et fiabilisation des données \n\n• Formation des équipes pour plus d’autonomie \n\n• Amélioration continue des reportings et des usages Notre objectif : Transformer vos données en un véritable levier de performance, au service de décisions plus rapides, plus fiables et plus alignées avec vos enjeux business. Vous souhaitez exploiter tout le potentiel de vos données? Contactez Neyo Analytics et passons ensemble de la donnée à la décision." },
+                        { type: 'heading', text: "Sources" },
+                        { type: 'sources', text: "• Syracuse University iSchool - What is Data Visualization: https://ischool.syracuse.edu/what-is-data-visualization/\n\n• All Consulting Firms - How Data Visualization Improves Decision Making: https://www.allconsultingfirms.com/blog/how-data-visualization-improves-decision-making/\n\n• Yellowfin BI - Benefits of Data Visualization Tools: https://www.yellowfinbi.com/blog/benefits-of-data-visualization-tools\n\n• Lighthouse Analytics - The Importance of Data Visualisation in Decision Making: https://www.lighthouseanalytics.co.za/the-importance-of-data-visualisation-in-decision-making/\n\n• Ramp - Power BI Vendors: https://ramp.com/vendors/power-bi\n\n• ElectroIQ - Power BI Statistics: https://electroiq.com/stats/power-bi-statistics/\n\n• Ramp - Tableau Vendors: https://ramp.com/vendors/tableau\n\n• Intuition Labs - Tableau vs Power BI Market Analysis: https://intuitionlabs.ai/pdfs/tableau-vs-power-bi-bi-platform-market-analysis-comparison.pdf\n\n• Black Label - Data Visualization for Business Growth: https://blacklabel.net/blog/business-insights/when-insight-meets-advantage-data-visualization-for-business-growth/\n\n• Imarticus - The Impact of Data Visualisation in Business Decision Making: https://imarticus.org/blog/the-impact-of-data-visualisation-in-business-decision-making/" }
+                    ],
+                },
+                {
+                    id: 2,
+                    title: "Pourquoi Palantir Foundry est en train de remplacer le Data Warehouse traditionnel (et pourquoi peu de gens l’ont compris)",
+                    excerpt: "Palantir Foundry dépasse le data warehouse traditionnel en transformant rapidement la donnée brute en insights exploitables",
+                    category: "Palantir",
+                    date: "15 Jan 2026",
+                    author: "Fethi BENZITOUNI",
+                    image: Palantirimg,
+                    content: [
+                        { type: 'lead', text: "Les data warehouses traditionnels ne suffisent plus à exploiter la vitesse et la complexité des données modernes. Palantir Foundry s’impose comme l’outil capable de centraliser, intégrer et analyser les données en temps réel, offrant aux entreprises une agilité que peu ont encore comprise." },
+                        {
+                            type: 'paragraph', text: "Pendant vingt ans, le data warehouse a été le cœur du pilotage des entreprises : Snowflake, Redshift, BigQuery, "
+                                + "puis Power BI ou Tableau pour visualiser. Mais ce modèle est en train de se fissurer.\n\n Comme l’explique Lokad dans son analyse de Palantir : \n\n"
+                                + "Palantir n’est ni un outil de BI, ni un data warehouse. C’est une plateforme data-to-operations conçue pour piloter des décisions métier réelles. "
+                        },
+                        { type: 'paragraph', text: "Palantir Foundry ne cherche donc pas à améliorer le reporting. Elle cherche à remplacer la façon dont les entreprises transforment leurs données en décisions." },
+                        { type: 'heading', text: "Palantir Foundry n’est pas un data warehouse" },
+                        {
+                            type: 'paragraph', text: "Un data warehouse est une infrastructure de stockage et d’analyse. Foundry est une plateforme opérationnelle complète. \n\n"
+                                + "Palantir décrit officiellement Foundry comme une plateforme qui combine ingestion, transformation, gouvernance, analytique et applications métier dans un même environnement : \n\n"
+                                + "« Foundry est une plateforme qui permet aux organisations d’intégrer, gérer et transformer leurs données, puis de construire des applications opérationnelles directement dessus. »"
+                        },
+                        {
+                            type: 'paragraph', text: "L’étude indépendante Total Economic Impact of Palantir Foundry montre même que certaines entreprises ont pu : \n\n"
+                                + "« décommissionner 100 % de leurs systèmes data et analytiques historiques en moins de trois ans après l’adoption de Foundry »\n\n"
+                                + " Autrement dit : Foundry devient l’architecture data centrale, pas un outil autour du data warehouse."
+                        },
+                        { type: 'heading', text: "L’Ontology : ce que Snowflake et Power BI n’ont pas" },
+                        {
+                            type: 'paragraph', text: "La vraie rupture de Foundry est son Ontology.\n\n Palantir la définit ainsi : \n\n« L’Ontology est une couche qui relie les actifs numériques (données, modèles, pipelines) "
+                                + "aux objets du monde réel qu’ils représentent : machines, commandes, fournisseurs, clients, etc. » \n\nCela permet de créer un jumeau numérique (digital twin) de l’entreprise. \n\n"
+                                + "Un jumeau numérique (digital twin) de l’entreprise signifie que Palantir Foundry crée une représentation vivante et connectée de l’organisation dans le système d’information. "
+                                + "Au lieu d’avoir des données isolées dans des tables ou des rapports, Foundry modélise les vrais objets de l’entreprise — usines, machines, commandes, fournisseurs, clients, "
+                                + "flux logistiques — ainsi que leurs relations et leur état en temps réel. Cette réplique numérique permet de voir comment l’entreprise fonctionne réellement, de simuler des scénarios "
+                                + "(retards, ruptures de stock, hausse de la demande, pannes) et d’anticiper leurs impacts avant qu’ils ne se produisent dans le monde réel. Grâce à ce jumeau numérique, la donnée ne sert "
+                                + "plus seulement à analyser le passé, mais à piloter l’entreprise comme un système dynamique.\n\n Un article d’analyse sur l’Ontology explique :\n\n « L’Ontology agit comme une couche sémantique "
+                                + "partagée entre les ingénieurs data, les métiers et les systèmes d’IA, permettant de raisonner sur des objets métier plutôt que sur des tables SQL. »\n\n Dans un data warehouse, on "
+                                + "manipule des tables. Dans Foundry, on manipule l’entreprise elle-même. "
+                        },
+                        { type: 'heading', text: "Foundry comme “système de build pour la data”" },
+                        {
+                            type: 'paragraph', text: "La documentation officielle décrit Foundry comme un véritable système de build pour la donnée : \n\n"
+                                + "« Foundry fournit un système d’intégration et de transformation des données capable d’orchestrer SQL, Python, Spark, avec gestion du versioning, de la traçabilité et de la qualité. » \n\n"
+                                + "Des intégrateurs comme Aqsone expliquent que Foundry remplace une grande partie de la stack data classique : \n\n« Foundry regroupe data engineering, data lake, machine learning, gouvernance "
+                                + "et analytique dans une seule plateforme intégrée. » "
+                        },
+                        { type: 'heading', text: "Du dashboard à la décision opérationnelle" },
+                        {
+                            type: 'paragraph', text: "Dans une architecture data classique, les outils comme Power BI ou Tableau servent surtout à observer ce qui s’est déjà produit. Les équipes regardent des indicateurs,"
+                                + " exportent des rapports, discutent, puis prennent des décisions manuellement. \n\nLa donnée est un support de réflexion, mais elle n’est pas directement connectée à l’action. \n\nPalantir Foundry "
+                                + "change cette logique en intégrant la donnée au cœur même des processus opérationnels. Les décisions ne sont plus prises à côté des systèmes, mais à l’intérieur de la plateforme, à "
+                                + "partir du jumeau numérique de l’entreprise. \n\nLokad décrit un cas typique de supply chain : \n\n« Foundry permet de connecter SAP, de modéliser les nomenclatures produits, les stocks et les "
+                                + "capacités de production afin de prendre directement des décisions opérationnelles. » \n\nFoundry ne sert donc pas seulement à voir des chiffres, mais à décider quoi produire, où, quand et "
+                                + "pour qui. \n\nAvec Palantir AIP, ces capacités sont étendues à l’IA : \n\n« Les agents d’IA peuvent interroger l’Ontology et déclencher des actions dans les systèmes réels. »"
+                        },
+                        { type: 'heading', text: "Pourquoi cette révolution est sous-estimée" },
+                        {
+                            type: 'paragraph', text: "Malgré ses capacités uniques, Palantir Foundry reste largement absente des discussions dominantes dans l’écosystème data, dominé par Snowflake, "
+                                + "Databricks ou Power BI. Une des raisons est la façon dont Foundry est perçue par de nombreux professionnels de la data. \n\nSur les forums spécialisés, elle est souvent décrite non pas "
+                                + "comme une plateforme complète, mais comme une simple couche au-dessus des data warehouses existants : \n\n« Beaucoup la perçoivent comme une couche sémantique ou un “data operating system” "
+                                + "au‑dessus des données et systèmes existants, plutôt que comme une plateforme data‑to‑operations à part entière. » \n\nCette perception masque la véritable nature de Foundry comme plateforme "
+                                + "data-to-operations, ce qui la rend difficile à comparer aux stacks classiques. \n\nMais le frein le plus important reste économique. Palantir Foundry est connue pour ses coûts très élevés, "
+                                + "tant en licences qu’en accompagnement et en déploiement. Contrairement aux solutions cloud comme Snowflake ou Databricks, accessibles en mode self-service et payées à l’usage, Foundry est "
+                                + "déployée via des projets structurés, souvent pluri-annuels, qui nécessitent un engagement financier important. \n\nPour beaucoup d’entreprises — en particulier les PME et les ETI — ce ticket "
+                                + "d’entrée est simplement trop élevé, même si la plateforme est technologiquement en avance. \n\nÀ cela s’ajoutent d’autres freins majeurs : \n\n•	une dépendance forte à un éditeur américain, "
+                                + "\n\n•	des enjeux de souveraineté des données, \n\n•	et une plateforme très intégrée, moins compatible avec une stack ouverte ou multi-fournisseurs. \n\nCes facteurs expliquent pourquoi Snowflake "
+                                + "et Databricks dominent la conversation publique, alors que Foundry est surtout adoptée par des organisations très capitalisées, critiques ou souveraines (industrie lourde, défense, "
+                                + "énergie, pharma, grandes chaînes logistiques). "
+                        },
+                        { type: 'heading', text: "Conclusion" },
+                        {
+                            type: 'paragraph', text: "Comme le résume un data engineer ayant travaillé avec Foundry : \n\n« Foundry ne se contente pas de montrer ce qui s’est passé. Elle permet de faire fonctionner "
+                                + "l’entreprise directement sur la donnée. » \n\nC’est pour cela que Palantir Foundry ne concurrence pas simplement les data warehouses. Elle est en train de les rendre structurellement "
+                                + "insuffisants. "
+                        },
+                        { type: 'heading', text: "NEYO Analytics accompagne les entreprises dans leurs projets Palantir Foundry" },
+                        { image: Neyo_GIF },
+                        {
+                            type: 'paragraph', text: "Nous proposons : \n\n- Cadrage stratégique des use cases \n\n- Intégration des sources (ERP, CRM, APIs) \n\n- Modélisation Ontology \n\n- Déploiement d’applications métier "
+                                + "\n\n- Mise en place d’IA avec Palantir AIP NEYO Analytics transforme Palantir Foundry en véritable moteur opérationnel pour votre organisation. "
+                        },
+                        { type: 'heading', text: "Sources" },
+                        { type: 'sources', text: "• lokad: https://www.lokad.com/review-of-palantir-com/\n\n• Palantir - Foundry: https://www.palantir.com/platforms/foundry/\n\n• Palantir - The Total Economic Impact of Palantir Foundry: https://www.palantir.com/assets/xrfr7uokpv1b/7h0zi3GZrU3L7AM2HO1Q6O/1ad26eaa42ad949f8e3c80ea22f96b7a/The_Total_Economic_Impact_of_Palantir_Foundry.pdf\n\n• Palantir - Ontology: https://palantir.com/docs/foundry/ontology/overview/\n\n• Palantir - Ontology: https://blog.pvmit.com/pvm-blog/palantir-ontology\n\n• Palantir - Data Integration: https://palantir.com/docs/foundry/data-integration/overview/\n\n• aqsone - Palantir Foundry: https://www.aqsone.com/fr/blog/palantir-foundry-une-solution-au-service-de-la-data\n\n• lokad - Review of Palantir: https://www.lokad.com/review-of-palantir-com/\n\n• The AI Architect - Palantir Foundry: https://theaiarchitects.substack.com/p/palantirs-digital-twin-building-the\n\n• Medium - Palantir Foundry: https://medium.com/better-programming/palantir-foundry-the-data-operating-system-that-is-not-talked-about-enough-9fb1c98a6b3d" }
+
+                    ]
+                },
+                {
+                    id: 3,
+                    title: "Power BI vs Tableau : Lequel choisir ?",
+                    excerpt: "Comparatif complet des deux leaders du marché de la Business Intelligence pour vous aider à faire le meilleur choix pour votre organisation.",
+                    category: "Business Intelligence",
+                    date: "05 Jan 2026",
+                    author: "Julie Leroux",
+                    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
+                    content: [
+                        { type: 'lead', text: "C'est l'éternel débat dans le monde de la BI. Power BI de Microsoft et Tableau de Salesforce dominent le marché. Lequel est fait pour vous ?" },
+                        { type: 'heading', text: "Microsoft Power BI" },
+                        { type: 'paragraph', text: "Si vous êtes déjà dans l'écosystème Microsoft (Office 365, Azure), Power BI est le choix naturel. Son coût d'entrée est faible et son intégration avec Excel est sans égal." },
+                        { type: 'heading', text: "Tableau Software" },
+                        { type: 'paragraph', text: "Tableau est souvent considéré comme plus puissant pour l'analytique visuelle pure et la gestion de très grands ensembles de données complexes. C'est le choix des Data Analysts puristes." },
+                        { type: 'quote', text: "Le meilleur outil est celui que vos équipes utiliseront réellement." },
+                        { type: 'paragraph', text: "Le choix dépend souvent de votre budget et de la maturité data de vos équipes. Neyo Analytics peut vous aider à auditer vos besoins pour faire le bon choix." }
+                    ]
+                },
+                {
+                    id: 4,
+                    title: "Ingénierie des Données et Décisions Stratégiques",
+                    excerpt: "L’ingénierie des données constitue le socle des décisions stratégiques modernes. En structurant, fiabilisant et rendant accessibles les données, elle permet aux organisations de transformer l’information brute en leviers de pilotage, d’anticipation et de création de valeur.",
+                    category: "Data Engineering",
+                    date: "15 Jan 2026",
+                    author: "Salah-Eddine BOUDHAN",
+                    image: dataEngineering,
+                    content: [
+                        { type: 'lead', text: "À l’ère du pilotage par la donnée, les décisions stratégiques ne reposent plus sur l’intuition mais sur des architectures data solides. Derrière chaque tableau de bord, chaque indicateur clé et chaque décision critique se cache un travail d’ingénierie des données indispensable pour transformer le chaos informationnel en avantage compétitif" },
+                        {
+                            type: 'paragraph', text: "L’ingénierie des données (data engineering) consiste à concevoir et déployer des systèmes permettant d’agréger, stocker et analyser des volumes de données massifs. \n\n"
+                                + "En pratique, les data engineers construisent des pipelines de données qui extraient, transforment et chargent (ETL/ELT) les données brutes dans des référentiels centralisés "
+                                + "(data warehouse/lake). Ces pipelines garantissent une qualité et une cohérence des données optimales, condition sine qua non pour toute intelligence d’affaires (BI). \n\n"
+                                + "IBM souligne ainsi que les ingénieurs des données « transforment d’importantes quantités de données en informations stratégiques ». Grâce à ces plateformes techniques, "
+                                + "des responsables métiers peuvent accéder aux données fiables dont ils ont besoin pour éclairer leurs décisions. \n\n• Processus ETL et pipelines – Le processus ETL "
+                                + "(extraction, transformation, chargement) consolide des données issues de systèmes divers en un jeu de données unifié. Les pipelines automatisent ces tâches : collecte des données, "
+                                + "nettoyage (suppression des doublons, correction d’erreurs) et chargement dans un entrepôt. Un pipeline moderne est généralement orchestré sous forme de graphe acyclique (DAG) de tâches "
+                                + "lié. Par exemple, un data engineer peut configurer un DAG Airflow pour ingérer les journaux d’une application, les nettoyer et les charger dans Snowflake. \n\n"
+                                + "• Plateformes cloud – Les clouds publics offrent des solutions managées (Glue, Dataflow, Data Factory) pour déployer rapidement ces pipelines à l’échelle. Une étude récente propose un "
+                                + "cadre d’évaluation pour comparer AWS et Azure dans ce domainejisem-journal.com. En pratique, l’entreprise choisit la plateforme cloud (AWS, Azure, Google, Snowflake…) qui maximise ses "
+                                + "performances analytiques et minimise les coûts. Les technologies de data lakehouse et warehouse permettent de stocker l’historique et de fournir aux BI la possibilité d’exécuter des "
+                                + "requêtes instantanées.\n\n Une stratégie de données d’entreprise solide lie ces technologies à la gouvernance et aux objectifs métier. Cela implique de démocratiser les données : rendre les "
+                                + "données accessibles à tous les services pour ' prendre des décisions significativement meilleures pour toutes les parties prenantes'.  Sans cela, beaucoup de données restent inutilisées "
+                                + "– selon une analyse récente, près de 68 % des données d’entreprise reposeraient dans des silos inexploitables. En déployant un environnement intégré (entrepôts centralisés, gouvernance, qualité "
+                                + "des données), les entreprises multiplient l’impact de la BI. Les résultats parlent d’eux-mêmes : des recherches académiques montrent que les organisations basées sur la donnée voient une amélioration "
+                                + "de 26 % de leurs performances grâce à l’analytics, et tirent ainsi un avantage concurrentiel notable."
+                        },
+                        { type: 'heading', text: "Cas Pratique : Uber et Netflix" },
+                        {
+                            type: 'paragraph', text: "L’architecture concrète d’un pipeline de données a un impact direct sur les résultats. Par exemple, Uber a révisé ses pipelines de données pour passer du traitement "
+                                + "par lots au streaming en temps réel. Selon leurs ingénieurs, ce changement a réduit la latence des données de plusieurs heures à quelques minutes, ce qui « accélère directement le "
+                                + "déploiement des modèles, la vitesse d’expérimentation et la précision des analyses »uber.com. Concrètement, cela a permis à Uber d’ajuster ses modèles de tarification et de planification "
+                                + "de manière plus réactive.\n\n Autre exemple : Netflix. En analysant d’énormes volumes de données sur les habitudes de visionnage, Netflix ajuste en continu ses recommandations de contenus. "
+                                + "Une étude rapporte que grâce à cette approche, Netflix peut « prédire et satisfaire les préférences individuelles, menant à une plus grande satisfaction et fidélité des "
+                                + "clients ». De même, Walmart utilise des pipelines analytiques pour optimiser l’inventaire et le pricing : ses modèles détectent les tendances de consommation en temps réel, "
+                                + "ce qui lui permet d’ajuster stocks et tarifs instantanémentresearchgate.net. Ces exemples illustrent comment un pipeline de données bien conçu se traduit par de meilleurs indicateurs métier : "
+                                + "augmentation des ventes, réduction des coûts et prise de décision accélérée."
+                        },
+                        { type: 'heading', text: "Conclusion" },
+                        {
+                            type: 'paragraph', text: "L’ingénierie des données est aujourd’hui au cœur de la stratégie des entreprises. Un pipeline performant assure que les données sont traitées et "
+                                + "mises à disposition au bon moment. Les dirigeants peuvent alors fonder leurs décisions sur des faits vérifiés. Comme le montrent les études, les entreprises qui exploitent "
+                                + "efficacement leurs données obtiennent des bénéfices mesurables (par exemple +26 % de performance globale) et un avantage concurrentiel durable. Que ce soit pour du reporting BI "
+                                + "quotidien ou des algorithmes de machine learning, c’est l’infrastructure data – conçue et opérée par des data engineers – qui fait la différence. En faisant appel à des spécialistes de "
+                                + "l’ingénierie des données (comme Neyo Analytics), les sociétés peuvent moderniser leur système d’information : intégration ETL, plateformes cloud, et pipelines agiles pour libérer le "
+                                + "potentiel de la donnée."
+                        },
+                        { type: 'heading', text: "Source" },
+                        { type: 'sources', text: "Contenu fondé sur des références industrielles et académiques (IBM, Uber Engineering, HBR, KPMG, etc.) et des publications scientifiques récentes: https://www.ibm.com/\n\n  https://www.uber.com/\n\n  https://www.edinburgjournals.org/\n\n  https://www.sets.kpmg.com/\n\n https://www.researchgate.net/" }
+                    ]
+                },
+                {
+                    id: 5,
+                    title: "L'avenir du Big Data en 2026",
+                    excerpt: "Tendances et prédictions sur l'évolution du Big Data et son impact sur les entreprises pour l'année à venir.",
+                    category: "Data Analytics",
+                    date: "20 Dec 2025",
+                    author: "Sophie Moreau",
+                    image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?q=80&w=1974&auto=format&fit=crop",
+                    content: [
+                        { type: 'lead', text: "Le Big Data n'est plus, vive le Smart Data. En 2026, la course au volume laisse place à la course à la qualité et à la pertinence." },
+                        { type: 'heading', text: "Data Mesh et décentralisation" },
+                        { type: 'paragraph', text: "Les architectures monolithiques (Data Lakes géants) montrent leurs limites. L'approche Data Mesh, qui traite la data comme un produit géré par des domaines métier, gagne du terrain." },
+                        { type: 'quote', text: "La qualité de la donnée est le plafond de verre de l'IA." },
+                        { type: 'heading', text: "Temps réel" },
+                        { type: 'paragraph', text: "L'analytique en temps réel devient la norme. Attendre un rapport J+1 n'est plus acceptable pour les industries critiques comme la finance ou la logistique." }
+                    ]
+                },
+                {
+                    id: 6,
+                    title: "Optimiser vos workflows avec l'automatisation",
+                    excerpt: "Comment l'automatisation intelligente peut réduire vos tâches répétitives et libérer du temps pour l'innovation.",
+                    category: "Intelligence Artificielle",
+                    date: "15 Dec 2025",
+                    author: "Lucas Petit",
+                    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop",
+                    content: [
+                        { type: 'lead', text: "40% du temps de travail pourrait être automatisé avec les technologies actuelles. L'automatisation n'est pas une menace, c'est un levier de productivité." },
+                        { type: 'heading', text: "Identifier les goulots d'étranglement" },
+                        { type: 'paragraph', text: "Tout commence par une analyse des processus. Quelles tâches nécessitent peu de jugement humain mais beaucoup de temps ? Saisie de données, reporting, notifications..." },
+                        { type: 'heading', text: "Outils Low-Code / No-Code" },
+                        { type: 'paragraph', text: "Des plateformes comme Power Automate ou Zapier permettent aux équipes métier de créer leurs propres automations sans attendre la DSI." },
+                        { type: 'paragraph', text: "L'objectif est de libérer la créativité humaine des tâches robotiques." }
+                    ]
+                }
             ]
         },
         // FAQ
@@ -192,9 +482,22 @@ export const translations = {
                 {
                     question: "Quels types d’entreprises peuvent bénéficier de nos services ?",
                     answer: "Nos services s’adressent à toutes les entreprises, qu’elles soient grandes, moyennes ou petites. Que vous souhaitiez optimiser vos processus, exploiter vos données ou automatiser certaines tâches, nous adaptons nos solutions à vos besoins et à votre niveau de maturité data."
-                },
+                }
             ]
-        }
+        },
+        // Contact Form
+        contactForm: {
+            title: "Contactez-nous",
+            description: "Vous avez un projet ou une question ? Notre équipe d'experts est à votre écoute pour vous accompagner.",
+            name: "Nom",
+            email: "Email",
+            subject: "Sujet",
+            message: "Message",
+            send: "Envoyer",
+            sending: "Envoi en cours...",
+            success: "Message envoyé avec succès !",
+            error: "Une erreur est survenue, veuillez réessayer."
+        },
     },
     en: {
         // Header
@@ -202,6 +505,7 @@ export const translations = {
             services: "Services",
             secteurs: "Expertises",
             about: "About",
+            contact: "Contact Us",
             blog: "Blog",
             language: "English"
         },
@@ -224,24 +528,41 @@ export const translations = {
         carousel: {
             slides: [
                 {
-                    value: "77%",
-                    text: "of data-driven companies improve their decision-making",
-                    source: "Source: McKinsey & Gartner studies"
+                    value: "70%",
+                    text: "of organisations are struggling to innovate due to an inability to use data effectively.",
+                    source: {
+                        text: "Source: digitalisationworld.com",
+                        url: "https://m.digitalisationworld.com/news/63947/70-of-organisations-struggling-to-innovate-due-to-inability-to-use-data-effectively"
+                    }
                 },
                 {
-                    value: "5x",
-                    text: "increase in analysis speed with optimized pipelines",
-                    source: "Field feedback & data benchmarks"
+                    value: "8/10",
+                    text: "businesses leaders say data is critical for decision-making in their organization today.",
+                    source: {
+                        text: "Source : Salesforce - Untapped Data Report",
+                        url: "https://www.salesforce.com/news/stories/data-skills-research/"
+                    }
                 },
                 {
-                    value: "90%",
-                    text: "of data problems come from poorly designed pipelines",
-                    source: "BI project observations"
+                    value: "68%",
+                    text: "of data available to businesses is simply never leveraged, meaning that barely a third of data potential is actually used today.",
+                    source: {
+                        text: "Source : Seagate Rethink Data Report – Business Wire",
+                        url: "https://www.businesswire.com/news/home/20200715005130/en/Seagates-Rethink-Data-Report-Reveals-That-68-of-Data-Available-to-Businesses-Goes-Unleveraged"
+                    }
                 },
                 {
                     value: "Multi-Cloud",
                     text: "AWS · Azure · GCP · On-Prem",
-                    source: "Neyo Analytics Expertise"
+                    source: "Expertise Neyo Analytics"
+                },
+                {
+                    value: "55%",
+                    text: "of employees have no skills in analysis tools like Power BI or Tableau, even though they spend a significant part of their time on data-related tasks.",
+                    source: {
+                        text: "Source : TechrSeries",
+                        url: "https://techrseries.com/employee-wellness/data-skills-gap-costs-businesses-nearly-a-month-of-productivity-per-employee-annually-multiverse-skills-diagnosis-reveals/"
+                    }
                 }
             ]
         },
@@ -346,17 +667,298 @@ export const translations = {
             rights: "All rights reserved."
         },
         // Blog
+        // Blog
         blog: {
-            title: "Neyo Analytics Blog",
-            intro: "Discover our articles, insights, and news about data, artificial intelligence, and cloud technologies.",
-            comingSoon: "Coming Soon",
-            description: "This section will soon be enriched with SEO-optimized blog articles covering the following topics:",
-            topics: [
-                "Best Practices in Data Engineering",
-                "Business Intelligence Trends",
-                "Palantir Use Cases",
-                "Data Pipeline Optimization",
-                "Artificial Intelligence and Machine Learning"
+            title: "BLOG",
+            subtitle: "From data analysis to artificial intelligence.",
+            readMore: "Read more",
+            categories: {
+                all: "All",
+                data: "Data Analytics",
+                ai: "Artificial Intelligence",
+                bi: "Business Intelligence",
+                cloud: "Cloud Computing",
+                palantir: "Palantir"
+            },
+            posts: [
+                {
+                    id: 1,
+                    title: "The Importance of Data Visualization in Decision Making",
+                    excerpt: "Discover how to transform your raw data into intuitive dashboards to make strategic decisions faster.",
+                    category: "Data Analytics",
+                    date: "Jan 15, 2026",
+                    author: "Abdelhamid ELMANSOURI",
+                    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+                    content: [
+                        { type: 'lead', text: "In a world where data volume is exploding, the ability to synthesize information has become critical. Data Visualization is not just about aesthetics—it's a performance tool." },
+                        { type: 'heading', text: "When Data Slows Down Decision-Making Instead of Speeding It Up" },
+                        {
+                            type: 'paragraph', text: "In many SMEs and large companies alike, the reality is often the same: scattered Excel files, time-consuming manual reporting, and indicators updated too late. Teams spend more time consolidating data than analyzing it, "
+                                + "and strategic decisions are made with delays or based on intuition rather than facts. In an economic context where agility and speed have become major competitive advantages, "
+                                + "this situation is no longer sustainable. This is where data visualization emerges as a key driver of transformation: it allows the conversion of complex data volumes into clear, "
+                                + "actionable information directly usable by decision-makers."
+                        },
+                        { type: 'quote', text: "A picture is worth a thousand words, but a good visualization is worth a thousand lines of data." },
+                        { type: 'heading', text: "What is Data Visualization?" },
+                        {
+                            type: 'paragraph', text: "Data visualization includes all the charts, dashboards, and interactive visual representations used to visually represent data. "
+                                + "The goal is not just aesthetic: it's primarily about making information understandable, readable, and immediately interpretable by business users. A good visual allows you to:"
+                                + "\n\n• Simplify complex data sets, \n\n• Highlight trends, correlations, or anomalies invisible in raw tables, "
+                                + "\n\n• Facilitate understanding for non-technical profiles. \n\nAccording to Syracuse University iSchool, data visualization plays a central role in an organization's ability to "
+                                + "transform data into actionable knowledge. It acts as a bridge between raw data and business decisions."
+                        },
+                        { type: 'heading', text: "Concrete Business Benefits of Data Visualization" },
+                        { type: 'quote', text: "Faster and Better Informed Decisions" },
+                        {
+                            type: 'paragraph', text: "Several studies show that managers using data visualization tools are 28% more likely to get the information in time to make a decision (All Consulting Firms, Yellowfin BI). "
+                                + "Thanks to dynamic dashboards, key indicators are accessible in real-time without depending on manual reporting or multiple back-and-forths between teams."
+                        },
+                        { type: 'quote', text: "Better Alignment and Strengthened Communication" },
+                        {
+                            type: 'paragraph', text: "Data visualization significantly improves internal communication. Clear and shared indicators facilitate alignment between management, business teams, and support functions. "
+                                + "According to Lighthouse Analytics, visuals favor a common understanding of challenges and reduce divergent interpretations of figures (Lighthouse Analytics)."
+                        },
+                        { type: 'quote', text: "Measurable Productivity Gains" },
+                        {
+                            type: 'paragraph', text: "Organizations using data visualization tools observe concrete benefits: "
+                                + "\n\n- Up to +43% improvement in ad-hoc analysis speed, \n\n- +36% data self-service for business users, "
+                                + "\n\n- 20% time savings on reporting and analysis tasks (Yellowfin BI, Tristate Technology)."
+                        },
+                        { type: 'heading', text: "Power BI: Data Visualization at the Heart of the Microsoft Ecosystem" },
+                        { image: PBIimg, size: 'large' },
+                        {
+                            type: 'paragraph', text: "Power BI is the business intelligence solution developed by Microsoft. It allows for the creation of interactive reports and dashboards connected to hundreds of data sources: "
+                                + "ERP, CRM, SQL databases, Excel files, cloud solutions, etc. Its main asset lies in its native integration with the Microsoft ecosystem (Excel, Azure, Teams, SharePoint), "
+                                + "making it particularly suitable for both SMEs and large enterprises. In 2025, Power BI is used by about 8% of organizations with a BI tool, with a 12% adoption rate in large companies, "
+                                + "confirming its dominant position in the market (Ramp, ElectroIQ). Power BI is also recognized for: \n\n• Its excellent cost/feature ratio, \n\n• Its ability to democratize access to data, "
+                                + "\n\n• Its advanced modeling and calculation possibilities via DAX."
+                        },
+                        { type: 'heading', text: "Tableau: Excellence in Analytical Visualization" },
+                        { image: Tableauimg, size: 'large' },
+                        {
+                            type: 'paragraph', text: "Tableau is historically recognized for the richness and refinement of its visualizations. Highly appreciated by data teams, analysts, and advanced profiles, it allows "
+                                + "for very intuitive and visual data exploration. According to several market analyses, Tableau holds between 12.88% and 16.99% market share in BI, with more than 49,000 user companies world-wide, "
+                                + "testifying to its maturity and wide adoption (Ramp, Intuition Labs). Tableau stands out notably for: \n\n• Data exploration freedom, \n\n• The visual quality of dashboards, "
+                                + "\n\n• Its capacity to handle complex analyses at scale."
+                        },
+                        { type: 'heading', text: "Why Invest in Data Visualization Today?" },
+                        { type: 'paragraph', text: "Companies that effectively leverage their customers' behavioral data to drive decisions can achieve up to 85% more sales growth than their less data-driven competitors (Black Label, Imarticus). In a world where data is omnipresent, the ability to understand it quickly becomes a sustainable strategic advantage." },
+                        { type: 'heading', text: "How Neyo Analytics Supports You" },
+                        { image: Neyo_GIF },
+                        { type: 'paragraph', text: "At Neyo Analytics, we support SMEs and large companies at every stage of their data transformation: \n\n• Scoping of business needs and key indicators \n\n• Implementation of Power BI and Tableau dashboards tailored to business roles \n\n• Data connection, modeling, and reliability \n\n• Team training for greater autonomy \n\n• Continuous improvement of reporting and usage Our goal: Transform your data into a true performance lever, serving faster, more reliable decisions aligned with your business challenges. Want to unlock the full potential of your data? Contact Neyo Analytics and let's move together from data to decision." },
+                        { type: 'heading', text: "Sources" },
+                        { type: 'sources', text: "• Syracuse University iSchool - What is Data Visualization: https://ischool.syracuse.edu/what-is-data-visualization/\n\n• All Consulting Firms - How Data Visualization Improves Decision Making: https://www.allconsultingfirms.com/blog/how-data-visualization-improves-decision-making/\n\n• Yellowfin BI - Benefits of Data Visualization Tools: https://www.yellowfinbi.com/blog/benefits-of-data-visualization-tools\n\n• Lighthouse Analytics - The Importance of Data Visualisation in Decision Making: https://www.lighthouseanalytics.co.za/the-importance-of-data-visualisation-in-decision-making/\n\n• Ramp - Power BI Vendors: https://ramp.com/vendors/power-bi\n\n• ElectroIQ - Power BI Statistics: https://electroiq.com/stats/power-bi-statistics/\n\n• Ramp - Tableau Vendors: https://ramp.com/vendors/tableau\n\n• Intuition Labs - Tableau vs Power BI Market Analysis: https://intuitionlabs.ai/pdfs/tableau-vs-power-bi-bi-platform-market-analysis-comparison.pdf\n\n• Black Label - Data Visualization for Business Growth: https://blacklabel.net/blog/business-insights/when-insight-meets-advantage-data-visualization-for-business-growth/\n\n• Imarticus - The Impact of Data Visualisation in Business Decision Making: https://imarticus.org/blog/the-impact-of-data-visualisation-in-business-decision-making/" },
+                    ],
+                },
+                {
+                    id: 2,
+                    title: "Why Palantir Foundry is Replacing the Traditional Data Warehouse (and Why Few People Have Understood It)",
+                    excerpt: "Palantir Foundry surpasses the traditional data warehouse by rapidly transforming raw data into actionable insights",
+                    category: "Palantir",
+                    date: "Jan 15, 2026",
+                    author: "Fethi BENZITOUNI",
+                    image: Palantirimg,
+                    content: [
+                        { type: 'lead', text: "Traditional data warehouses are no longer sufficient to exploit the speed and complexity of modern data. Palantir Foundry emerges as the tool capable of centralizing, integrating, and analyzing data in real-time, offering businesses an agility that few have yet understood." },
+                        {
+                            type: 'paragraph', text: "For twenty years, the data warehouse has been at the heart of business management: Snowflake, Redshift, BigQuery, "
+                                + "then Power BI or Tableau for visualization. But this model is starting to crack.\n\n As Lokad explains in their analysis of Palantir: \n\n"
+                                + "Palantir is neither a BI tool nor a data warehouse. It's a data-to-operations platform designed to drive real business decisions. "
+                        },
+                        { type: 'paragraph', text: "Palantir Foundry therefore does not seek to improve reporting. It seeks to replace how companies transform their data into decisions." },
+                        { type: 'heading', text: "Palantir Foundry is Not a Data Warehouse" },
+                        {
+                            type: 'paragraph', text: "A data warehouse is a storage and analysis infrastructure. Foundry is a complete operational platform. \n\n"
+                                + "Palantir officially describes Foundry as a platform that combines ingestion, transformation, governance, analytics, and business applications in a single environment: \n\n"
+                                + "« Foundry is a platform that enables organizations to integrate, manage, and transform their data, then build operational applications directly on top of it. »"
+                        },
+                        {
+                            type: 'paragraph', text: "The independent study Total Economic Impact of Palantir Foundry even shows that some companies were able to: \n\n"
+                                + "« decommission 100% of their legacy data and analytics systems in less than three years after adopting Foundry »\n\n"
+                                + " In other words: Foundry becomes the central data architecture, not a tool around the data warehouse."
+                        },
+                        { type: 'heading', text: "The Ontology: What Snowflake and Power BI Don't Have" },
+                        {
+                            type: 'paragraph', text: "The real breakthrough of Foundry is its Ontology.\n\n Palantir defines it as follows: \n\n« The Ontology is a layer that connects digital assets (data, models, pipelines) "
+                                + "to the real-world objects they represent: machines, orders, suppliers, customers, etc. » \n\nThis enables the creation of a digital twin of the enterprise. \n\n"
+                                + "A digital twin of the enterprise means that Palantir Foundry creates a living, connected representation of the organization in the information system. "
+                                + "Instead of having isolated data in tables or reports, Foundry models the real objects of the enterprise — factories, machines, orders, suppliers, customers, "
+                                + "logistics flows — as well as their relationships and real-time status. This digital replica allows you to see how the enterprise actually operates, simulate scenarios "
+                                + "(delays, stock shortages, demand surges, breakdowns) and anticipate their impacts before they occur in the real world. Thanks to this digital twin, data no longer "
+                                + "serves only to analyze the past, but to operate the enterprise as a dynamic system.\n\n An analysis article on the Ontology explains:\n\n « The Ontology acts as a semantic layer "
+                                + "shared between data engineers, business users, and AI systems, enabling reasoning about business objects rather than SQL tables. »\n\n In a data warehouse, you "
+                                + "manipulate tables. In Foundry, you manipulate the enterprise itself. "
+                        },
+                        { type: 'heading', text: "Foundry as a 'Build System for Data'" },
+                        {
+                            type: 'paragraph', text: "The official documentation describes Foundry as a true build system for data: \n\n"
+                                + "« Foundry provides a data integration and transformation system capable of orchestrating SQL, Python, Spark, with versioning, traceability, and quality management. » \n\n"
+                                + "Integrators like Aqsone explain that Foundry replaces a large part of the classic data stack: \n\n« Foundry combines data engineering, data lake, machine learning, governance "
+                                + "and analytics in a single integrated platform. » "
+                        },
+                        { type: 'heading', text: "From Dashboard to Operational Decision" },
+                        {
+                            type: 'paragraph', text: "In a classic data architecture, tools like Power BI or Tableau mainly serve to observe what has already happened. Teams look at indicators,"
+                                + " export reports, discuss, then make decisions manually. \n\nData is a support for reflection, but it is not directly connected to action. \n\nPalantir Foundry "
+                                + "changes this logic by integrating data at the very heart of operational processes. Decisions are no longer made alongside systems, but inside the platform, "
+                                + "from the digital twin of the enterprise. \n\nLokad describes a typical supply chain case: \n\n« Foundry allows you to connect SAP, model product nomenclatures, inventory, and "
+                                + "production capacities to directly make operational decisions. » \n\nFoundry therefore serves not only to see numbers, but to decide what to produce, where, when, and "
+                                + "for whom. \n\nWith Palantir AIP, these capabilities are extended to AI: \n\n« AI agents can query the Ontology and trigger actions in real systems. »"
+                        },
+                        { type: 'heading', text: "Why This Revolution is Underestimated" },
+                        {
+                            type: 'paragraph', text: "Despite its unique capabilities, Palantir Foundry remains largely absent from dominant discussions in the data ecosystem, dominated by Snowflake, "
+                                + "Databricks, or Power BI. One reason is how Foundry is perceived by many data professionals. \n\nOn specialized forums, it is often described not "
+                                + "as a complete platform, but as a simple layer on top of existing data warehouses: \n\n« Many perceive it as a semantic layer or a 'data operating system' "
+                                + "on top of existing data and systems, rather than as a full-fledged data-to-operations platform. » \n\nThis perception masks the true nature of Foundry as a "
+                                + "data-to-operations platform, making it difficult to compare to classic stacks. \n\nBut the most important barrier remains economic. Palantir Foundry is known for its very high costs, "
+                                + "both in licenses and in support and deployment. Unlike cloud solutions like Snowflake or Databricks, accessible in self-service mode and paid by usage, Foundry is "
+                                + "deployed through structured projects, often multi-year, requiring significant financial commitment. \n\nFor many companies — particularly SMEs and mid-sized enterprises — this "
+                                + "entry ticket is simply too high, even if the platform is technologically advanced. \n\nTo this are added other major barriers: \n\n•\tstrong dependence on an American vendor, "
+                                + "\n\n•\tdata sovereignty issues, \n\n•\tand a highly integrated platform, less compatible with an open or multi-vendor stack. \n\nThese factors explain why Snowflake "
+                                + "and Databricks dominate the public conversation, while Foundry is mainly adopted by highly capitalized, critical, or sovereign organizations (heavy industry, defense, "
+                                + "energy, pharma, large logistics chains). "
+                        },
+                        { type: 'heading', text: "Conclusion" },
+                        {
+                            type: 'paragraph', text: "As a data engineer who worked with Foundry summarizes: \n\n« Foundry doesn't just show what happened. It enables running "
+                                + "the enterprise directly on data. » \n\nThis is why Palantir Foundry doesn't simply compete with data warehouses. It is making them structurally "
+                                + "insufficient. "
+                        },
+                        { type: 'heading', text: "NEYO Analytics Supports Companies in Their Palantir Foundry Projects" },
+                        { image: Neyo_GIF },
+                        {
+                            type: 'paragraph', text: "We offer: \n\n- Strategic scoping of use cases \n\n- Integration of sources (ERP, CRM, APIs) \n\n- Ontology modeling \n\n- Deployment of business applications "
+                                + "\n\n- AI implementation with Palantir AIP NEYO Analytics transforms Palantir Foundry into a true operational engine for your organization. "
+                        },
+                        { type: 'heading', text: "Sources" },
+                        { type: 'sources', text: "• lokad: https://www.lokad.com/review-of-palantir-com/\n\n• Palantir - Foundry: https://www.palantir.com/platforms/foundry/\n\n• Palantir - The Total Economic Impact of Palantir Foundry: https://www.palantir.com/assets/xrfr7uokpv1b/7h0zi3GZrU3L7AM2HO1Q6O/1ad26eaa42ad949f8e3c80ea22f96b7a/The_Total_Economic_Impact_of_Palantir_Foundry.pdf\n\n• Palantir - Ontology: https://palantir.com/docs/foundry/ontology/overview/\n\n• Palantir - Ontology: https://blog.pvmit.com/pvm-blog/palantir-ontology\n\n• Palantir - Data Integration: https://palantir.com/docs/foundry/data-integration/overview/\n\n• aqsone - Palantir Foundry: https://www.aqsone.com/fr/blog/palantir-foundry-une-solution-au-service-de-la-data\n\n• lokad - Review of Palantir: https://www.lokad.com/review-of-palantir-com/\n\n• The AI Architect - Palantir Foundry: https://theaiarchitects.substack.com/p/palantirs-digital-twin-building-the\n\n• Medium - Palantir Foundry: https://medium.com/better-programming/palantir-foundry-the-data-operating-system-that-is-not-talked-about-enough-9fb1c98a6b3d" }
+                    ]
+                },
+                {
+                    id: 3,
+                    title: "Power BI vs Tableau: Which One to Choose?",
+                    excerpt: "Complete comparison of the two market leaders in Business Intelligence to help you make the best choice for your organization.",
+                    category: "Business Intelligence",
+                    date: "Jan 05, 2026",
+                    author: "Julie Leroux",
+                    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
+                    content: [
+                        { type: 'lead', text: "It's the eternal debate in the BI world. Microsoft's Power BI and Salesforce's Tableau dominate the market. Which one is right for you?" },
+                        { type: 'heading', text: "Microsoft Power BI" },
+                        { type: 'paragraph', text: "If you are already in the Microsoft ecosystem (Office 365, Azure), Power BI is the natural choice. Its entry cost is low and its integration with Excel is unrivaled." },
+                        { type: 'heading', text: "Tableau Software" },
+                        { type: 'paragraph', text: "Tableau is often considered more powerful for pure visual analytics and handling very large, complex datasets. It is the choice of purist Data Analysts." },
+                        { type: 'quote', text: "The best tool is the one your teams will actually use." },
+                        { type: 'paragraph', text: "The choice often depends on your budget and the data maturity of your teams. Neyo Analytics can help you audit your needs to make the right choice." }
+                    ]
+                },
+                {
+                    id: 4,
+                    title: "Data Engineering and Strategic Decision-Making",
+                    excerpt: "Data engineering forms the foundation of modern strategic decision-making. By structuring, ensuring reliability, and making data accessible, it enables organizations to transform raw information into levers for governance, anticipation, and value creation.",
+                    category: "Data Engineering",
+                    date: "Jan 15, 2026",
+                    author: "Salah-Eddine BOUDHAN",
+                    image: dataEngineering,
+                    content: [
+                        { type: 'lead', text: "In the era of data-driven management, strategic decisions no longer rely on intuition but on robust data architectures. Behind every dashboard, key performance indicator, and critical decision lies essential data engineering work that transforms informational chaos into a competitive advantage." },
+                        {
+                            type: 'paragraph',
+                            text:
+                                "Data engineering involves designing and deploying systems that aggregate, store, and analyze massive volumes of data.\n\n" +
+                                "In practice, data engineers build data pipelines that extract, transform, and load (ETL/ELT) raw data into centralized repositories " +
+                                "(data warehouses or data lakes). These pipelines ensure optimal data quality and consistency, which are essential prerequisites for any business intelligence (BI) initiative.\n\n" +
+                                "IBM highlights that data engineers “transform large amounts of data into strategic insights.” Thanks to these technical platforms, " +
+                                "business leaders can access reliable data to support informed decision-making.\n\n" +
+                                "• ETL processes and pipelines – The ETL process (Extract, Transform, Load) consolidates data from multiple systems into a unified dataset. Pipelines automate these tasks: data collection, " +
+                                "data cleansing (duplicate removal, error correction), and loading into a warehouse. A modern pipeline is typically orchestrated as a directed acyclic graph (DAG) of interdependent tasks. " +
+                                "For example, a data engineer may configure an Airflow DAG to ingest application logs, clean them, and load them into Snowflake.\n\n" +
+                                "• Cloud platforms – Public cloud providers offer managed solutions (Glue, Dataflow, Data Factory) to rapidly deploy scalable pipelines. A recent study proposes an evaluation framework " +
+                                "to compare AWS and Azure in this area. In practice, organizations choose the cloud platform (AWS, Azure, Google Cloud, Snowflake, etc.) that maximizes analytical performance while minimizing costs. " +
+                                "Lakehouse and data warehouse technologies store historical data and enable BI teams to run near-instant analytical queries.\n\n" +
+                                "A strong enterprise data strategy connects these technologies with governance and business objectives. This involves democratizing data: making it accessible across departments to “enable significantly " +
+                                "better decisions for all stakeholders.” Without such an approach, much of the data remains unused—recent analyses suggest that nearly 68% of enterprise data sits in unusable silos. " +
+                                "By deploying an integrated environment (centralized warehouses, governance frameworks, and data quality processes), organizations amplify the impact of BI. Academic research confirms that " +
+                                "data-driven organizations achieve up to a 26% improvement in performance through analytics, resulting in a clear competitive advantage."
+                        },
+                        {
+                            type: 'heading',
+                            text: "Use Case: Uber and Netflix"
+                        },
+                        {
+                            type: 'paragraph',
+                            text:
+                                "The concrete architecture of a data pipeline has a direct impact on business outcomes. For example, Uber redesigned its data pipelines by moving from batch processing to real-time streaming. " +
+                                "According to Uber engineers, this shift reduced data latency from several hours to just a few minutes, which “directly accelerates model deployment, experimentation speed, and analytical accuracy.” " +
+                                "As a result, Uber can adjust pricing and operational planning models much more dynamically.\n\n" +
+                                "Another example is Netflix. By analyzing massive volumes of viewing behavior data, Netflix continuously refines its content recommendations. Studies report that this approach allows Netflix to " +
+                                "“predict and satisfy individual preferences, leading to higher customer satisfaction and retention.” Similarly, Walmart uses analytical pipelines to optimize inventory management and pricing: " +
+                                "its models detect consumption trends in real time, enabling instant adjustments to stock levels and prices. These examples illustrate how a well-designed data pipeline translates into improved " +
+                                "business KPIs: increased revenue, reduced operational costs, and faster decision-making."
+                        },
+                        {
+                            type: 'heading',
+                            text: "Conclusion"
+                        },
+                        {
+                            type: 'paragraph',
+                            text:
+                                "Data engineering is now at the core of corporate strategy. A high-performance pipeline ensures that data is processed and delivered at the right time, allowing executives to base decisions on verified facts. " +
+                                "As demonstrated by multiple studies, organizations that effectively leverage their data achieve measurable benefits (such as a +26% overall performance increase) and a sustainable competitive advantage. " +
+                                "Whether for daily BI reporting or advanced machine learning algorithms, it is the data infrastructure—designed and operated by data engineers—that makes the difference. By working with data engineering specialists " +
+                                "(such as Neyo Analytics), companies can modernize their information systems through ETL integration, cloud platforms, and agile pipelines that unlock the full potential of data."
+                        },
+                        {
+                            type: 'heading',
+                            text: "Sources"
+                        },
+                        {
+                            type: 'sources',
+                            text:
+                                "Content based on industrial and academic references (IBM, Uber Engineering, HBR, KPMG, etc.) and recent scientific publications:\n\n" +
+                                "https://www.ibm.com/\n\n" +
+                                "https://www.uber.com/\n\n" +
+                                "https://www.edinburgjournals.org/\n\n" +
+                                "https://www.sets.kpmg.com/\n\n" +
+                                "https://www.researchgate.net/"
+                        }
+                    ]
+                },
+                {
+                    id: 5,
+                    title: "The Future of Big Data in 2026",
+                    excerpt: "Trends and predictions on the evolution of Big Data and its impact on businesses for the coming year.",
+                    category: "Data Analytics",
+                    date: "Dec 20, 2025",
+                    author: "Sophie Moreau",
+                    image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?q=80&w=1974&auto=format&fit=crop",
+                    content: [
+                        { type: 'lead', text: "Big Data is dead, long live Smart Data. In 2026, the race for volume gives way to the race for quality and relevance." },
+                        { type: 'heading', text: "Data Mesh and Decentralization" },
+                        { type: 'paragraph', text: "Monolithic architectures (Giant Data Lakes) are showing their limits. The Data Mesh approach, which treats data as a product managed by business domains, is gaining ground." },
+                        { type: 'quote', text: "Data quality is the glass ceiling of AI." },
+                        { type: 'heading', text: "Real Time" },
+                        { type: 'paragraph', text: "Real-time analytics is becoming the norm. Waiting for a D+1 report is no longer acceptable for critical industries like finance or logistics." }
+                    ]
+                },
+                {
+                    id: 6,
+                    title: "Optimizing Your Workflows with Automation",
+                    excerpt: "How intelligent automation can reduce your repetitive tasks and free up time for innovation.",
+                    category: "Artificial Intelligence",
+                    date: "Dec 15, 2025",
+                    author: "Lucas Petit",
+                    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop",
+                    content: [
+                        { type: 'lead', text: "40% of work time could be automated with current technologies. Automation is not a threat, it is a productivity lever." },
+                        { type: 'heading', text: "Identify Bottlenecks" },
+                        { type: 'paragraph', text: "It all starts with process analysis. Which tasks require little human judgment but a lot of time? Data entry, reporting, notifications..." },
+                        { type: 'heading', text: "Low-Code / No-Code Tools" },
+                        { type: 'paragraph', text: "Platforms like Power Automate or Zapier allow business teams to create their own automations without waiting for IT." },
+                        { type: 'paragraph', text: "The goal is to free human creativity from robotic tasks." }
+                    ]
+                }
             ]
         },
         // FAQ
@@ -390,6 +992,19 @@ export const translations = {
                     answer: "Our services are addressed to all companies, whether they are large, medium or small. Whether you want to optimize your processes, exploit your data or automate certain tasks, we adapt our solutions to your needs and your level of data maturity."
                 }
             ]
+        },
+        // Contact Form
+        contactForm: {
+            title: "Contact Us",
+            description: "Do you have a project or a question? Our team of experts is here to support you.",
+            name: "Name",
+            email: "Email",
+            subject: "Subject",
+            message: "Message",
+            send: "Send",
+            sending: "Sending...",
+            success: "Message sent successfully!",
+            error: "An error occurred, please try again."
         }
     }
 };

@@ -38,6 +38,7 @@ export default function Footer() {
                             <li><a href="#services">{t.servicesTitle}</a></li>
                             <li><a href="#expertise-toggle">{t.ExpertisesTitle}</a></li>
                             <li><a href="#about">{t.aboutLink}</a></li>
+                            <li><a href="#contact">{t.contactLink}</a></li>
                         </ul>
                     </div>
 
@@ -46,7 +47,7 @@ export default function Footer() {
                         <h4>{t.contactTitle}</h4>
                         <p className="contact-email">contact@neyo-analytics.com</p>
                         <div className="social-links">
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/company/neyoanalytics/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                                 <Linkedin size={24} />
                             </a>
                             <a href="mailto:contact@neyo-analytics.com" aria-label="Email">

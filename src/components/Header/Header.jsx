@@ -80,6 +80,7 @@ const Header = () => {
           <a href="#services" onClick={(e) => handleNavClick(e, '#services')}>{t.services}</a>
           <a href="#secteurs" onClick={(e) => handleNavClick(e, '#secteurs')}>{t.secteurs}</a>
           <a href="#about" onClick={(e) => handleNavClick(e, '#about')}>{t.about}</a>
+          <a href="#contact" onClick={(e) => handleNavClick(e, '#contact')}>{t.contact}</a>
           <Link to="/blog">{t.blog}</Link>
         </nav>
 
@@ -88,19 +89,20 @@ const Header = () => {
           {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
 
-        {/* Switch FR/EN */}
-        <div className="switch-container">
-          <Switch
-            checked={language === 'en'}
-            onCheckedChange={toggleLanguage}
-          />
-          <span className="lang-label">
-            {language.toUpperCase()}
-          </span>
-        </div>
+        {/* Switch FR/EN & Theme - Desktop Only */}
+        <div className="desktop-only-toggles">
+          <div className="switch-container">
+            <Switch
+              checked={language === 'en'}
+              onCheckedChange={toggleLanguage}
+            />
+            <span className="lang-label">
+              {language.toUpperCase()}
+            </span>
+          </div>
 
-        {/* Bouton Jour/Nuit */}
-        <ThemeToggle />
+          <ThemeToggle />
+        </div>
 
         <div className="spacer"></div>
       </div>
@@ -118,10 +120,20 @@ const Header = () => {
             <a href="#services" onClick={(e) => handleNavClick(e, '#services')}>{t.services}</a>
             <a href="#secteurs" onClick={(e) => handleNavClick(e, '#secteurs')}>{t.secteurs}</a>
             <a href="#about" onClick={(e) => handleNavClick(e, '#about')}>{t.about}</a>
+            <a href="#contact" onClick={(e) => handleNavClick(e, '#contact')}>{t.contact}</a>
             <Link to="/blog" onClick={() => setIsMenuOpen(false)}>{t.blog}</Link>
 
             <div className="mobile-theme-lang">
-              {/* Optional: Add language/theme toggles inside mobile menu if needed */}
+              <div className="switch-container">
+                <Switch
+                  checked={language === 'en'}
+                  onCheckedChange={toggleLanguage}
+                />
+                <span className="lang-label">
+                  {language.toUpperCase()}
+                </span>
+              </div>
+              <ThemeToggle />
             </div>
           </motion.nav>
         )}

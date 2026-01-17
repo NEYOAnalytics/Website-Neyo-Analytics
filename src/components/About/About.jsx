@@ -30,7 +30,7 @@ export default function About() {
 
                     <div className="expertise-cta">
                         <p>{t.ctaText}</p>
-                        <a href="mailto:contact@neyo-analytics.com" aria-label="Email"><button>{t.ctaButton}</button></a>
+                        <a href="#contact" aria-label="Contact"><button>{t.ctaButton}</button></a>
                     </div>
                 </div>
             </div>

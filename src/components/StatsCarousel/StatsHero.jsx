@@ -77,7 +77,13 @@ export default function StatsHero() {
             </p>
 
             <span className="source">
-              {slides[index].source}
+              {typeof slides[index].source === 'object' ? (
+                <a href={slides[index].source.url} target="_blank" rel="noopener noreferrer">
+                  {slides[index].source.text}
+                </a>
+              ) : (
+                slides[index].source
+              )}
             </span>
           </motion.div>
         </AnimatePresence>
@@ -103,7 +109,7 @@ export default function StatsHero() {
           </div>
         </div>
 
-        <a href="mailto:contact@neyo-analytics.com" aria-label="Email"><button className="stats-action-button">{t.actionButton}</button></a>
+        <a href="#contact" aria-label="Contact"><button className="stats-action-button">{t.actionButton}</button></a>
       </div>
     </section>
   );
