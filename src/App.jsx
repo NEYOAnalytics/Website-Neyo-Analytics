@@ -9,6 +9,7 @@ import Blog from './pages/Blog';
 import CornerNeuralBackground from './components/CornerNeuralBackground/CornerNeuralBackground';
 
 import { ThemeProvider } from './context/ThemeContext';
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Footer />
         </Router>
       </LanguageProvider>
+      <Analytics />
     </ThemeProvider>
   );
 }
