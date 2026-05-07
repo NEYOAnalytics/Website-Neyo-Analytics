@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
+import AidSignal from './pages/AidSignal';
 
 import CornerNeuralBackground from './components/CornerNeuralBackground/CornerNeuralBackground';
 
@@ -21,6 +22,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/aid-signal" element={<AidSignal />} />
           </Routes>
           <Footer />
         </Router>

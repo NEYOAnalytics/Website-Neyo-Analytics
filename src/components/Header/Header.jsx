@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../../context/LanguageContext';
 import { translations } from '../../translations/translations';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Shield, FileText } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Header.scss';
 import Logo from '../../assets/images/Group 40.png';
@@ -11,11 +11,20 @@ import ThemeToggle from '../ThemeToggle';
 
 const Header = () => {
   const { language, toggleLanguage } = useLanguage();
-  const t = translations[language].nav;
+  const t = translations[language];
+  const nav = t.nav;
+  const legalNav = t.aidSignal?.legal;
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const isAidSignal = location.pathname === '/aid-signal';
+
+  const scrollToAidSection = (id) => {
+    setIsMenuOpen(false);
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,11 +86,26 @@ const Header = () => {
 
         {/* Desktop NAV */}
         <nav className="desktop-nav">
-          <a href="#services" onClick={(e) => handleNavClick(e, '#services')}>{t.services}</a>
-          <a href="#secteurs" onClick={(e) => handleNavClick(e, '#secteurs')}>{t.secteurs}</a>
-          <a href="#about" onClick={(e) => handleNavClick(e, '#about')}>{t.about}</a>
-          <a href="#contact" onClick={(e) => handleNavClick(e, '#contact')}>{t.contact}</a>
-          <Link to="/blog">{t.blog}</Link>
+          {isAidSignal ? (
+            <>
+              <button className="nav-anchor-btn" onClick={() => scrollToAidSection('section-terms')}>
+                <FileText size={14} />
+                {legalNav?.termsNav}
+              </button>
+              <button className="nav-anchor-btn" onClick={() => scrollToAidSection('section-privacy')}>
+                <Shield size={14} />
+                {legalNav?.privacyNav}
+              </button>
+            </>
+          ) : (
+            <>
+              <a href="#services" onClick={(e) => handleNavClick(e, '#services')}>{nav.services}</a>
+              <a href="#secteurs" onClick={(e) => handleNavClick(e, '#secteurs')}>{nav.secteurs}</a>
+              <a href="#about" onClick={(e) => handleNavClick(e, '#about')}>{nav.about}</a>
+              <a href="#contact" onClick={(e) => handleNavClick(e, '#contact')}>{nav.contact}</a>
+              <Link to="/blog">{nav.blog}</Link>
+            </>
+          )}
         </nav>
 
         {/* Mobile Menu Icon */}
@@ -117,11 +141,26 @@ const Header = () => {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
           >
-            <a href="#services" onClick={(e) => handleNavClick(e, '#services')}>{t.services}</a>
-            <a href="#secteurs" onClick={(e) => handleNavClick(e, '#secteurs')}>{t.secteurs}</a>
-            <a href="#about" onClick={(e) => handleNavClick(e, '#about')}>{t.about}</a>
-            <a href="#contact" onClick={(e) => handleNavClick(e, '#contact')}>{t.contact}</a>
-            <Link to="/blog" onClick={() => setIsMenuOpen(false)}>{t.blog}</Link>
+            {isAidSignal ? (
+              <>
+                <button className="nav-anchor-btn" onClick={() => scrollToAidSection('section-terms')}>
+                  <FileText size={14} />
+                  {legalNav?.termsNav}
+                </button>
+                <button className="nav-anchor-btn" onClick={() => scrollToAidSection('section-privacy')}>
+                  <Shield size={14} />
+                  {legalNav?.privacyNav}
+                </button>
+              </>
+            ) : (
+              <>
+                <a href="#services" onClick={(e) => handleNavClick(e, '#services')}>{nav.services}</a>
+                <a href="#secteurs" onClick={(e) => handleNavClick(e, '#secteurs')}>{nav.secteurs}</a>
+                <a href="#about" onClick={(e) => handleNavClick(e, '#about')}>{nav.about}</a>
+                <a href="#contact" onClick={(e) => handleNavClick(e, '#contact')}>{nav.contact}</a>
+                <Link to="/blog" onClick={() => setIsMenuOpen(false)}>{nav.blog}</Link>
+              </>
+            )}
 
             <div className="mobile-theme-lang">
               <div className="switch-container">
