@@ -356,6 +356,83 @@ body.dark .aid-signal-page.pyner-style {
     }
   }
 
+  // ── Grid Nature (Crisis Selector) ─────────
+  .grid-nature {
+    position: relative;
+    padding: 100px 0;
+    
+    .nature-header-block {
+      padding: 0 60px 60px;
+      @media (max-width: $mobile) { padding: 0 20px 40px; }
+      h2 { font-size: 56px; @media (max-width: $mobile) { font-size: 32px; } }
+    }
+
+    .nature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 0 60px 60px;
+      @media (max-width: $mobile) { padding: 0 20px 40px; gap: 20px; }
+    }
+
+    .nature-card {
+      flex: 1;
+      min-width: 280px;
+      height: 180px;
+      border-radius: 12px;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      cursor: pointer;
+      border: 1px solid var(--grid-line-color);
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        .nature-overlay {
+          background: rgba(0, 0, 0, 0.3);
+        }
+        .nature-emoji {
+          transform: scale(1.2) rotate(10deg);
+        }
+      }
+
+      .nature-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5); // User requested 0.5 overlay
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.4s ease;
+      }
+
+      .nature-emoji {
+        font-size: 48px;
+        margin-bottom: 15px;
+        transition: transform 0.4s ease;
+      }
+
+      .nature-label {
+        position: absolute;
+        bottom: 20px;
+        color: white;
+        font-size: 14px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: center;
+        width: 100%;
+        padding: 0 10px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      }
+    }
+  }
+
   // ── Grid Pro ──────────────────────────────
   .grid-pro {
     position: relative;
