@@ -13,37 +13,30 @@ const DISASTER_PHOTOS = [
   {
     url: 'https://x2s1gymgomqevywy.public.blob.vercel-storage.com/t%C3%A9l%C3%A9chargeeement.jpg',
     caption: 'Séisme — Dévastation urbaine et effondrement de structures',
-    emoji: '🌍'
   },
   {
     url: 'https://x2s1gymgomqevywy.public.blob.vercel-storage.com/458.jpg',
     caption: 'Feux de forêt — Colonne de fumée et progression du brasier',
-    emoji: '🔥'
   },
   {
     url: 'https://x2s1gymgomqevywy.public.blob.vercel-storage.com/Des-secouristes-recherchent-des-survivants-dans-les-decombres-apres-le-seisme-a-Moulay-Brahim-au-Maroc-1703339.jpg',
     caption: 'Urgence — Intervention rapprochée d\'un sauveteur',
-    emoji: '🚨'
   },
   {
     url: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?w=800&q=80&v=3',
     caption: 'Assistance — Coordination de l\'aide humanitaire et logistique',
-    emoji: '🎯'
   },
   {
     url: 'https://images.unsplash.com/photo-1547683905-f686c993aae5?w=800&q=80&v=3',
     caption: 'Inondations — Secours en milieu urbain submergé',
-    emoji: '💧'
   },
   {
     url: 'https://x2s1gymgomqevywy.public.blob.vercel-storage.com/36847026052_6d50801c5f_b.jpg',
     caption: 'Sauvetage — Hélitreuillage en zone de crise',
-    emoji: '🚁'
   },
   {
     url: 'https://x2s1gymgomqevywy.public.blob.vercel-storage.com/SDIS44-secours-en-mer-Matthieu-Josse.jpg',
     caption: 'Coordination — Déploiement stratégique des secours',
-    emoji: '📋'
   },
 ];
 
@@ -158,35 +151,6 @@ const AidSignal = () => {
                 <div className="icon-box">{featureIcons[index]}</div>
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="grid-line horizontal bottom"></div>
-      </section>
-
-      {/* ── NATURE DES SINISTRES ── */}
-      <section className="grid-nature">
-        <div className="container grid-container">
-          <div className="grid-line vertical left"></div>
-          <div className="grid-line vertical right"></div>
-
-          <div className="nature-header-block">
-            <div className="label">NATURE DES SINISTRES</div>
-            <h2>Catégories d'Intervention</h2>
-          </div>
-
-          <div className="nature-grid">
-            {DISASTER_PHOTOS.map((item, index) => (
-              <div 
-                key={index} 
-                className="nature-card"
-                style={{ backgroundImage: `url(${item.url})` }}
-              >
-                <div className="nature-overlay">
-                  <div className="nature-emoji">{item.emoji}</div>
-                  <div className="nature-label">{item.caption.split(' — ')[0]}</div>
-                </div>
               </div>
             ))}
           </div>
