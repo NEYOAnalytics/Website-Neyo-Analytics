@@ -14,7 +14,7 @@ import proLogoImg from '../assets/images/aid_signal_pro_logo.png';
 const DISASTER_PHOTOS = [
   {
     url: 'https://x2s1gymgomqevywy.public.blob.vercel-storage.com/t%C3%A9l%C3%A9chargeeement.jpg',
-    caption: 'Séisme — Dévastation urbaine et éffondrement de structures',
+    caption: 'Séisme — Devastation urbaine et éffondrement de structures',
   },
   {
     url: 'https://x2s1gymgomqevywy.public.blob.vercel-storage.com/458.jpg',
