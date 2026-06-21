@@ -577,15 +577,15 @@ export const translations = {
                     { title: "8. Droit applicable", text: "Les présentes conditions sont régies par le droit français. Tout litige relève de la compétence exclusive des tribunaux compétents." }
                 ],
                 privacy: [
-                    { title: "1. Responsable du traitement", text: "Neyo Analytics est responsable du traitement des données collectées via Aid Signal. Contact : privacy@neyo-analytics.com" },
+                    { title: "1. Responsable du traitement", text: "Neyo Analytics est responsable du traitement des données collectées via Aid Signal. Contact : contact@neyo-analytics.com" },
                     { title: "2. Données collectées", text: "Nous collectons : coordonnées GPS des incidents, horodatage et type d'incidents, photos et vidéos des évaluations terrain, identifiants d'authentification chiffrés, et données techniques anonymisées." },
                     { title: "3. Finalité du traitement", text: "Les données servent uniquement à coordonner les interventions humanitaires, générer des rapports d'évaluation, alimenter le tableau de bord Aid Signal Pro et améliorer l'application." },
                     { title: "4. Base légale", text: "Le traitement repose sur l'exécution d'une mission d'intérêt public (réponse aux crises humanitaires) et votre consentement explicite. Vous pouvez retirer ce consentement à tout moment." },
                     { title: "5. Partage des données", text: "Les données peuvent être partagées avec les coordinateurs de votre organisation (via Aid Signal Pro) et les organismes partenaires accrédités (UNDP, ONG). Nous ne vendons jamais vos données à des tiers." },
                     { title: "6. Sécurité", text: "Toutes les données sont chiffrées en transit (TLS 1.3) et au repos (AES-256). Nos serveurs sont hébergés dans des infrastructures certifiées ISO 27001. Des audits de sécurité réguliers garantissent la protection de vos données." },
                     { title: "7. Conservation des données", text: "Les données opérationnelles sont conservées 5 ans. Les données d'authentification sont supprimées dans les 30 jours suivant la fermeture d'un compte." },
-                    { title: "8. Vos droits (RGPD)", text: "Vous disposez des droits d'accès, de rectification, d'effacement, de portabilité et d'opposition. Pour les exercer : privacy@neyo-analytics.com" },
-                    { title: "9. Contact & réclamations", text: "DPD : dpo@neyo-analytics.com — CNIL : www.cnil.fr" }
+                    { title: "8. Vos droits (RGPD)", text: "Vous disposez des droits d'accès, de rectification, d'effacement, de portabilité et d'opposition. Pour les exercer : contact@neyo-analytics.com" },
+                    { title: "9. Contact & réclamations", text: "DPD : contact@neyo-analytics.com — CNIL : www.cnil.fr" }
                 ]
             }
         },
@@ -1176,15 +1176,15 @@ export const translations = {
                     { title: "8. Applicable Law", text: "These terms are governed by French law. Any dispute falls under the exclusive jurisdiction of the competent courts." }
                 ],
                 privacy: [
-                    { title: "1. Data Controller", text: "Neyo Analytics is responsible for processing data collected through Aid Signal. Contact: privacy@neyo-analytics.com" },
+                    { title: "1. Data Controller", text: "Neyo Analytics is responsible for processing data collected through Aid Signal. Contact: contact@neyo-analytics.com" },
                     { title: "2. Data Collected", text: "We collect: GPS coordinates of reported incidents, timestamps and incident types, field assessment photos and videos, encrypted authentication credentials, and anonymized technical data." },
                     { title: "3. Purpose of Processing", text: "Data is used solely to coordinate humanitarian interventions, generate assessment reports, feed the Aid Signal Pro dashboard and improve the application." },
                     { title: "4. Legal Basis", text: "Processing is based on the performance of a public interest mission (humanitarian crisis response) and your explicit consent. You may withdraw this consent at any time." },
                     { title: "5. Data Sharing", text: "Data may be shared with coordinators within your organization (via Aid Signal Pro) and accredited partner organizations (UNDP, NGOs). We never sell your data to third parties." },
                     { title: "6. Security", text: "All data is encrypted in transit (TLS 1.3) and at rest (AES-256). Our servers are hosted in ISO 27001 certified facilities. Regular security audits ensure protection of your data." },
                     { title: "7. Data Retention", text: "Operational data is retained for 5 years. Authentication data is deleted within 30 days of account closure." },
-                    { title: "8. Your Rights (GDPR)", text: "You have the rights of access, rectification, erasure, portability and objection. To exercise these rights: privacy@neyo-analytics.com" },
-                    { title: "9. Contact & Complaints", text: "DPO: dpo@neyo-analytics.com — ICO/CNIL: www.cnil.fr" }
+                    { title: "8. Your Rights (GDPR)", text: "You have the rights of access, rectification, erasure, portability and objection. To exercise these rights: contact@neyo-analytics.com" },
+                    { title: "9. Contact & Complaints", text: "DPO: contact@neyo-analytics.com — ICO/CNIL: www.cnil.fr" }
                 ]
             }
         }

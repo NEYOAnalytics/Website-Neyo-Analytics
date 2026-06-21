@@ -177,6 +177,7 @@
     .footer-links {
         display: flex;
         gap: 20px;
+        align-items: center;
         justify-content: center;
         flex-wrap: wrap;
 
@@ -190,6 +191,24 @@
             &:hover {
                 opacity: 1;
                 color: #fa9100;
+            }
+
+            &.aid-signal-btn-footer {
+                background: #fa9100;
+                color: #ffffff !important;
+                padding: 8px 16px;
+                border-radius: 50px;
+                font-weight: 700;
+                font-size: 13px;
+                opacity: 1;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 10px rgba(250, 145, 0, 0.2);
+
+                &:hover {
+                    background: #e07d00;
+                    transform: translateY(-2px);
+                    box-shadow: 0 6px 15px rgba(250, 145, 0, 0.35);
+                }
             }
         }
     }

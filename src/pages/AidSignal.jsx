@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/translations';
@@ -7,6 +7,8 @@ import './AidSignal.scss';
 
 import appActual from '../assets/images/aid_signal_app_actual.jpg';
 import proActual from '../assets/images/aid_signal_pro_actual.jpg';
+import logoImg from '../assets/images/aid_signal_logo_user.jpg';
+import proLogoImg from '../assets/images/aid_signal_pro_logo.png';
 
 // ── Unsplash disaster/rescue photos (public, no auth needed) ──
 const DISASTER_PHOTOS = [
@@ -78,6 +80,8 @@ const AidSignal = () => {
   const data = t.aidSignal;
   const legal = data.legal;
 
+  const [isVideoExpanded, setIsVideoExpanded] = useState(false);
+
   const featureIcons = [<CloudOff />, <Map />, <Camera />];
 
   return (
@@ -115,7 +119,7 @@ const AidSignal = () => {
               <div className="iphone-mockup">
                 <div className="iphone-screen">
                   <video
-                    src="https://x2s1gymgomqevywy.public.blob.vercel-storage.com/ScreenRecording_05-06-2026%2017-23-08_1.MP4"
+                    src="https://x2s1gymgomqevywy.public.blob.vercel-storage.com/ScreenRecording_05-06-2026%2017-23-08_1.MP4?v=2"
                     autoPlay
                     loop
                     muted
@@ -125,6 +129,20 @@ const AidSignal = () => {
                 </div>
                 <div className="iphone-notch"></div>
               </div>
+
+              {/* Floating logo card */}
+              <motion.div
+                className="floating-app-logo"
+                animate={{ y: [0, -15, 0] }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  ease: "easeInOut"
+                }}
+              >
+                <img src={logoImg} alt="Aid Signal App Logo" />
+              </motion.div>
             </motion.div>
           </div>
         </div>
@@ -166,25 +184,62 @@ const AidSignal = () => {
 
           <div className="pro-header-block">
             <div className="label">DASHBOARD COORDINATEUR</div>
-            <h2>Aid Signal Pro</h2>
+            <motion.img
+              src={proLogoImg}
+              alt="Aid Signal Pro"
+              className="pro-logo-img"
+              animate={{ y: [0, -10, 0] }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut"
+              }}
+            />
           </div>
 
-          <div className="pro-main-content">
-            <div className="pro-visual">
-              <img src={proActual} alt="Pro Dashboard" />
-            </div>
-            <div className="pro-details">
+          <motion.div 
+            layout 
+            transition={{ duration: 1.0, ease: [0.4, 0, 0.2, 1] }}
+            className={`pro-main-content ${isVideoExpanded ? 'expanded' : ''}`}
+          >
+            <motion.div
+              layout
+              transition={{ duration: 1.0, ease: [0.4, 0, 0.2, 1] }}
+              className="pro-visual"
+              onClick={() => setIsVideoExpanded(!isVideoExpanded)}
+              style={{ cursor: isVideoExpanded ? 'zoom-out' : 'zoom-in' }}
+            >
+              <motion.video
+                layout
+                src="https://x2s1gymgomqevywy.public.blob.vercel-storage.com/video-final-pret-pour-audio.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+              />
+            </motion.div>
+            <motion.div 
+              layout
+              transition={{ duration: 1.0, ease: [0.4, 0, 0.2, 1] }}
+              className="pro-details"
+            >
               {t.proDashboard.features.map((feature, index) => (
-                <div key={index} className="pro-detail-item">
+                <motion.div 
+                  layout
+                  transition={{ duration: 1.0, ease: [0.4, 0, 0.2, 1] }}
+                  key={index} 
+                  className="pro-detail-item"
+                >
                   <div className="num-box">0{index + 1}</div>
                   <div className="detail-text">
                     <h4>{feature.split(' ')[0]}</h4>
                     <p>{feature}</p>
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
         <div className="grid-line horizontal bottom"></div>
       </section>

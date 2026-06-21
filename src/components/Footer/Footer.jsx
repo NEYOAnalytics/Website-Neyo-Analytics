@@ -1,5 +1,6 @@
 import React from 'react';
 import { Linkedin, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from '../../hooks/useTranslation';
 import logoNeyo from '../../assets/images/Group 40.png';
 import "./Footer.scss";
@@ -39,6 +40,7 @@ export default function Footer() {
                             <li><a href="#expertise-toggle">{t.ExpertisesTitle}</a></li>
                             <li><a href="#about">{t.aboutLink}</a></li>
                             <li><a href="#contact">{t.contactLink}</a></li>
+                            <li><Link to="/aid-signal" onClick={() => window.scrollTo(0, 0)}>Aid Signal</Link></li>
                         </ul>
                     </div>
 
@@ -60,6 +62,9 @@ export default function Footer() {
                 <div className="footer-bottom">
                     <p>&copy; {new Date().getFullYear()} Neyo Analytics. {t.rights}</p>
                     <div className="footer-links">
+                        <Link to="/aid-signal" className="aid-signal-btn-footer" onClick={() => window.scrollTo(0, 0)}>
+                            Aid Signal
+                        </Link>
                         <a href="#privacy">{t.privacy}</a>
                         <a href="#terms">{t.terms}</a>
                     </div>
