@@ -14,7 +14,7 @@ import proLogoImg from '../assets/images/aid_signal_pro_logo.png';
 const DISASTER_PHOTOS = [
   {
     url: 'https://x2s1gymgomqevywy.public.blob.vercel-storage.com/t%C3%A9l%C3%A9chargeeement.jpg',
-    caption: 'Séisme — Dévastation urbaine et effondrement de structures',
+    caption: 'Séisme — Dévastation urbaine et éffondrement de structures',
   },
   {
     url: 'https://x2s1gymgomqevywy.public.blob.vercel-storage.com/458.jpg',
@@ -198,8 +198,8 @@ const AidSignal = () => {
             />
           </div>
 
-          <motion.div 
-            layout 
+          <motion.div
+            layout
             transition={{ duration: 1.0, ease: [0.4, 0, 0.2, 1] }}
             className={`pro-main-content ${isVideoExpanded ? 'expanded' : ''}`}
           >
@@ -219,16 +219,16 @@ const AidSignal = () => {
                 playsInline
               />
             </motion.div>
-            <motion.div 
+            <motion.div
               layout
               transition={{ duration: 1.0, ease: [0.4, 0, 0.2, 1] }}
               className="pro-details"
             >
               {t.proDashboard.features.map((feature, index) => (
-                <motion.div 
+                <motion.div
                   layout
                   transition={{ duration: 1.0, ease: [0.4, 0, 0.2, 1] }}
-                  key={index} 
+                  key={index}
                   className="pro-detail-item"
                 >
                   <div className="num-box">0{index + 1}</div>
