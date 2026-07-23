@@ -1,5 +1,5 @@
 import { image } from 'framer-motion/client';
-import PowerBI_ROI from '../assets/PowerBI_ROI.pdf';
+const PowerBI_ROI = '/PowerBI_ROI.pdf';
 import Neyo_GIF from '../assets/images/Neyo_noBackground.gif';
 import Tableauimg from '../assets/images/Tableau.png';
 import PBIimg from '../assets/images/PowerBIimg.png';

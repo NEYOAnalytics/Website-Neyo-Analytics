@@ -1,0 +1,783 @@
+@import '../../styles/variables';
+
+// ─────────────────────────────────────────────
+// Quadrillage visible en mode JOUR (light) et NUIT (dark)
+// ─────────────────────────────────────────────
+body.light .aid-signal-page.pyner-style {
+  --grid-line-color: rgba(0, 21, 52, 0.08); // bleu marine très léger sur fond clair
+}
+
+body.dark .aid-signal-page.pyner-style {
+  --grid-line-color: rgba(255, 255, 255, 0.09); // blanc très léger sur fond sombre
+}
+
+.aid-signal-page.pyner-style {
+  --grid-line-color: rgba(0, 21, 52, 0.08); // fallback
+
+  min-height: 100vh;
+  background: var(--bg-main);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  transition: background 0.4s ease, color 0.4s ease;
+  padding-top: 100px;
+  overflow-x: hidden;
+  position: relative;
+  z-index: 10;
+
+  // ── Layout container ──────────────────────
+  .container {
+    width: 1500px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+    box-sizing: border-box;
+
+    @media (max-width: $mobile) {
+      padding: 0 20px;
+    }
+  }
+
+  .grid-container {
+    @extend .container;
+    padding: 0 60px;
+
+    @media (max-width: $mobile) {
+      padding: 0 20px;
+    }
+  }
+
+  // ── Grid lines 1px ──────────────────────
+  .grid-line {
+    position: absolute;
+    background: var(--grid-line-color);
+    z-index: 1;
+
+    &.horizontal {
+      height: 1px;
+      width: 100%;
+      left: 0;
+    }
+
+    &.vertical {
+      width: 1px;
+      height: 100%;
+      top: 0;
+    }
+
+    &.left {
+      left: 40px;
+
+      @media (max-width: $mobile) {
+        left: 20px;
+      }
+    }
+
+    &.right {
+      right: 40px;
+
+      @media (max-width: $mobile) {
+        right: 20px;
+      }
+    }
+
+    &.top {
+      top: 0;
+    }
+
+    &.bottom {
+      bottom: 0;
+    }
+  }
+
+  // ── HERO ─────────────────────────────────
+  .hero-reverted {
+    padding: 80px 0 140px;
+    position: relative;
+    z-index: 2;
+
+    // Quadrillage subtil visible mode jour ET nuit
+    background-image:
+      linear-gradient(var(--grid-line-color) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line-color) 1px, transparent 1px);
+    background-size: 50px 50px;
+
+    .hero-layout {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 80px;
+
+      @media (max-width: 968px) {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+    }
+
+    .hero-content {
+      flex: 1.2;
+      max-width: 700px;
+
+      .aid-signal-logo {
+        margin-bottom: 24px;
+
+        .text-row {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-size: 32px;
+          font-weight: 800;
+          letter-spacing: -1px;
+
+          .aid {
+            color: var(--text-main);
+          }
+
+          .pipe {
+            color: #Fa9100;
+            opacity: 0.5;
+          }
+
+          .signal {
+            color: #Fa9100;
+          }
+        }
+
+        .red-bar {
+          width: 60px;
+          height: 4px;
+          background: #Fa9100;
+          margin-top: 4px;
+        }
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 8px 16px;
+        background: rgba(250, 145, 0, 0.08);
+        border: 1px solid rgba(250, 145, 0, 0.25);
+        border-radius: 100px;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 3px;
+        color: #Fa9100;
+        margin-bottom: 30px;
+        backdrop-filter: blur(10px);
+      }
+
+      h1 {
+        font-size: clamp(40px, 6vw, 84px);
+        font-weight: 900;
+        line-height: 1.05;
+        margin-bottom: 24px;
+        letter-spacing: -3px;
+      }
+
+      p {
+        font-size: 20px;
+        line-height: 1.6;
+        opacity: 0.7;
+        margin-bottom: 48px;
+        max-width: 550px;
+      }
+
+      .btn-primary {
+        background: #Fa9100;
+        color: white;
+        border: none;
+        padding: 18px 40px;
+        border-radius: 50px;
+        font-size: 17px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: #e07d00;
+          transform: translateY(-3px);
+          box-shadow: 0 15px 30px rgba(250, 145, 0, 0.3);
+        }
+      }
+    }
+
+    .hero-image-actual {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+
+      .iphone-mockup {
+        position: relative;
+        width: 320px;
+        height: 650px;
+        background: #000;
+        border-radius: 50px;
+        border: 12px solid #1a1a1a;
+        box-shadow: 0 50px 100px rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+
+        &::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          border: 2px solid rgba(255, 255, 255, 0.1);
+          border-radius: 38px;
+          z-index: 10;
+          pointer-events: none;
+        }
+
+        .iphone-screen {
+          width: 100%;
+          height: 100%;
+
+          img,
+          video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .iphone-notch {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 150px;
+          height: 30px;
+          background: #1a1a1a;
+          border-bottom-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+          z-index: 20;
+        }
+      }
+    }
+  }
+
+  // ── Label technique ───────────────────────
+  .label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #Fa9100;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 20px;
+      height: 1px;
+      background: currentColor;
+    }
+  }
+
+  // ── Grid Features (bento) ────────────────
+  .grid-features {
+    position: relative;
+
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .bento-item {
+      padding: 60px;
+      border-right: 1px solid var(--grid-line-color);
+      border-bottom: 1px solid var(--grid-line-color);
+      position: relative;
+
+      &:nth-child(3n) {
+        border-right: none;
+      }
+
+      &.undp-context {
+        grid-column: span 2;
+
+        @media (max-width: 1024px) {
+          grid-column: span 1;
+        }
+
+        h2 {
+          font-size: 40px;
+          margin-bottom: 20px;
+        }
+
+        p {
+          font-size: 18px;
+          opacity: 0.7;
+          line-height: 1.6;
+          margin-bottom: 40px;
+        }
+      }
+
+      .feature-number {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        font-size: 14px;
+        font-weight: 900;
+        opacity: 0.08;
+      }
+
+      .icon-box {
+        color: #Fa9100;
+        margin-bottom: 30px;
+      }
+
+      h3 {
+        font-size: 24px;
+        margin-bottom: 16px;
+      }
+
+      p {
+        font-size: 16px;
+        opacity: 0.6;
+      }
+    }
+
+    .undp-tag {
+      display: inline-block;
+      padding: 6px 14px;
+      border: 1px solid rgba(250, 145, 0, 0.3);
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #Fa9100;
+    }
+  }
+
+  // ── Grid Nature (Crisis Selector) ─────────
+  .grid-nature {
+    position: relative;
+    padding: 100px 0;
+    
+    .nature-header-block {
+      padding: 0 60px 60px;
+      @media (max-width: $mobile) { padding: 0 20px 40px; }
+      h2 { font-size: 56px; @media (max-width: $mobile) { font-size: 32px; } }
+    }
+
+    .nature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 0 60px 60px;
+      @media (max-width: $mobile) { padding: 0 20px 40px; gap: 20px; }
+    }
+
+    .nature-card {
+      flex: 1;
+      min-width: 280px;
+      height: 180px;
+      border-radius: 12px;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      cursor: pointer;
+      border: 1px solid var(--grid-line-color);
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        .nature-overlay {
+          background: rgba(0, 0, 0, 0.3);
+        }
+        .nature-emoji {
+          transform: scale(1.2) rotate(10deg);
+        }
+      }
+
+      .nature-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5); // User requested 0.5 overlay
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.4s ease;
+      }
+
+      .nature-emoji {
+        font-size: 48px;
+        margin-bottom: 15px;
+        transition: transform 0.4s ease;
+      }
+
+      .nature-label {
+        position: absolute;
+        bottom: 20px;
+        color: white;
+        font-size: 14px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: center;
+        width: 100%;
+        padding: 0 10px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      }
+    }
+  }
+
+  // ── Grid Pro ──────────────────────────────
+  .grid-pro {
+    position: relative;
+    padding: 100px 0;
+
+    .pro-header-block {
+      padding-bottom: 60px;
+
+      h2 {
+        font-size: 56px;
+      }
+    }
+
+    .pro-main-content {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      border-top: 1px solid var(--grid-line-color);
+
+      @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .pro-visual {
+      padding: 60px;
+      border-right: 1px solid var(--grid-line-color);
+
+      img {
+        width: 100%;
+        border-radius: 12px;
+      }
+
+      @media (max-width: 1024px) {
+        border-right: none;
+        border-bottom: 1px solid var(--grid-line-color);
+      }
+    }
+
+    .pro-detail-item {
+      padding: 40px 60px;
+      border-bottom: 1px solid var(--grid-line-color);
+      display: flex;
+      gap: 30px;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .num-box {
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--grid-line-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 900;
+        flex-shrink: 0;
+        border-radius: 4px;
+      }
+
+      h4 {
+        font-size: 20px;
+        margin-bottom: 8px;
+      }
+
+      p {
+        font-size: 15px;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  // ── Grid Impact ───────────────────────────
+  .grid-impact {
+    position: relative;
+
+    .impact-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .impact-text {
+      padding: 80px 60px;
+      border-right: 1px solid var(--grid-line-color);
+
+      @media (max-width: 1024px) {
+        border-right: none;
+        border-bottom: 1px solid var(--grid-line-color);
+      }
+
+      h2 {
+        font-size: 40px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 18px;
+        opacity: 0.6;
+        line-height: 1.6;
+        margin-bottom: 40px;
+      }
+    }
+
+    .stats-inline {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-top: 10px;
+    }
+
+    .stat-inline-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 20px;
+      border: 1px solid var(--grid-line-color);
+      border-radius: 8px;
+      background: rgba(250, 145, 0, 0.03);
+
+      .stat-val {
+        font-size: 22px;
+        font-weight: 900;
+        color: #Fa9100;
+        min-width: 90px;
+      }
+
+      .stat-label {
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        opacity: 0.5;
+      }
+    }
+
+    .carousel-column {
+      border-left: 1px solid var(--grid-line-color);
+      overflow: hidden;
+      height: 600px;
+      position: relative;
+
+      @media (max-width: 1024px) {
+        border-left: none;
+        border-top: 1px solid var(--grid-line-color);
+        height: 400px;
+      }
+    }
+  }
+
+  // ── Disaster Carousel ─────────────────────
+  .disaster-carousel {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    // Fade top & bottom
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 80px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    &::before {
+      top: 0;
+      background: linear-gradient(to bottom, var(--bg-main), transparent);
+    }
+
+    &::after {
+      bottom: 0;
+      background: linear-gradient(to top, var(--bg-main), transparent);
+    }
+
+    .carousel-track {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 12px;
+      animation: scrollUp 30s linear infinite;
+
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+
+    .carousel-card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 1px solid var(--grid-line-color);
+
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s ease;
+      }
+
+      &:hover img {
+        transform: scale(1.04);
+      }
+
+      .carousel-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 10px 14px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+        color: white;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+      }
+    }
+  }
+
+  @keyframes scrollUp {
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+
+  // ── Legal sections ────────────────────────
+  .legal-section {
+    position: relative;
+    padding: 0;
+
+    &.privacy-section {
+      .legal-header {
+        border-top: 2px solid #Fa9100;
+      }
+    }
+
+    .legal-content {
+      padding: 80px 0;
+    }
+
+    .legal-header {
+      padding: 60px 60px 40px;
+      border-bottom: 1px solid var(--grid-line-color);
+
+      @media (max-width: $mobile) {
+        padding: 40px 20px 30px;
+      }
+    }
+
+    .legal-title {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 40px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+
+      svg {
+        color: #Fa9100;
+        flex-shrink: 0;
+      }
+    }
+
+    .legal-date {
+      font-size: 13px;
+      opacity: 0.4;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .legal-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .legal-article {
+      padding: 40px 60px;
+      border-right: 1px solid var(--grid-line-color);
+      border-bottom: 1px solid var(--grid-line-color);
+
+      @media (max-width: $mobile) {
+        padding: 30px 20px;
+      }
+
+      // Alterner : col paire sans bordure droite
+      &:nth-child(2n) {
+        border-right: none;
+      }
+
+      h3 {
+        font-size: 15px;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+        margin-bottom: 14px;
+        color: #Fa9100;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 1.7;
+        opacity: 0.7;
+        margin-bottom: 10px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      ul {
+        margin: 10px 0 10px 20px;
+
+        li {
+          font-size: 14px;
+          line-height: 1.7;
+          opacity: 0.7;
+          margin-bottom: 6px;
+
+          strong {
+            opacity: 1;
+            color: var(--text-main);
+          }
+        }
+      }
+
+      strong {
+        font-weight: 700;
+      }
+    }
+  }
+}
