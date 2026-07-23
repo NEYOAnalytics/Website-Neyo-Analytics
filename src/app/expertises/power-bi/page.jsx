@@ -4,8 +4,8 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import styles from '../expertises.module.scss';
 
 export const metadata = {
-  title: 'Expertise Power BI & Data Viz Nearshore | NEYO Analytics',
-  description: 'Conception de dashboards Power BI, DAX complexe, modélisation et Microsoft Fabric. Consultants experts basés au Maroc.',
+  title: 'Expertise Power BI & Data Viz',
+  description: 'Conception de dashboards Power BI, DAX complexe, modélisation et Microsoft Fabric avec nos experts au Maroc.',
 };
 
 export default function PowerBiExpertisePage() {

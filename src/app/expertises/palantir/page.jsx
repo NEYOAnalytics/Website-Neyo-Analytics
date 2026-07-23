@@ -4,8 +4,8 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import styles from '../expertises.module.scss';
 
 export const metadata = {
-  title: 'Consultants Palantir Foundry & AIP Nearshore | NEYO Analytics',
-  description: 'Expertise avancée Palantir Foundry, Ontologie et AIP (Artificial Intelligence Platform). Consultants certifiés basés au Maroc.',
+  title: 'Expertise Palantir Foundry & AIP',
+  description: 'Expertise de niche Palantir Foundry, Ontologie et AIP (Artificial Intelligence Platform) avec nos consultants au Maroc.',
 };
 
 export default function PalantirExpertisePage() {

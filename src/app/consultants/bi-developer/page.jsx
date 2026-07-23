@@ -4,8 +4,8 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import styles from '../consultants.module.scss';
 
 export const metadata = {
-  title: 'Développeur BI & Power BI Nearshore Maroc | NEYO Analytics',
-  description: 'Recrutez un Consultant / Développeur Power BI senior basés au Maroc (DAX, Modélisation, Fabric). Francophone, sous 1 à 2 semaines.',
+  title: 'Développeur Power BI Nearshore',
+  description: 'Recrutez un Consultant Développeur Power BI senior au Maroc (DAX, Modélisation, Fabric) en régie sous 1 à 2 semaines.',
 };
 
 export default function BiDeveloperPage() {

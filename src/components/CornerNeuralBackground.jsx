@@ -32,13 +32,21 @@ const CornerNeuralBackground = () => {
       }
 
       reset() {
-        this.originX = width - Math.random() * Math.min(width, 650);
-        this.originY = Math.random() * Math.min(height, 550);
+        // Place 70% of particles on right side/corner, 30% on left side/corner
+        const isRightSide = Math.random() > 0.3;
+        if (isRightSide) {
+          // Right edge margin (outer 300px)
+          this.originX = width - Math.random() * Math.min(width * 0.25, 320);
+        } else {
+          // Left edge margin (outer 300px)
+          this.originX = Math.random() * Math.min(width * 0.25, 320);
+        }
+        this.originY = Math.random() * Math.min(height, 750);
         this.x = this.originX;
         this.y = this.originY;
         this.angle = Math.random() * Math.PI * 2;
         this.speed = 0.002 + Math.random() * 0.003;
-        this.radius = 10 + Math.random() * 25;
+        this.radius = 8 + Math.random() * 18;
         this.size = Math.random() * 2 + 1;
       }
 
@@ -49,9 +57,17 @@ const CornerNeuralBackground = () => {
       }
 
       draw() {
+        // Calculate center fade: keep particles subtle if near center text
+        const distFromCenter = Math.abs(this.x - width / 2);
+        const centerThreshold = Math.min(width * 0.3, 350);
+        let alphaMultiplier = 1.0;
+        if (distFromCenter < centerThreshold) {
+          alphaMultiplier = Math.max(0.1, distFromCenter / centerThreshold);
+        }
+
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${colorBase}, 0.6)`;
+        ctx.fillStyle = `rgba(${colorBase}, ${0.5 * alphaMultiplier})`;
         ctx.fill();
       }
     }
@@ -78,21 +94,31 @@ const CornerNeuralBackground = () => {
           const dist = Math.sqrt(dx * dx + dy * dy);
 
           if (dist < connectionDistance) {
+            // Fade out connections that cross through center
+            const midX = (p.x + p2.x) / 2;
+            const distFromCenter = Math.abs(midX - width / 2);
+            const centerThreshold = Math.min(width * 0.3, 350);
+            let alphaMult = 1.0;
+            if (distFromCenter < centerThreshold) {
+              alphaMult = Math.max(0.08, distFromCenter / centerThreshold);
+            }
+
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(${colorBase}, ${0.7 * (1 - dist / connectionDistance)})`;
-            ctx.lineWidth = 0.8;
+            ctx.strokeStyle = `rgba(${colorBase}, ${0.55 * (1 - dist / connectionDistance) * alphaMult})`;
+            ctx.lineWidth = 0.7;
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p2.x, p2.y);
             ctx.stroke();
           }
         }
 
+        // Corner focus lines
         const dxC = p.x - width;
         const dyC = p.y - 0;
         const distC = Math.sqrt(dxC * dxC + dyC * dyC);
-        if (distC < 450) {
+        if (distC < 400 && p.x > width * 0.6) {
           ctx.beginPath();
-          ctx.strokeStyle = `rgba(${colorBase}, ${0.4 * (1 - distC / 450)})`;
+          ctx.strokeStyle = `rgba(${colorBase}, ${0.35 * (1 - distC / 400)})`;
           ctx.lineWidth = 0.5;
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(width, 0);

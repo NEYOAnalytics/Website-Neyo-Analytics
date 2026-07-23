@@ -4,8 +4,8 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import styles from '../consultants.module.scss';
 
 export const metadata = {
-  title: 'Consultant Data Scientist & IA Nearshore Maroc | NEYO Analytics',
-  description: 'Recrutez un Consultant Data Scientist au Maroc pour vos modèles de Machine Learning, LLMs, et solutions IA avancées.',
+  title: 'Data Scientist & IA Nearshore',
+  description: 'Recrutez un Consultant Data Scientist au Maroc pour vos modèles de Machine Learning, LLMs et solutions d\'IA avancées.',
 };
 
 export default function DataScientistPage() {

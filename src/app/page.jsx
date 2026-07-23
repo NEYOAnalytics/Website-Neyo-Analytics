@@ -112,7 +112,7 @@ export default function HomePage() {
               <h3>{exp.title}</h3>
               <p>{exp.desc}</p>
               <Link href={exp.link} className={styles.expLink}>
-                <span>{c.readMore}</span>
+                <span>{language === 'fr' ? `Voir l'expertise ${exp.title.split(' ')[0]}` : `Explore ${exp.title.split(' ')[0]}`}</span>
                 <ArrowRight size={14} />
               </Link>
             </div>

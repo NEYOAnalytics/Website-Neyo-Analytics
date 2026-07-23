@@ -4,8 +4,8 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import styles from '../expertises.module.scss';
 
 export const metadata = {
-  title: 'Expertise IA Générative & Data Science | NEYO Analytics',
-  description: 'Projets d\'IA générative (LLM, RAG), Machine Learning et Data Science industrielle avec nos experts Nearshore au Maroc.',
+  title: 'Expertise IA Générative & Data Science',
+  description: 'Projets d\'IA générative (LLM, RAG), Machine Learning et Data Science avec nos experts au Maroc.',
 };
 
 export default function IaDataScienceExpertisePage() {

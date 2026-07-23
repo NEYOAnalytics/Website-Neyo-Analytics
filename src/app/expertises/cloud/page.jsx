@@ -4,8 +4,8 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import styles from '../expertises.module.scss';
 
 export const metadata = {
-  title: 'Expertise Cloud Data & Fabric | NEYO Analytics',
-  description: 'Infrastructures Cloud Data Azure, AWS, GCP & Microsoft Fabric. Consultants experts cloud basés au Maroc.',
+  title: 'Expertise Cloud Data & Lakehouse',
+  description: 'Infrastructures Cloud Data Azure, AWS, GCP et Microsoft Fabric. Consultants experts cloud basés au Maroc.',
 };
 
 export default function CloudExpertisePage() {

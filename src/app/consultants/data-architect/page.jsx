@@ -4,8 +4,8 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import styles from '../consultants.module.scss';
 
 export const metadata = {
-  title: 'Architecte Data Cloud Nearshore Maroc | NEYO Analytics',
-  description: 'Architectes Data Cloud seniors basés au Maroc (Azure, AWS, GCP, Databricks, Data Mesh). Conseils & gouvernance.',
+  title: 'Architecte Data Cloud Nearshore',
+  description: 'Architectes Data Cloud seniors au Maroc (Azure, AWS, GCP, Databricks, Data Mesh) en régie sous 1 à 2 semaines.',
 };
 
 export default function DataArchitectPage() {

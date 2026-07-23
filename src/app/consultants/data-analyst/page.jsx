@@ -4,8 +4,8 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import styles from '../consultants.module.scss';
 
 export const metadata = {
-  title: 'Consultant Data Analyst Nearshore Maroc | NEYO Analytics',
-  description: 'Trouvez un Consultant Data Analyst senior au Maroc pour vos analyses métriques, SQL, Power BI & reporting décisionnel.',
+  title: 'Data Analyst Senior Nearshore',
+  description: 'Consultant Data Analyst senior au Maroc pour vos analyses métier, SQL, Power BI et reporting décisionnel.',
 };
 
 export default function DataAnalystPage() {

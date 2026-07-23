@@ -46,7 +46,7 @@ const Footer = () => {
             <h4 className="footer-title">{isFr ? 'Profils Consultants' : 'Consultant Profiles'}</h4>
             <ul className="footer-links">
               <li><Link href="/consultants/data-engineer">{isFr ? 'Consultant Data Engineer' : 'Data Engineer Consultant'}</Link></li>
-              <li><Link href="/consultants/power-bi">{isFr ? 'Consultant Power BI' : 'Power BI Consultant'}</Link></li>
+              <li><Link href="/consultants/bi-developer">{isFr ? 'Consultant Power BI & BI Dev' : 'Power BI & BI Developer'}</Link></li>
               <li><Link href="/consultants/data-analyst">{isFr ? 'Consultant Data Analyst' : 'Data Analyst Consultant'}</Link></li>
               <li><Link href="/consultants/data-scientist">{isFr ? 'Consultant Data Scientist' : 'Data Scientist Consultant'}</Link></li>
               <li><Link href="/consultants/bi-developer">{isFr ? 'Développeur BI' : 'BI Developer'}</Link></li>

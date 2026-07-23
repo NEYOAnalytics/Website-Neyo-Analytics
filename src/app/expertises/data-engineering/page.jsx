@@ -4,8 +4,8 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import styles from '../expertises.module.scss';
 
 export const metadata = {
-  title: 'Expertise Data Engineering & Pipelines | NEYO Analytics',
-  description: 'Architectures Modern Data Stack : Databricks, Snowflake, Airflow, dbt, Spark. Consultants Data Engineering Nearshore.',
+  title: 'Expertise Data Engineering',
+  description: 'Architectures Modern Data Stack : Databricks, Snowflake, Airflow, dbt et PySpark avec nos consultants Data Engineering.',
 };
 
 export default function DataEngineeringExpertisePage() {

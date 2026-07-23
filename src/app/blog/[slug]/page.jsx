@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useParams, notFound } from 'next/navigation';
 import { useLanguage } from '../../../components/LanguageProviderClient';
 import { blogPosts } from '../../../data/blogPosts';
+import SocialShare from '../../../components/SocialShare/SocialShare';
 import { ArrowLeft, Calendar, User, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
 import styles from '../../consultants/consultants.module.scss';
 
@@ -33,7 +34,7 @@ export default function BlogPostPage() {
     <div className={styles.container}>
       <Link href="/blog" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: '#Fa9100', textDecoration: 'none', marginBottom: '2rem', fontWeight: '600' }}>
         <ArrowLeft size={16} />
-        <span>{isFr ? 'Retour aux articles du blog' : 'Back to Blog Articles'}</span>
+        <span>{isFr ? 'Retour aux articles du blog NEYO' : 'Back to NEYO Blog Articles'}</span>
       </Link>
 
       <article style={{ maxWidth: '840px', margin: '0 auto', color: 'var(--text-secondary, #cbd5e1)', lineHeight: '1.75' }}>
@@ -50,12 +51,12 @@ export default function BlogPostPage() {
 
         {/* Intro */}
         {intro && (
-          <div style={{ fontSize: '1.1rem', color: 'var(--text-main, #ffffff)', lineHeight: '1.8', marginBottom: '2.5rem', background: 'var(--card-bg, rgba(255, 255, 255, 0.03))', borderLeft: '4px solid #Fa9100', padding: '1.25rem 1.5rem', borderRadius: '0 12px 12px 0' }}>
+          <p style={{ fontSize: '1.15rem', color: '#f8fafc', fontWeight: '500', marginBottom: '2rem', lineHeight: '1.8' }}>
             {intro}
-          </div>
+          </p>
         )}
 
-        {/* Stats Box if available */}
+        {/* Chiffres clés / Encart résumé si disponible */}
         {statsBox && Array.isArray(statsBox) && statsBox.length > 0 && (
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
             {statsBox.map((st, idx) => (
@@ -98,6 +99,9 @@ export default function BlogPostPage() {
           </div>
         ))}
 
+        {/* Social Share Bar */}
+        <SocialShare title={title} />
+
         {/* Keywords tags footer */}
         {post.keywords && (
           <div style={{ marginTop: '3rem', paddingTop: '1.5rem', borderTop: '1px solid var(--card-border, rgba(255, 255, 255, 0.08))' }}>
@@ -123,7 +127,7 @@ export default function BlogPostPage() {
 
         {/* CTA Box */}
         <section className={styles.ctaBox} style={{ marginTop: '4rem' }}>
-          <h2>{isFr ? 'Prêt à concrétiser votre projet Data ?' : 'Ready to Launch Your Data Project?'}</h2>
+          <h2>{isFr ? 'Prêt à concrétiser votre projet Data & IA ?' : 'Ready to Launch Your Data & AI Project?'}</h2>
           <p>{isFr ? 'Discutez directement avec un expert NEYO Analytics pour qualifier votre besoin et estimer votre ROI Nearshore.' : 'Speak directly with a NEYO Analytics expert to scope your requirements and estimate your Nearshore ROI.'}</p>
           <Link href="/contact" className={styles.btnPrimary}>
             <span>{isFr ? 'Parler à un expert NEYO' : 'Talk to a NEYO Expert'}</span>

@@ -4,8 +4,8 @@ import { ArrowRight, CheckCircle2, Database, ShieldCheck, Zap } from 'lucide-rea
 import styles from '../consultants.module.scss';
 
 export const metadata = {
-  title: 'Consultant Data Engineer Nearshore Maroc | NEYO Analytics',
-  description: 'Recrutez un Consultant Data Engineer senior basés au Maroc (Databricks, Snowflake, Airflow, Spark). Francophone, opérationnel sous 1 à 2 semaines.',
+  title: 'Data Engineer Senior Nearshore',
+  description: 'Recrutez un Consultant Data Engineer senior au Maroc (Databricks, Snowflake, Airflow, Spark) en régie sous 1 à 2 semaines.',
 };
 
 export default function DataEngineerPage() {

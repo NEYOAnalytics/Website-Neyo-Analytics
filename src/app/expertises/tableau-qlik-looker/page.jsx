@@ -4,8 +4,8 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import styles from '../expertises.module.scss';
 
 export const metadata = {
-  title: 'Expertise Tableau, Qlik & Looker | NEYO Analytics',
-  description: 'Consultants experts Tableau Software, Qlik Sense et Looker en régie Nearshore Maroc.',
+  title: 'Expertise Tableau, Qlik & Looker',
+  description: 'Consultants experts Tableau Software, Qlik Sense et Looker en régie au Maroc.',
 };
 
 export default function TableauQlikLookerExpertisePage() {
