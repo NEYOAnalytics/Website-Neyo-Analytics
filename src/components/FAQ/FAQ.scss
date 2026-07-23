@@ -1,0 +1,99 @@
+.faq-section {
+    padding: 6rem 2rem;
+    background-color: transparent;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 4rem;
+        font-size: 2.5rem;
+        color: var(--text-main);
+    }
+
+    .faq-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: start;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .faq-item {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--text-main);
+        border-radius: 12px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+
+        &:hover {
+            border-color: rgba(250, 145, 0, 0.5);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        &.active {
+            border-color: #Fa9100;
+            background: rgba(255, 255, 255, 0.05);
+
+            .faq-question {
+                color: #Fa9100;
+
+                .icon {
+                    transform: rotate(180deg);
+                    color: #Fa9100;
+                }
+            }
+
+            .faq-answer {
+                max-height: 200px;
+                /* Adjust based on content */
+                padding: 0 1.5rem 1.5rem 1.5rem;
+                opacity: 1;
+            }
+        }
+    }
+
+    .faq-question {
+        padding: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 1rem;
+        color: var(--text-main);
+        transition: color 0.3s ease;
+
+        .icon {
+            transition: transform 0.3s ease, color 0.3s ease;
+            font-size: 1.2rem;
+            color: var(--text-main);
+        }
+    }
+
+    .faq-answer {
+        max-height: 0;
+        opacity: 0;
+        text-align: justify;
+        overflow: hidden;
+        padding: 0 1.5rem;
+        color: var(--text-main);
+        line-height: 1.6;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+        .pdf-download-link {
+            display: inline-block;
+            color: #Fa9100;
+            text-decoration: underline;
+            font-weight: 600;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
+}

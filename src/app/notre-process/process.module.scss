@@ -1,0 +1,166 @@
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem 1.5rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+
+  .badge {
+    display: inline-block;
+    background: rgba(250, 145, 0, 0.1);
+    color: #Fa9100;
+    border: 1px solid rgba(250, 145, 0, 0.3);
+    padding: 0.35rem 1.1rem;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--text-main, white);
+    margin-bottom: 1rem;
+  }
+
+  .lead {
+    font-size: 1.1rem;
+    color: var(--text-secondary, #cbd5e1);
+    max-width: 780px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.stepCard {
+  background: var(--card-bg, rgba(255, 255, 255, 0.03));
+  border: 1px solid var(--card-border, rgba(255, 255, 255, 0.08));
+  border-radius: 20px;
+  padding: 2.25rem;
+
+  .stepHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+
+    .num {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #Fa9100;
+      opacity: 0.8;
+    }
+
+    .icon {
+      color: #Fa9100;
+    }
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-main, white);
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    color: var(--text-muted, #94a3b8);
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+}
+
+.faqSection {
+  padding: 3rem 0;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-main, white);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .faqList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .faqItem {
+    background: var(--card-bg, rgba(255, 255, 255, 0.03));
+    border: 1px solid var(--card-border, rgba(255, 255, 255, 0.08));
+    border-radius: 14px;
+    padding: 1.5rem;
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #Fa9100;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: var(--text-muted, #94a3b8);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+  }
+}
+
+.ctaBox {
+  background: var(--card-bg);
+  border: 2px solid rgba(250, 145, 0, 0.4);
+  border-radius: 24px;
+  padding: 3.5rem 2rem;
+  text-align: center;
+  margin-top: 3rem;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .btnPrimary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #Fa9100;
+    color: var(--text-main, white);
+    text-decoration: none;
+    padding: 0.85rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    border: 2px solid #Fa9100;
+
+    &:hover {
+      background-color: var(--text-main, white);
+      color: #Fa9100;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .stepsGrid { grid-template-columns: 1fr; }
+}
