@@ -144,6 +144,92 @@ export const siteContent = {
       h1: "Nos Domaines d'Expertise Data & IA",
       lead: "De la modélisation décisionnelle aux architectures cloud modernes et à l'IA générative.",
     },
+    expertisesDetails: {
+      ia: {
+        badge: "IA & Algorithmes",
+        h1: "Expertise IA Générative & Data Science",
+        lead: "Intégrez l'intelligence artificielle au cœur de vos produits métiers et automatisez vos traitements complexes.",
+        sectionTitle: "Solutions IA",
+        items: [
+          "RAG (Retrieval-Augmented Generation) d'entreprise",
+          "Fine-tuning & Déploiement de LLM",
+          "Algorithmes prédictifs & Maintenance préventive",
+          "MLOps & Monitoring des performances"
+        ],
+        ctaTitle: "Déployer vos cas d'usage IA avec NEYO",
+        ctaBtn: "Parler à un Data Scientist"
+      },
+      cloud: {
+        badge: "Cloud & Infrastructures",
+        h1: "Expertise Cloud Data & Microsoft Fabric",
+        lead: "Modernisation de vos plateformes de données sur les environnements Cloud Azure, AWS et GCP.",
+        sectionTitle: "Services Cloud",
+        items: [
+          "Microsoft Fabric (OneLake, Synapse)",
+          "Migration Cloud Data & Refactoring",
+          "Azure Data Factory / Synapse / ADLS",
+          "Security & FinOps Cloud Data"
+        ],
+        ctaTitle: "Moderniser votre infrastructure Cloud",
+        ctaBtn: "Demander un diagnostic Cloud"
+      },
+      dataEng: {
+        badge: "Data Engineering",
+        h1: "Expertise Data Engineering & Modern Data Stack",
+        lead: "Construisez des architectures de données modulaires, robustes et hautement automatisées pour alimenter vos systèmes analytiques et IA.",
+        sectionTitle: "Domaines clés",
+        items: [
+          "Ingestion & Processing Spark / Databricks",
+          "Entrepôts de données Cloud (Snowflake, BigQuery)",
+          "Transformations dbt & Data Quality",
+          "Orchestration de flux (Airflow, Dagster, Prefect)"
+        ],
+        ctaTitle: "Besoin d'un accompagnement en Data Engineering ?",
+        ctaBtn: "Discuter avec un Data Engineer Senior"
+      },
+      palantir: {
+        badge: "Palantir Foundry",
+        h1: "Expertise Palantir Foundry & AIP",
+        lead: "Tirez parti de la plateforme Palantir pour créer des jumeaux numériques, modéliser votre ontologie métier et déployer l'AIP.",
+        sectionTitle: "Nos domaines d'intervention",
+        items: [
+          "Ontology Modeling & Intégration de données",
+          "Création de Workflows opérationnels (Slate, Workshop)",
+          "Déploiement Artificial Intelligence Platform (AIP)",
+          "Sécurité, Gouvernance & Contrôle d'accès"
+        ],
+        ctaTitle: "Accélérer vos projets Palantir",
+        ctaBtn: "Échanger avec un expert Foundry"
+      },
+      powerbi: {
+        badge: "Business Intelligence",
+        h1: "Expertise Power BI & Data Viz",
+        lead: "Transformez vos données brutes en tableaux de bord interactifs et sécurisés pour piloter vos performances avec Microsoft Power BI.",
+        sectionTitle: "Notre savoir-faire",
+        items: [
+          "Modélisation DAX avancée & Optimisation",
+          "Conception UX/UI de Dashboards exécutifs",
+          "Sécurité RLS/CLS & Gouvernance Power BI Service",
+          "Intégration Power BI Premium / Fabric"
+        ],
+        ctaTitle: "Valoriser vos données avec Power BI",
+        ctaBtn: "Parler à un expert Power BI"
+      },
+      tableau: {
+        badge: "Data Visualization",
+        h1: "Expertise Tableau, Qlik & Looker",
+        lead: "Conception et déploiement de solutions analytiques sur-mesure pour démocratiser l'accès à la donnée.",
+        sectionTitle: "Technologies maîtrisées",
+        items: [
+          "Tableau Software (Prep, Desktop, Server)",
+          "Qlik Sense & QlikView",
+          "Looker & LookML (GCP)",
+          "Data Storytelling & UX/UI Analytique"
+        ],
+        ctaTitle: "Déployer votre plateforme Data Viz",
+        ctaBtn: "Contacter nos équipes BI"
+      }
+    },
     process: {
       badge: "Méthodologie Opérationnelle",
       h1: "Notre Processus d'Accompagnement en 4 Étapes",
@@ -310,6 +396,92 @@ export const siteContent = {
       badge: "Technical Know-How",
       h1: "Our Data & AI Expertise Domains",
       lead: "From BI modeling to modern cloud architectures and generative AI.",
+    },
+    expertisesDetails: {
+      ia: {
+        badge: "AI & Algorithms",
+        h1: "Generative AI & Data Science Expertise",
+        lead: "Integrate artificial intelligence into your business products and automate complex processing.",
+        sectionTitle: "AI Solutions",
+        items: [
+          "Enterprise RAG (Retrieval-Augmented Generation)",
+          "LLM Fine-tuning & Deployment",
+          "Predictive Algorithms & Preventive Maintenance",
+          "MLOps & Performance Monitoring"
+        ],
+        ctaTitle: "Deploy Your AI Use Cases with NEYO",
+        ctaBtn: "Talk to a Data Scientist"
+      },
+      cloud: {
+        badge: "Cloud & Infrastructure",
+        h1: "Cloud Data & Microsoft Fabric Expertise",
+        lead: "Modernization of your data platforms across Azure, AWS, and GCP cloud environments.",
+        sectionTitle: "Cloud Services",
+        items: [
+          "Microsoft Fabric (OneLake, Synapse)",
+          "Cloud Data Migration & Refactoring",
+          "Azure Data Factory / Synapse / ADLS",
+          "Cloud Data Security & FinOps"
+        ],
+        ctaTitle: "Modernize Your Cloud Infrastructure",
+        ctaBtn: "Request a Cloud Assessment"
+      },
+      dataEng: {
+        badge: "Data Engineering",
+        h1: "Data Engineering & Modern Data Stack",
+        lead: "Build modular, robust, and highly automated data architectures to power your analytics and AI systems.",
+        sectionTitle: "Key Domains",
+        items: [
+          "Spark / Databricks Ingestion & Processing",
+          "Cloud Data Warehousing (Snowflake, BigQuery)",
+          "dbt Transformations & Data Quality",
+          "Workflow Orchestration (Airflow, Dagster, Prefect)"
+        ],
+        ctaTitle: "Need Data Engineering Support?",
+        ctaBtn: "Discuss with a Senior Data Engineer"
+      },
+      palantir: {
+        badge: "Palantir Foundry",
+        h1: "Palantir Foundry & AIP Expertise",
+        lead: "Leverage the Palantir platform to build digital twins, model your business ontology, and deploy AIP.",
+        sectionTitle: "Our Intervention Areas",
+        items: [
+          "Ontology Modeling & Data Integration",
+          "Operational Workflow Creation (Slate, Workshop)",
+          "Artificial Intelligence Platform (AIP) Deployment",
+          "Security, Governance & Access Control"
+        ],
+        ctaTitle: "Accelerate Your Palantir Projects",
+        ctaBtn: "Exchange with a Foundry Expert"
+      },
+      powerbi: {
+        badge: "Business Intelligence",
+        h1: "Power BI & Data Viz Expertise",
+        lead: "Transform your raw data into interactive, secure dashboards to drive your performance with Microsoft Power BI.",
+        sectionTitle: "Our Know-How",
+        items: [
+          "Advanced DAX Modeling & Optimization",
+          "Executive Dashboard UX/UI Design",
+          "RLS/CLS Security & Power BI Service Governance",
+          "Power BI Premium / Fabric Integration"
+        ],
+        ctaTitle: "Unlock Your Data with Power BI",
+        ctaBtn: "Talk to a Power BI Expert"
+      },
+      tableau: {
+        badge: "Data Visualization",
+        h1: "Tableau, Qlik & Looker Expertise",
+        lead: "Design and deployment of custom analytical solutions to democratize data access.",
+        sectionTitle: "Mastered Technologies",
+        items: [
+          "Tableau Software (Prep, Desktop, Server)",
+          "Qlik Sense & QlikView",
+          "Looker & LookML (GCP)",
+          "Data Storytelling & Analytical UX/UI"
+        ],
+        ctaTitle: "Deploy Your Data Viz Platform",
+        ctaBtn: "Contact Our BI Teams"
+      }
     },
     process: {
       badge: "Operational Methodology",

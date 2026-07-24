@@ -68,7 +68,7 @@ const CornerNeuralBackground = () => {
       ctx.clearRect(0, 0, width, height);
 
       const isMobile = window.innerWidth < 768;
-      const opacityMultiplier = (theme === 'light' && isMobile) ? 0.25 : 1;
+      const opacityMultiplier = theme === 'light' ? (isMobile ? 0.15 : 0.20) : 1;
 
       particles.forEach((p, index) => {
         p.update();
