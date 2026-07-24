@@ -2,7 +2,7 @@ import React from 'react';
 import ExpertiseClientPage from '../ExpertiseClientPage';
 
 export const metadata = {
-  title: 'Expertise Tableau, Qlik & Looker | NEYO Analytics',
+  title: 'Expertise Tableau, Qlik & Looker',
   description: 'Conception de solutions analytiques sur-mesure sur Tableau, Qlik Sense et Looker avec nos experts Nearshore.',
 };
 

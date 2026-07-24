@@ -1,7 +1,7 @@
 import ExpertiseClientPage from '../ExpertiseClientPage';
 
 export const metadata = {
-  title: 'Expertise Cloud Data & Fabric | NEYO Analytics',
+  title: 'Expertise Cloud Data & Fabric',
   description: 'Infrastructures Cloud Data Azure, AWS, GCP & Microsoft Fabric. Consultants experts cloud basés au Maroc.',
 };
 

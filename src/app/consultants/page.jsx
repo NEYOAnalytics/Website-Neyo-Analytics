@@ -22,11 +22,18 @@ export default function ConsultantsHubPage() {
       stack: ['PySpark', 'Databricks', 'Snowflake', 'Airflow', 'SQL'],
     },
     {
-      slug: 'bi-developer',
+      slug: 'power-bi',
       title: language === 'fr' ? 'Consultant Power BI' : 'Power BI Consultant',
       icon: <BarChart2 size={28} />,
-      desc: language === 'fr' ? 'Expert en modélisation DAX, conception de tableaux de bord décisionnels et gouvernance RLS.' : 'Expert in DAX modeling, executive dashboard design, and RLS governance.',
+      desc: language === 'fr' ? 'Expert en modélisation DAX, conception de tableaux de bord décisionnels et gouvernance RLS. Tarifs 30 à 40% inférieurs à un consultant en France.' : 'Expert in DAX modeling, executive dashboard design, and RLS governance. Rates 30 to 40% lower than France-based consultants.',
       stack: ['Power BI', 'DAX', 'Power Query', 'Fabric', 'Direct Lake'],
+    },
+    {
+      slug: 'bi-developer',
+      title: language === 'fr' ? 'Développeur BI (Tableau, Qlik, Looker)' : 'BI Developer (Tableau, Qlik, Looker)',
+      icon: <Code size={28} />,
+      desc: language === 'fr' ? 'Développement de solutions de reporting multi-outils (Tableau, Qlik, Looker, SSRS). Idéal pour les migrations d\'un outil BI vers un autre.' : 'Multi-tool reporting solution development (Tableau, Qlik, Looker, SSRS). Ideal for BI tool migrations.',
+      stack: ['Tableau', 'Qlik', 'Looker', 'SQL Server', 'ETL'],
     },
     {
       slug: 'data-analyst',
@@ -41,13 +48,6 @@ export default function ConsultantsHubPage() {
       icon: <Brain size={28} />,
       desc: language === 'fr' ? 'Modélisation prédictive, Machine Learning, NLP et intégration de modèles LLMs métier.' : 'Predictive modeling, Machine Learning, NLP, and enterprise LLM model integration.',
       stack: ['Python', 'Scikit-Learn', 'PyTorch', 'MLflow', 'LLMs'],
-    },
-    {
-      slug: 'bi-developer',
-      title: language === 'fr' ? 'Développeur BI' : 'BI Developer',
-      icon: <Code size={28} />,
-      desc: language === 'fr' ? 'Développement de solutions de reporting multi-outils (Tableau, Qlik, Looker, SSRS).' : 'Multi-tool reporting solution development (Tableau, Qlik, Looker, SSRS).',
-      stack: ['Tableau', 'Qlik', 'Looker', 'SQL Server', 'ETL'],
     },
     {
       slug: 'data-architect',
