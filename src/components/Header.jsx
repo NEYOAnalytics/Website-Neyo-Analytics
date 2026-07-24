@@ -76,7 +76,7 @@ const Header = () => {
               className="theme-toggle-btn"
               onClick={handleThemeClick}
               aria-label="Toggle theme"
-              title={theme === 'dark' ? 'Mode Jour' : 'Mode Nuit'}
+              title={theme === 'dark' ? (language === 'fr' ? 'Mode Jour' : 'Light Mode') : (language === 'fr' ? 'Mode Nuit' : 'Dark Mode')}
             >
               {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
             </button>
@@ -117,7 +117,7 @@ const Header = () => {
                 className="theme-toggle-btn"
                 onClick={handleThemeClick}
                 aria-label="Toggle theme"
-                title={theme === 'dark' ? 'Mode Jour' : 'Mode Nuit'}
+                title={theme === 'dark' ? (language === 'fr' ? 'Mode Jour' : 'Light Mode') : (language === 'fr' ? 'Mode Nuit' : 'Dark Mode')}
               >
                 {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
               </button>
@@ -160,7 +160,7 @@ const Header = () => {
               </button>
               <button type="button" className="theme-toggle-btn" onClick={handleThemeClick}>
                 {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-                <span>{theme === 'dark' ? 'Mode Jour' : 'Mode Nuit'}</span>
+                <span>{theme === 'dark' ? (language === 'fr' ? 'Mode Jour' : 'Light Mode') : (language === 'fr' ? 'Mode Nuit' : 'Dark Mode')}</span>
               </button>
             </div>
             <Link

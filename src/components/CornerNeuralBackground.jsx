@@ -67,9 +67,17 @@ const CornerNeuralBackground = () => {
     const animate = () => {
       ctx.clearRect(0, 0, width, height);
 
+      const isMobile = window.innerWidth < 768;
+      const opacityMultiplier = (theme === 'light' && isMobile) ? 0.25 : 1;
+
       particles.forEach((p, index) => {
         p.update();
-        p.draw();
+        
+        // Draw particle
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${colorBase}, ${0.6 * opacityMultiplier})`;
+        ctx.fill();
 
         for (let j = index + 1; j < particles.length; j++) {
           const p2 = particles[j];
@@ -79,7 +87,7 @@ const CornerNeuralBackground = () => {
 
           if (dist < connectionDistance) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(${colorBase}, ${0.7 * (1 - dist / connectionDistance)})`;
+            ctx.strokeStyle = `rgba(${colorBase}, ${0.7 * opacityMultiplier * (1 - dist / connectionDistance)})`;
             ctx.lineWidth = 0.8;
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p2.x, p2.y);
@@ -92,7 +100,7 @@ const CornerNeuralBackground = () => {
         const distC = Math.sqrt(dxC * dxC + dyC * dyC);
         if (distC < 450) {
           ctx.beginPath();
-          ctx.strokeStyle = `rgba(${colorBase}, ${0.4 * (1 - distC / 450)})`;
+          ctx.strokeStyle = `rgba(${colorBase}, ${0.4 * opacityMultiplier * (1 - distC / 450)})`;
           ctx.lineWidth = 0.5;
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(width, 0);
