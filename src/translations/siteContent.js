@@ -29,7 +29,7 @@ export const siteContent = {
       heroTitlePart1: "Des consultants ",
       heroTitleHighlight: "Data & IA",
       heroTitlePart2: " experts basés au Maroc pour l'Europe & le Golfe, prêts en 48h",
-      heroSubtitle: "Renforcez vos équipes avec des <strong>Data Engineers, consultants Power BI & Data Scientists</strong> trilingues (Français, Anglais, Arabe), parfaitement alignés sur les fuseaux Europe (0-1h) et Golfe / GCC (2-3h), à des coûts optimisés jusqu'à <strong>-40%</strong>.",
+      heroSubtitle: "Renforcez vos équipes avec des <strong>consultants Data & IA experts basés au Maroc</strong> (Data Engineers, Power BI, Data Scientists) trilingues (Français, Anglais, Arabe), parfaitement alignés sur les fuseaux Europe (0-1h) et Golfe / GCC (2-3h), à des coûts optimisés jusqu'à <strong>-40%</strong>.",
       stats: [
         { value: "48h", label: "Délai de Short-list", sub: "2 à 3 profils ciblés proposés" },
         { value: "-40%", label: "Économie de Coût", sub: "vs recrutement direct CDI chargé" },

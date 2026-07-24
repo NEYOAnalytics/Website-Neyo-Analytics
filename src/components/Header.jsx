@@ -90,7 +90,7 @@ const Header = () => {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`nav-item ${isActive ? 'active' : ''}`}
+                    className={`nav-item ${isActive ? 'active' : ''}`} title={link.label[language]}
                   >
                     {link.label[language]}
                   </Link>
@@ -122,7 +122,7 @@ const Header = () => {
                 {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
               </button>
 
-              <Link href="/contact" className="btn-primary-header">
+              <Link href="/contact" className="btn-primary-header" title={language === 'fr' ? 'Parler à un expert' : 'Talk to an Expert'}>
                 <span>{language === 'fr' ? 'Parler à un expert' : 'Talk to an Expert'}</span>
                 <ArrowRight size={14} />
               </Link>
@@ -147,7 +147,7 @@ const Header = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`mobile-link ${pathname === link.href ? 'active' : ''}`}
+                className={`mobile-link ${pathname === link.href ? 'active' : ''}`} title={link.label[language]}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.label[language]}
@@ -165,7 +165,7 @@ const Header = () => {
             </div>
             <Link
               href="/contact"
-              className="btn-primary-mobile"
+              className="btn-primary-mobile" title={language === 'fr' ? 'Parler à un expert' : 'Talk to an Expert'}
               onClick={() => setMobileMenuOpen(false)}
             >
               {language === 'fr' ? 'Parler à un expert' : 'Talk to an Expert'}

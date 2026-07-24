@@ -48,11 +48,11 @@ export default function HomePage() {
           </h1>
           <p className={styles.heroSubtitle} dangerouslySetInnerHTML={{ __html: h.heroSubtitle }} />
           <div className={styles.heroActions}>
-            <Link href="/contact" className={styles.btnPrimary}>
+            <Link href="/contact" className={styles.btnPrimary} title={c.contactUs}>
               <span>{c.contactUs}</span>
               <ArrowRight size={18} />
             </Link>
-            <Link href="/consultants" className={styles.btnSecondary}>
+            <Link href="/consultants" className={styles.btnSecondary} title={c.discoverConsultants}>
               <span>{c.discoverConsultants}</span>
             </Link>
           </div>
@@ -91,7 +91,7 @@ export default function HomePage() {
           ))}
         </div>
         <div className={styles.whyCtaWrapper}>
-          <Link href="/nearshore-maroc" className={styles.linkBanner}>
+          <Link href="/nearshore-maroc" className={styles.linkBanner} title={language === 'fr' ? "Découvrir l'argumentaire complet Nearshore Maroc" : "Discover Full Nearshore Morocco Overview"}>
             <span>{language === 'fr' ? "Découvrir l'argumentaire complet Nearshore Maroc" : 'Discover Full Nearshore Morocco Overview'}</span>
             <ArrowRight size={16} />
           </Link>
@@ -111,7 +111,7 @@ export default function HomePage() {
               <div className={styles.iconBox}>{expertiseIcons[idx]}</div>
               <h3>{exp.title}</h3>
               <p>{exp.desc}</p>
-              <Link href={exp.link} className={styles.expLink}>
+              <Link href={exp.link} className={styles.expLink} title={exp.title}>
                 <span>{c.readMore}</span>
                 <ArrowRight size={14} />
               </Link>
@@ -136,7 +136,7 @@ export default function HomePage() {
           ))}
         </div>
         <div className={styles.processCtaWrapper}>
-          <Link href="/notre-process" className={styles.btnSecondary}>
+          <Link href="/notre-process" className={styles.btnSecondary} title={c.seeDetailProcess}>
             <span>{c.seeDetailProcess}</span>
             <ArrowRight size={16} />
           </Link>
@@ -148,7 +148,7 @@ export default function HomePage() {
         <div className={styles.ctaBox}>
           <h2>{h.finalCtaTitle}</h2>
           <p>{h.finalCtaDesc}</p>
-          <Link href="/contact" className={styles.btnPrimaryLarge}>
+          <Link href="/contact" className={styles.btnPrimaryLarge} title={c.contactUs}>
             <span>{c.contactUs}</span>
             <ArrowRight size={20} />
           </Link>
