@@ -82,6 +82,42 @@ export default function BlogPostPage() {
               </div>
             )}
 
+            {section.table && (
+              <div style={{ overflowX: 'auto', margin: '1.5rem 0' }}>
+                <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', background: 'var(--card-bg, rgba(255, 255, 255, 0.02))', border: '1px solid var(--card-border, rgba(255, 255, 255, 0.08))', borderRadius: '8px' }}>
+                  {section.table.headers && (
+                    <thead>
+                      <tr style={{ background: 'rgba(250, 145, 0, 0.1)', borderBottom: '1px solid var(--card-border, rgba(255, 255, 255, 0.15))' }}>
+                        {section.table.headers.map((h, hIdx) => (
+                          <th key={hIdx} style={{ padding: '0.85rem 1rem', color: '#Fa9100', fontWeight: '700', fontSize: '0.92rem' }}>{h}</th>
+                        ))}
+                      </tr>
+                    </thead>
+                  )}
+                  <tbody>
+                    {section.table.rows.map((r, rIdx) => (
+                      <tr key={rIdx} style={{ borderBottom: '1px solid var(--card-border, rgba(255, 255, 255, 0.06))' }}>
+                        {r.map((c, cIdx) => (
+                          <td key={cIdx} style={{ padding: '0.85rem 1rem', color: cIdx === 0 ? 'var(--text-main, white)' : 'var(--text-secondary, #cbd5e1)', fontWeight: cIdx === 0 ? '600' : '400', fontSize: '0.92rem' }}>{c}</td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+
+            {section.checklist && Array.isArray(section.checklist) && (
+              <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.65rem', margin: '1.25rem 0' }}>
+                {section.checklist.map((item, itemIdx) => (
+                  <li key={itemIdx} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.98rem', color: 'var(--text-main, white)', background: 'var(--card-bg, rgba(255, 255, 255, 0.02))', padding: '0.75rem 1rem', borderRadius: '8px', border: '1px solid var(--card-border, rgba(255, 255, 255, 0.05))' }}>
+                    <CheckCircle2 size={18} style={{ color: '#Fa9100', flexShrink: 0 }} />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+
             {section.bullets && Array.isArray(section.bullets) && section.bullets.length > 0 && (
               <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1rem' }}>
                 {section.bullets.map((b, bIdx) => (

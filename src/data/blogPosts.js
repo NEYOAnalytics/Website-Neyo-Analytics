@@ -387,4 +387,468 @@ export const blogPosts = [
       en: "Comparison based on official technical documentation and architecture benchmarks for Microsoft Fabric and Databricks.",
     },
   },
+  {
+    slug: 'recruter-vs-externaliser-data-engineer',
+    title: {
+      fr: 'Recruter ou externaliser son Data Engineer : le comparatif chiffré',
+      en: 'Hiring vs Outsourcing a Data Engineer: A Cost & Speed Comparison',
+    },
+    excerpt: {
+      fr: 'CDI ou consultant nearshore ? Comparatif coût total, délai de staffing et flexibilité pour armer votre équipe data en 2026.',
+      en: 'Permanent hire vs nearshore consultant? Total cost, staffing lead time, and flexibility comparison for your data team in 2026.',
+    },
+    date: '24 Janvier 2026',
+    author: 'NEYO Analytics Team',
+    category: {
+      fr: 'Staffing & RH',
+      en: 'Staffing & HR',
+    },
+    readTime: '7 min',
+    keywords: [
+      'recruter vs externaliser data engineer', 'coût data engineer France vs Maroc',
+      'combien coûte un consultant Power BI nearshore', 'nearshore vs CDI',
+      'staffing data engineer', 'flexibilité contractuelle IT',
+    ],
+    intro: {
+      fr: 'CDI ou consultant nearshore : ce que chaque option coûte réellement, et dans quel délai vous êtes opérationnel.',
+      en: 'Permanent hire or nearshore consultant: what each option truly costs, and how quickly you can become operational.',
+    },
+    sections: {
+      fr: [
+        {
+          h2: 'Le scénario recrutement CDI',
+          content:
+            "Un Data Engineer confirmé (5 à 9 ans d'expérience) coûte en France entre 44 000 € et 61 000 € brut par an, soit une moyenne autour de 52 500 €, selon les baromètres salariaux 2026. En ajoutant les charges patronales (40 à 45% du brut), le coût employeur réel dépasse souvent 70 000 € par an, avant même de compter le temps de recrutement.\n\nOr ce temps de recrutement n'est pas négligeable : sur un poste en tension comme Data Engineer, un processus complet (sourcing, entretiens, négociation, préavis du candidat) dure fréquemment entre 2 et 4 mois. Pendant cette période, le projet data reste bloqué ou avance avec des ressources déjà surchargées.",
+        },
+        {
+          h2: 'Le scénario nearshore',
+          content:
+            "Un consultant Data Engineer nearshore est staffé en 1 à 2 semaines. Le tarif journalier (TJM) remplace le salaire chargé : pas de charges sociales à payer, pas de congés payés à provisionner, pas de période d'essai, et surtout une durée d'engagement ajustable au projet plutôt qu'un contrat à durée indéterminée.",
+        },
+        {
+          h2: 'Comparatif sur 12 mois',
+          table: {
+            headers: ['', 'Recrutement CDI France', 'Consultant nearshore NEYO'],
+            rows: [
+              ['Coût employeur annuel', '~70 000 € (salaire + charges)', 'Variable selon volume réel de jours facturés'],
+              ['Délai avant 1er jour travaillé', '2 à 4 mois', '1 à 2 semaines'],
+              ['Engagement', 'Indéterminé, coût de rupture élevé', 'Ajustable, réversible'],
+              ['Risque période d\'essai', 'Oui', 'Non'],
+              ['Montée/descente en charge', 'Impossible sans nouveau recrutement', 'Immédiate'],
+            ],
+          },
+          content:
+            "Sur un projet de 6 à 9 mois avec un besoin qui varie dans le temps (montée en charge en phase de cadrage, puis stabilisation), le scénario nearshore permet d'ajuster le volume de jours facturés au réel, ce qu'un CDI ne permet structurellement pas.",
+        },
+        {
+          h2: 'Quand le CDI reste le bon choix',
+          content:
+            "L'externalisation n'est pas la réponse à tout. Un CDI reste préférable quand le besoin est pérenne sur plusieurs années, que la compétence doit devenir un savoir-faire interne stratégique, ou que le poste implique un pilotage d'équipe long terme. Le nearshore est un complément à l'équipe interne, pas un substitut systématique.",
+        },
+        {
+          h2: 'Quand le nearshore est le choix le plus rentable',
+          bullets: [
+            {
+              title: 'Pic de charge ponctuel',
+              text: 'Migration, refonte, cadrage d\'un nouveau projet data.',
+            },
+            {
+              title: 'Compétence rare ou récente',
+              text: 'Microsoft Fabric, Databricks, IA générative difficile à recruter en interne rapidement.',
+            },
+            {
+              title: 'Test de périmètre',
+              text: 'Besoin de tester un poste ou un périmètre avant de décider s\'il doit devenir permanent.',
+            },
+            {
+              title: 'Contrainte budgétaire',
+              text: 'Contrainte budgétaire qui rend un recrutement CDI trop risqué à court terme.',
+            },
+          ],
+        },
+        {
+          h2: 'Comment NEYO Analytics staffe vos consultants Data Engineer',
+          content:
+            "Nos consultants sont sélectionnés sur leur stack technique précise (Databricks, Snowflake, Airflow, Azure Data Factory, DBT) et présentés en short-list sous quelques jours après l'expression de votre besoin. Vous échangez directement avec eux avant toute décision.",
+        },
+      ],
+      en: [
+        {
+          h2: 'The Permanent Hire Scenario',
+          content:
+            "A confirmed Data Engineer (5 to 9 years experience) in Europe commands a base salary between €44,000 and €61,000 gross per year. Factoring in employer payroll taxes and benefits, total annual employer cost often exceeds €70,000 to €85,000.\n\nFurthermore, sourcing time for in-demand roles typically spans 2 to 4 months (recruiting, interviews, notice period). During this window, critical data projects remain stalled or overload existing staff.",
+        },
+        {
+          h2: 'The Nearshore Scenario',
+          content:
+            "A nearshore Data Engineer consultant is onboarded within 1 to 2 weeks. Standard daily rates replace fixed payroll overhead: no local employment taxes, no severance liabilities, and an engagement duration perfectly mapped to project scope.",
+        },
+        {
+          h2: '12-Month Comparative Overview',
+          table: {
+            headers: ['Criterion', 'Direct Permanent Hire', 'NEYO Nearshore Consultant'],
+            rows: [
+              ['Annual Employer Cost', '~€70,000+ (salary + taxes)', 'Variable based on billed days'],
+              ['Time to Onboarding', '2 to 4 months', '1 to 2 weeks'],
+              ['Contractual Commitment', 'Permanent, high exit friction', 'Flexible & adjustable'],
+              ['Probation Period Risk', 'Yes', 'None'],
+              ['Scaling Capacity', 'Rigid', 'Immediate scale up/down'],
+            ],
+          },
+          content:
+            "For a 6 to 9-month project with fluctuating resource needs, nearshore consulting allows aligning billed days strictly with actual workload.",
+        },
+        {
+          h2: 'When Permanent Hiring Remains Ideal',
+          content:
+            "Outsourcing is not a universal substitute. Permanent hires remain preferable when long-term retention over multiple years is required, or when internal core IP must be built internally.",
+        },
+        {
+          h2: 'When Nearshore Delivers Highest ROI',
+          bullets: [
+            {
+              title: 'Workload Spikes',
+              text: 'Migrations, refactoring, or scoping new data platforms.',
+            },
+            {
+              title: 'Niche Skills',
+              text: 'Microsoft Fabric, Databricks, GenAI skills difficult to source locally.',
+            },
+            {
+              title: 'Role Validation',
+              text: 'Testing scope before committing to permanent headcount.',
+            },
+            {
+              title: 'Budget Flexibility',
+              text: 'Mitigating fixed payroll commitment risks.',
+            },
+          ],
+        },
+        {
+          h2: 'How NEYO Analytics Staffs Your Data Engineers',
+          content:
+            "Our consultants are shortlisted based on your exact tech stack (Databricks, Snowflake, Airflow, Azure Data Factory, DBT) within days of your requirement.",
+        },
+      ],
+    },
+    statsBox: {
+      fr: [
+        { value: '1–2 w', label: 'Délai de staffing Nearshore' },
+        { value: '-40%', label: 'Économie globale de coût' },
+        { value: '48h', label: 'Short-list profils proposés' },
+        { value: '100%', label: 'Flexibilité contractuelle' },
+      ],
+      en: [
+        { value: '1–2 w', label: 'Nearshore staffing lead time' },
+        { value: '-40%', label: 'Overall cost savings' },
+        { value: '48h', label: 'Profile shortlist turnaround' },
+        { value: '100%', label: 'Contractual flexibility' },
+      ],
+    },
+    sources: {
+      fr: 'Glassdoor France et Jedha (baromètres salariaux Data Engineer France 2026).',
+      en: 'Glassdoor and Jedha (Data Engineer Salary Surveys 2026).',
+    },
+  },
+  {
+    slug: 'data-analyst-vs-data-engineer-vs-data-scientist',
+    title: {
+      fr: 'Data Analyst, Data Engineer, Data Scientist : quel profil pour quel besoin ?',
+      en: 'Data Analyst, Data Engineer, Data Scientist: Which Profile for Your Project?',
+    },
+    excerpt: {
+      fr: 'Data Analyst, Data Engineer, Data Scientist : quelles différences et quel profil choisir selon votre projet ? Guide pour DSI et directions métier.',
+      en: 'Data Analyst, Data Engineer, Data Scientist: key differences and how to choose the right profile for your project.',
+    },
+    date: '20 Janvier 2026',
+    author: 'NEYO Analytics Team',
+    category: {
+      fr: 'Métiers Data',
+      en: 'Data Roles',
+    },
+    readTime: '8 min',
+    keywords: [
+      'data engineer vs data analyst', 'data scientist', 'profils data',
+      'recrutement data', 'architecture data', 'gouvernance data',
+    ],
+    intro: {
+      fr: "Trois métiers souvent confondus, trois livrables très différents. Voici comment choisir le bon profil avant d'ouvrir un poste ou de solliciter un consultant.",
+      en: 'Three often confused roles with three very distinct deliverables. Here is how to select the right profile before hiring or engaging a consultant.',
+    },
+    sections: {
+      fr: [
+        {
+          h2: 'Le Data Analyst : donner du sens aux données existantes',
+          content:
+            "Le Data Analyst construit des tableaux de bord, définit des indicateurs métier et restitue l'information aux équipes opérationnelles ou à la direction. Ses outils principaux : Power BI, Tableau, Qlik Sense, SQL. Il travaille sur des données déjà collectées et généralement déjà structurées — son enjeu est la clarté de la restitution et la pertinence des KPI, pas la construction de l'infrastructure sous-jacente.\n\nLivrables types : dashboards Power BI, rapports mensuels, définitions de KPI, requêtes SQL d'analyse ad hoc.",
+        },
+        {
+          h2: "Le Data Engineer : construire l'infrastructure de la donnée",
+          content:
+            "Le Data Engineer conçoit et maintient les pipelines qui collectent, transforment et stockent la donnée avant qu'elle soit exploitable par un Data Analyst ou un Data Scientist. Ses outils principaux : Databricks, Snowflake, Airflow, DBT, Spark, Azure Data Factory. Sans un Data Engineer, un Data Analyst travaille sur des données non fiables, non fraîches ou mal structurées — la qualité de tout le reste de la chaîne data dépend de ce rôle.\n\nLivrables types : pipelines ETL/ELT, architecture de données (data warehouse, lakehouse), documentation de la qualité des données.",
+        },
+        {
+          h2: 'Le Data Scientist : modéliser et prédire',
+          content:
+            "Le Data Scientist construit des modèles (machine learning, IA générative) pour répondre à des questions que la restitution classique ne peut pas résoudre : prédiction de churn, scoring, recommandation, détection d'anomalies. Ses outils principaux : Python, R, scikit-learn, frameworks de ML/LLM. Il a généralement besoin d'une infrastructure data déjà fiabilisée par un Data Engineer pour être efficace.\n\nLivrables types : modèles prédictifs, notebooks d'expérimentation, mise en production de modèles (MLOps).",
+        },
+        {
+          h2: 'Tableau de synthèse',
+          table: {
+            headers: ['Critère', 'Data Analyst', 'Data Engineer', 'Data Scientist'],
+            rows: [
+              ['Question posée', '"Que s\'est-il passé ?"', '"Comment structurer et fiabiliser la donnée ?"', '"Que va-t-il se passer / que recommander ?"'],
+              ['Outils clés', 'Power BI, Tableau, SQL', 'Databricks, Airflow, DBT, Spark', 'Python, ML, LLM'],
+              ['Livrable principal', 'Dashboard, rapport', 'Pipeline, architecture data', 'Modèle prédictif'],
+              ['Séniorité recommandée', 'Junior à confirmé', 'Confirmé recommandé', 'Confirmé à senior'],
+            ],
+          },
+        },
+        {
+          h2: "Un projet data a rarement besoin d'un seul profil",
+          content:
+            "Dans la pratique, un projet data mature combine les trois : un Data Engineer fiabilise la donnée, un Data Analyst la restitue aux métiers, un Data Scientist en extrait de la valeur prédictive. Beaucoup d'entreprises se trompent de priorité en recrutant un Data Scientist avant d'avoir une infrastructure data fiable — le résultat est un modèle brillant sur des données de mauvaise qualité.",
+        },
+        {
+          h2: 'Comment NEYO Analytics vous aide à cadrer le bon besoin',
+          content:
+            "Avant de vous proposer un profil, nous challengeons votre besoin réel : parfois un projet présenté comme \"besoin d'un Data Scientist\" révèle en creux un problème d'infrastructure qui appelle d'abord un Data Engineer. Cette étape de cadrage évite un mauvais staffing et une mission qui ne produit pas les résultats attendus.",
+        },
+      ],
+      en: [
+        {
+          h2: 'Data Analyst: Deriving Value from Existing Data',
+          content:
+            "The Data Analyst builds dashboards, defines business KPIs, and communicates insights to business teams. Primary tools: Power BI, Tableau, Qlik, SQL. They focus on structured data analytics.\n\nKey deliverables: Power BI dashboards, KPI definitions, ad-hoc SQL queries.",
+        },
+        {
+          h2: 'Data Engineer: Building the Data Infrastructure',
+          content:
+            "The Data Engineer designs pipelines to ingest, transform, and store data reliably. Primary tools: Databricks, Snowflake, Airflow, dbt, Spark, Azure Data Factory. They form the foundation of all analytics.\n\nKey deliverables: ETL/ELT pipelines, Lakehouse architecture, data quality frameworks.",
+        },
+        {
+          h2: 'Data Scientist: Predictive Modeling & AI',
+          content:
+            "The Data Scientist builds predictive machine learning and GenAI models for advanced analytics (churn prediction, scoring, anomaly detection). Primary tools: Python, ML frameworks, LLMs.\n\nKey deliverables: Predictive models, MLOps deployment, feature pipelines.",
+        },
+        {
+          h2: 'Comparison Matrix',
+          table: {
+            headers: ['Criterion', 'Data Analyst', 'Data Engineer', 'Data Scientist'],
+            rows: [
+              ['Core Question', '"What happened?"', '"How to reliably store & structure data?"', '"What will happen next?"'],
+              ['Key Tools', 'Power BI, Tableau, SQL', 'Databricks, Airflow, dbt, Spark', 'Python, Scikit-learn, LLMs'],
+              ['Main Deliverable', 'Dashboard, report', 'Data pipeline & architecture', 'Predictive model'],
+              ['Recommended Seniority', 'Junior to Senior', 'Mid to Senior', 'Mid to Senior'],
+            ],
+          },
+        },
+        {
+          h2: 'Combining Profiles for Success',
+          content:
+            'Mature data initiatives require all three roles in synergy: Data Engineers ensure data quality, Analysts deliver business visibility, and Data Scientists build predictive intelligence.',
+        },
+        {
+          h2: 'How NEYO Analytics Helps Scoping',
+          content:
+            'We evaluate your project context prior to staffing to ensure you hire the exact profile required.',
+        },
+      ],
+    },
+    statsBox: {
+      fr: [
+        { value: '3', label: 'Métiers Data complémentaires' },
+        { value: '100%', label: 'Profils qualifiés & certifiés' },
+        { value: '48h', label: 'Cadrage & Short-list' },
+        { value: 'ETL/BI/IA', label: 'Stack complète couverte' },
+      ],
+      en: [
+        { value: '3', label: 'Complementary Data Roles' },
+        { value: '100%', label: 'Qualified & Certified Profiles' },
+        { value: '48h', label: 'Scoping & Shortlist' },
+        { value: 'ETL/BI/AI', label: 'Full Stack Covered' },
+      ],
+    },
+  },
+  {
+    slug: 'row-level-security-power-bi-guide-complet',
+    title: {
+      fr: 'Row-Level Security dans Power BI : le guide complet',
+      en: 'Row-Level Security in Power BI: Complete 2026 Guide',
+    },
+    excerpt: {
+      fr: 'RLS statique, dynamique, DirectQuery : guide complet pour sécuriser vos rapports Power BI et éviter les erreurs de configuration les plus courantes.',
+      en: 'Static, dynamic, and DirectQuery RLS: complete guide to securing Power BI reports and avoiding common pitfalls.',
+    },
+    date: '18 Janvier 2026',
+    author: 'NEYO Analytics Team',
+    category: {
+      fr: 'Business Intelligence',
+      en: 'Business Intelligence',
+    },
+    readTime: '9 min',
+    keywords: [
+      'RLS Power BI', 'Row-Level Security', 'DAX', 'DirectQuery',
+      'Microsoft Fabric', 'sécurité données Power BI', 'Azure AD',
+    ],
+    intro: {
+      fr: "Comment sécuriser l'accès aux données au niveau ligne, sans dégrader la performance de vos rapports.",
+      en: 'How to restrict data access at row level without compromising report performance.',
+    },
+    sections: {
+      fr: [
+        {
+          h2: "Qu'est-ce que la RLS et pourquoi elle est incontournable",
+          content:
+            "La Row-Level Security (RLS) restreint l'accès aux données selon l'identité de l'utilisateur connecté, via des filtres DAX appliqués automatiquement à chaque requête. Concrètement : un même rapport peut afficher des résultats différents selon qui le consulte — un manager régional ne voit que sa région, un médecin ne voit que ses patients assignés, un client d'une plateforme multi-tenant ne voit que ses propres données. Sans RLS, sécuriser ces cas d'usage obligerait à dupliquer les rapports par périmètre, ce qui devient vite ingérable.",
+        },
+        {
+          h2: 'RLS statique vs RLS dynamique',
+          content:
+            'RLS statique : les rôles utilisent des valeurs fixes dans le filtre DAX (par exemple [Région] = "Est"), avec un rôle distinct par périmètre d\'accès. Adaptée à un petit nombre de niveaux d\'accès qui changent rarement.\n\nRLS dynamique : basée sur la fonction USERPRINCIPALNAME(), combinée à une table de mapping qui associe chaque utilisateur à son périmètre de données. Adaptée aux organisations avec des dizaines ou centaines d\'utilisateurs, où créer un rôle statique par utilisateur serait ingérable.',
+        },
+        {
+          h2: 'Configurer un rôle RLS : les étapes',
+          checklist: [
+            'Dans Power BI Desktop, ouvrir Modélisation > Gérer les rôles',
+            'Créer un rôle et écrire l\'expression de filtre DAX sur la table concernée',
+            'Tester immédiatement avec "Afficher en tant que rôles" avant toute publication',
+            'Publier le modèle et le rapport sur le service Power BI',
+            'Dans le service, ajouter les utilisateurs ou groupes de sécurité Azure AD à chaque rôle',
+            'Retester après publication : le comportement peut différer entre Power BI Desktop et le service',
+          ],
+        },
+        {
+          h2: "RLS et DirectQuery : une sécurité poussée jusqu'à la base",
+          content:
+            "En mode DirectQuery, les filtres RLS écrits en DAX sont traduits en clauses SQL WHERE et exécutés directement sur la base de données source. Concrètement, la donnée non autorisée ne quitte jamais la source — un avantage de sécurité réel pour les environnements sensibles. La contrepartie : la performance dépend alors de l'indexation de la base source sur les colonnes utilisées par les filtres RLS.",
+        },
+        {
+          h2: 'Les erreurs les plus fréquentes',
+          bullets: [
+            {
+              title: 'Filtres RLS sur les tables de faits',
+              text: 'Appliquer les filtres sur les tables de faits dégrade fortement la performance sur les gros volumes. La bonne pratique est de filtrer les dimensions et de laisser les relations du modèle propager la sécurité.',
+            },
+            {
+              title: 'Utiliser LOOKUPVALUE',
+              text: 'Utiliser LOOKUPVALUE au lieu de s\'appuyer sur les relations actives du modèle. Les filtres RLS ne se propagent que via des relations actives.',
+            },
+            {
+              title: 'Table de mapping volumineuse',
+              text: 'Table de mapping de sécurité trop volumineuse ou en DirectQuery : elle doit être importée et réduite aux utilisateurs actifs uniquement.',
+            },
+            {
+              title: 'Tests uniquement en Desktop',
+              text: 'Ne tester qu\'en Power BI Desktop : un rôle validé en local doit être re-testé après publication sur le service, où le comportement peut différer (notamment en Direct Lake).',
+            },
+          ],
+        },
+        {
+          h2: 'RLS et Microsoft Fabric / Direct Lake',
+          content:
+            "Pour les modèles sémantiques en Direct Lake sous Microsoft Fabric, la RLS reste appliquée normalement. Un point de vigilance : si une requête DAX bascule en secours vers DirectQuery à cause d'une fonctionnalité non supportée en Direct Lake, les filtres RLS continuent de s'appliquer, mais les caractéristiques de performance peuvent changer — un point à surveiller via l'app de métriques de capacité Fabric.",
+        },
+        {
+          h2: 'Check-list avant mise en production',
+          checklist: [
+            'Chaque rôle testé en "Afficher en tant que" dans Power BI Desktop',
+            'Chaque rôle re-testé après publication sur le service Power BI',
+            'Filtres appliqués sur les dimensions, pas sur les tables de faits',
+            'Table de mapping de sécurité importée, réduite aux utilisateurs actifs',
+            'Documentation des rôles et de leur logique partagée avec l\'équipe cliente',
+            'Groupes de sécurité Azure AD utilisés plutôt que des utilisateurs individuels quand c\'est possible',
+          ],
+        },
+        {
+          h2: 'Comment NEYO Analytics sécurise vos rapports',
+          content:
+            'Chaque mission Power BI incluant de la RLS livre systématiquement une documentation des rôles et un cycle de test en environnement de recette avant mise en production, pour éviter tout incident de fuite de données.',
+        },
+      ],
+      en: [
+        {
+          h2: 'What is RLS and Why is it Essential?',
+          content:
+            'Row-Level Security (RLS) restricts data access for given users via DAX filters applied at query time. A single report dynamically adjusts output based on user identity (e.g. regional managers seeing only their region).',
+        },
+        {
+          h2: 'Static vs Dynamic RLS',
+          content:
+            'Static RLS uses fixed values in DAX (e.g. [Region] = "East"). Dynamic RLS uses USERPRINCIPALNAME() mapped to security tables for scalable user management.',
+        },
+        {
+          h2: 'Step-by-Step RLS Configuration',
+          checklist: [
+            'In Power BI Desktop, navigate to Modeling > Manage Roles',
+            'Create role & define DAX filter on dimension tables',
+            'Test locally with "View as roles"',
+            'Publish dataset to Power BI Service',
+            'Assign Azure AD groups or users to roles in Service',
+            'Validate post-publication behavior',
+          ],
+        },
+        {
+          h2: 'RLS with DirectQuery',
+          content:
+            'In DirectQuery mode, DAX RLS filters translate directly into SQL WHERE clauses on the source database, ensuring unauthorized rows never leave the source engine.',
+        },
+        {
+          h2: 'Common Implementation Mistakes',
+          bullets: [
+            {
+              title: 'Filtering Fact Tables',
+              text: 'Filtering fact tables degrades performance; filter dimension tables instead.',
+            },
+            {
+              title: 'Using LOOKUPVALUE over Relationships',
+              text: 'Bypassing model relationships adds unnecessary DAX overhead.',
+            },
+            {
+              title: 'Overly Large Mapping Tables',
+              text: 'Security mapping tables should be imported and trimmed to active users.',
+            },
+          ],
+        },
+        {
+          h2: 'RLS in Microsoft Fabric & Direct Lake',
+          content:
+            'Direct Lake semantic models in Microsoft Fabric support standard RLS rules seamlessly.',
+        },
+        {
+          h2: 'Pre-Production Checklist',
+          checklist: [
+            'Roles verified in Power BI Desktop',
+            'Roles re-tested in Power BI Service',
+            'Filters applied on dimensions',
+            'Azure AD security groups utilized',
+          ],
+        },
+        {
+          h2: 'How NEYO Analytics Secures Your Reports',
+          content:
+            'Every NEYO Power BI mission includes RLS documentation and validation testing prior to production deployment.',
+        },
+      ],
+    },
+    statsBox: {
+      fr: [
+        { value: 'RLS', label: 'Sécurité dynamique intégrée' },
+        { value: 'DAX', label: 'Filtres optimisés sur dimensions' },
+        { value: 'Fabric', label: 'Compatibilité Direct Lake' },
+        { value: '100%', label: 'Conformité RGPD & Azure AD' },
+      ],
+      en: [
+        { value: 'RLS', label: 'Dynamic security integrated' },
+        { value: 'DAX', label: 'Optimized dimension filters' },
+        { value: 'Fabric', label: 'Direct Lake compatibility' },
+        { value: '100%', label: 'GDPR & Azure AD compliance' },
+      ],
+    },
+    sources: {
+      fr: 'Microsoft Learn (documentation officielle RLS Power BI et Microsoft Fabric), guides spécialisés Power BI Consulting et DataCamp (bonnes pratiques RLS 2026).',
+      en: 'Microsoft Learn (Official Power BI & Microsoft Fabric RLS documentation).',
+    },
+  },
 ];
+
