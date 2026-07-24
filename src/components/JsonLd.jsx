@@ -6,7 +6,13 @@ export function OrganizationJsonLd() {
     '@type': 'Organization',
     name: 'NEYO Analytics',
     url: 'https://www.neyo-analytics.com',
-    logo: 'https://www.neyo-analytics.com/logo.png',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.neyo-analytics.com/logo.png',
+      width: 1088,
+      height: 328,
+    },
+    image: 'https://www.neyo-analytics.com/logo-square.png',
     description: 'Société de conseil spécialisée en Nearshore Data & IA basée au Maroc pour les entreprises en Europe et dans le Golfe.',
     address: {
       '@type': 'PostalAddress',

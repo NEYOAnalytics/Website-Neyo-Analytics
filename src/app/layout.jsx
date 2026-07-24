@@ -16,12 +16,12 @@ export const metadata = {
   description: 'Société Nearshore Data & IA au Maroc. Consultants Power BI, Data Engineers & Scientists en régie sous 1 à 2 semaines pour l\'Europe et le Golfe.',
   icons: {
     icon: [
-      { url: '/Logo geometrique 2.svg', type: 'image/svg+xml' },
+      { url: '/logo-icon.svg', type: 'image/svg+xml' },
       { url: '/logo.png', type: 'image/png' },
     ],
     shortcut: '/logo.png',
     apple: [
-      { url: '/logo.png', sizes: '180x180', type: 'image/png' },
+      { url: '/logo-square.png', sizes: '180x180', type: 'image/png' },
     ],
   },
   openGraph: {
@@ -31,26 +31,33 @@ export const metadata = {
     siteName: 'NEYO Analytics',
     locale: 'fr_FR',
     type: 'website',
+    images: [
+      {
+        url: '/logo-square.png',
+        width: 512,
+        height: 512,
+        alt: 'NEYO Analytics Logo',
+      },
+    ],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: 'NEYO Analytics | Nearshore Data & IA Maroc',
     description: 'Consultants Data & IA francophones au Maroc pour l\'Europe et le Golfe.',
+    images: ['/logo.png'],
   },
   robots: {
     index: true,
     follow: true,
+  },
+  verification: {
+    google: 'b673f4ef0c5741af',
   },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <head>
-        <link rel="icon" href="/Logo geometrique 2.svg" type="image/svg+xml" />
-        <link rel="alternate icon" href="/logo.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/logo.png" sizes="180x180" />
-      </head>
       <body className="dark">
         <ThemeProvider>
           <LanguageProvider>
