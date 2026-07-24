@@ -10,26 +10,48 @@ import '../styles/global.scss';
 export const metadata = {
   metadataBase: new URL('https://www.neyo-analytics.com'),
   title: {
-    default: 'NEYO Analytics — Nearshore Data & IA Maroc | ESN Spécialisée Europe & Golfe',
+    default: 'NEYO Analytics | Nearshore Data & IA Maroc',
     template: '%s | NEYO Analytics',
   },
-  description: 'Société de conseil Nearshore Data & IA basée au Maroc. Consultants Power BI, Data Engineers, Data Scientists & Développeurs BI en régie sous 1 à 2 semaines.',
+  description: 'Société Nearshore Data & IA au Maroc. Consultants Power BI, Data Engineers & Scientists en régie sous 1 à 2 semaines pour l\'Europe et le Golfe.',
+  icons: {
+    icon: [
+      { url: '/logo-icon.svg', type: 'image/svg+xml' },
+      { url: '/logo.png', type: 'image/png' },
+    ],
+    shortcut: '/logo.png',
+    apple: [
+      { url: '/logo-square.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
   openGraph: {
-    title: 'NEYO Analytics — Nearshore Data & IA Maroc',
-    description: 'Renforcez vos équipes avec nos consultants experts Data & IA basés au Maroc (Power BI, Databricks, Azure, Palantir). Francophones, même fuseau horaire, coûts optimisés.',
+    title: 'NEYO Analytics | Nearshore Data & IA Maroc',
+    description: 'Consultants experts Data & IA au Maroc (Power BI, Databricks, Azure, Palantir) en régie pour l\'Europe et le Golfe. Coûts optimisés à -40%.',
     url: 'https://www.neyo-analytics.com',
     siteName: 'NEYO Analytics',
     locale: 'fr_FR',
     type: 'website',
+    images: [
+      {
+        url: '/logo-square.png',
+        width: 512,
+        height: 512,
+        alt: 'NEYO Analytics Logo',
+      },
+    ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'NEYO Analytics — Nearshore Data & IA Maroc',
-    description: 'Consultants Data & IA francophones basés au Maroc pour la France, la Belgique, la Suisse et le Golfe.',
+    card: 'summary',
+    title: 'NEYO Analytics | Nearshore Data & IA Maroc',
+    description: 'Consultants Data & IA francophones au Maroc pour l\'Europe et le Golfe.',
+    images: ['/logo.png'],
   },
   robots: {
     index: true,
     follow: true,
+  },
+  verification: {
+    google: 'b673f4ef0c5741af',
   },
 };
 
