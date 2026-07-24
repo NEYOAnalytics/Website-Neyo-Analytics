@@ -139,6 +139,87 @@ export const siteContent = {
       h1: "Nos Profils Consultants Data & IA en Régie",
       lead: "Des experts qualifiés, évalués et immédiatement opérationnels pour intégrer vos équipes agiles.",
     },
+    consultantDetails: {
+      dataEngineer: {
+        badge: "Régie & Assistance Technique",
+        h1: "Consultant Data Engineer Nearshore Maroc",
+        lead: "Conception, automatisation et optimisation de vos pipelines de données (ETL/ELT), architectures Data Warehousing et Data Lakes cloud en régie ou au forfait.",
+        sectionTitle: "Expertise technique & Stack maîtrisé",
+        items: [
+          "Databricks (PySpark, Delta Lake)",
+          "Snowflake & Google BigQuery",
+          "Orchestration Airflow & Prefect",
+          "Transformations dbt & SQL Avancé",
+          "Azure Data Factory / AWS Glue",
+          "Streaming Kafka / Event Hubs"
+        ],
+        ctaTitle: "Besoin d'un Data Engineer sous 1 à 2 semaines ?",
+        ctaDesc: "Découvrez les profils présélectionnés disponibles pour renforcer votre équipe.",
+        ctaBtn: "Demander un Data Engineer"
+      },
+      biDeveloper: {
+        badge: "Régie BI & Data Viz",
+        h1: "Développeur BI & Consultant Power BI Nearshore Maroc",
+        lead: "Conception de dashboards décisionnels interactifs, modélisation DAX performante et mise en place de la gouvernance Power BI.",
+        sectionTitle: "Compétences clés",
+        items: [
+          "Modélisation DAX Complexe & Tabular",
+          "Power Query & Préparation M",
+          "Microsoft Fabric & Direct Lake",
+          "Design UI/UX & Data Storytelling",
+          "Sécurité RLS / CLS",
+          "Optimisation de requêtes & Performance"
+        ],
+        ctaTitle: "Discuter de votre besoin en Power BI",
+        ctaDesc: "Recevez un profil qualifié sous 48h.",
+        ctaBtn: "Parler à un expert Power BI"
+      },
+      dataAnalyst: {
+        badge: "Analyse Métier & KPIs",
+        h1: "Consultant Data Analyst Nearshore Maroc",
+        lead: "Transformez vos flux de données complexes en insights actionnables et tableaux de bord d'aide à la décision.",
+        sectionTitle: "Compétences clés",
+        items: [
+          "Requêtage SQL Avancé (Joins, CTE, Window Functions)",
+          "Power BI / Tableau / Looker",
+          "Analyse statistique Python / Pandas",
+          "Cadrage des besoins métier & Spécifications"
+        ],
+        ctaTitle: "Renforcez vos équipes avec un Data Analyst",
+        ctaDesc: "",
+        ctaBtn: "Demander une short-list"
+      },
+      dataScientist: {
+        badge: "Intelligence Artificielle & ML",
+        h1: "Consultant Data Scientist & IA Nearshore Maroc",
+        lead: "Développement de modèles algorithmiques, IA générative (LLM), NLP et vision par ordinateur.",
+        sectionTitle: "Savoir-faire",
+        items: [
+          "Modèles Machine Learning (Scikit-learn, XGBoost)",
+          "Deep Learning (PyTorch, TensorFlow)",
+          "IA Générative (LLM Fine-tuning, RAG, LangChain)",
+          "MLOps & Industrialisation de modèles"
+        ],
+        ctaTitle: "Lancer votre projet IA avec un expert",
+        ctaDesc: "",
+        ctaBtn: "Contacter un spécialiste IA"
+      },
+      dataArchitect: {
+        badge: "Architecture & Gouvernance",
+        h1: "Architecte Data Cloud Nearshore Maroc",
+        lead: "Conception d'architectures de données modernes, scalables, hautement disponibles et conformes aux exigences de sécurité.",
+        sectionTitle: "Domaines d'intervention",
+        items: [
+          "Modern Data Stack & Cloud Architecture",
+          "Data Mesh & Data Fabric Frameworks",
+          "Sécurité, RGPD & Gouvernance des données",
+          "Audit d'infrastructure & FinOps"
+        ],
+        ctaTitle: "Échanger avec un Architecte Data Senior",
+        ctaDesc: "",
+        ctaBtn: "Demander une consultation"
+      }
+    },
     expertises: {
       badge: "Savoir-Faire Technique",
       h1: "Nos Domaines d'Expertise Data & IA",
@@ -391,6 +472,87 @@ export const siteContent = {
       badge: "Data Talent Pool",
       h1: "Our Data & AI Staffing Consultants",
       lead: "Qualified, evaluated, and immediately operational experts to integrate into your agile teams.",
+    },
+    consultantDetails: {
+      dataEngineer: {
+        badge: "Staffing & Technical Support",
+        h1: "Nearshore Data Engineer Consultant — Morocco",
+        lead: "Design, automation, and optimization of your data pipelines (ETL/ELT), Data Warehousing and cloud Data Lake architectures, on a time-and-materials or fixed-fee basis.",
+        sectionTitle: "Technical Expertise & Mastered Stack",
+        items: [
+          "Databricks (PySpark, Delta Lake)",
+          "Snowflake & Google BigQuery",
+          "Airflow & Prefect Orchestration",
+          "dbt Transformations & Advanced SQL",
+          "Azure Data Factory / AWS Glue",
+          "Kafka / Event Hubs Streaming"
+        ],
+        ctaTitle: "Need a Data Engineer in 1 to 2 Weeks?",
+        ctaDesc: "Discover pre-selected profiles available to strengthen your team.",
+        ctaBtn: "Request a Data Engineer"
+      },
+      biDeveloper: {
+        badge: "BI Staffing & Data Viz",
+        h1: "BI Developer & Power BI Consultant — Nearshore Morocco",
+        lead: "Design of interactive decision-making dashboards, high-performance DAX modeling, and Power BI governance setup.",
+        sectionTitle: "Key Skills",
+        items: [
+          "Complex DAX & Tabular Modeling",
+          "Power Query & M Data Preparation",
+          "Microsoft Fabric & Direct Lake",
+          "UI/UX Design & Data Storytelling",
+          "RLS / CLS Security",
+          "Query Optimization & Performance"
+        ],
+        ctaTitle: "Discuss Your Power BI Need",
+        ctaDesc: "Receive a qualified profile within 48h.",
+        ctaBtn: "Talk to a Power BI Expert"
+      },
+      dataAnalyst: {
+        badge: "Business Analytics & KPIs",
+        h1: "Nearshore Data Analyst Consultant — Morocco",
+        lead: "Transform your complex data flows into actionable insights and decision-support dashboards.",
+        sectionTitle: "Key Skills",
+        items: [
+          "Advanced SQL Querying (Joins, CTEs, Window Functions)",
+          "Power BI / Tableau / Looker",
+          "Statistical Analysis with Python / Pandas",
+          "Business Requirements & Specifications"
+        ],
+        ctaTitle: "Reinforce Your Team with a Data Analyst",
+        ctaDesc: "",
+        ctaBtn: "Request a Shortlist"
+      },
+      dataScientist: {
+        badge: "Artificial Intelligence & ML",
+        h1: "Nearshore Data Scientist & AI Consultant — Morocco",
+        lead: "Algorithmic model development, generative AI (LLM), NLP, and computer vision.",
+        sectionTitle: "Know-How",
+        items: [
+          "Machine Learning Models (Scikit-learn, XGBoost)",
+          "Deep Learning (PyTorch, TensorFlow)",
+          "Generative AI (LLM Fine-tuning, RAG, LangChain)",
+          "MLOps & Model Industrialization"
+        ],
+        ctaTitle: "Launch Your AI Project with an Expert",
+        ctaDesc: "",
+        ctaBtn: "Contact an AI Specialist"
+      },
+      dataArchitect: {
+        badge: "Architecture & Governance",
+        h1: "Nearshore Data & Cloud Architect — Morocco",
+        lead: "Design of modern, scalable, highly available data architectures that meet security requirements.",
+        sectionTitle: "Intervention Areas",
+        items: [
+          "Modern Data Stack & Cloud Architecture",
+          "Data Mesh & Data Fabric Frameworks",
+          "Security, GDPR & Data Governance",
+          "Infrastructure Audit & FinOps"
+        ],
+        ctaTitle: "Speak with a Senior Data Architect",
+        ctaDesc: "",
+        ctaBtn: "Request a Consultation"
+      }
     },
     expertises: {
       badge: "Technical Know-How",

@@ -22,7 +22,7 @@ export default function ConsultantsHubPage() {
       stack: ['PySpark', 'Databricks', 'Snowflake', 'Airflow', 'SQL'],
     },
     {
-      slug: 'power-bi',
+      slug: 'bi-developer',
       title: language === 'fr' ? 'Consultant Power BI' : 'Power BI Consultant',
       icon: <BarChart2 size={28} />,
       desc: language === 'fr' ? 'Expert en modélisation DAX, conception de tableaux de bord décisionnels et gouvernance RLS.' : 'Expert in DAX modeling, executive dashboard design, and RLS governance.',
