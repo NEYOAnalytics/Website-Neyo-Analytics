@@ -1,11 +1,12 @@
-import React from 'react';
 import ExpertiseClientPage from '../ExpertiseClientPage';
+import { createMetadata } from '../../../lib/metadata';
 
-export const metadata = {
-  title: 'Expertise Palantir Foundry & AIP',
-  description: 'Intégration Palantir Foundry, modélisation d\'ontologie et déploiement AIP (Artificial Intelligence Platform) avec nos experts Nearshore.',
-};
+export const metadata = createMetadata({
+  title: 'Expertise Palantir Foundry & AIP Nearshore Maroc — NEYO Analytics',
+  description: 'Consultants Palantir Foundry & AIP au Maroc pour vos projets de data ops, ontologie et analytics décisionnel avancé. Expertise certifiée nearshore.',
+  path: '/expertises/palantir',
+});
 
 export default function PalantirExpertisePage() {
-  return <ExpertiseClientPage expertiseKey="palantir" />;
+  return <ExpertiseClientPage expertiseKey="palantir" expertiseSlug="palantir" />;
 }

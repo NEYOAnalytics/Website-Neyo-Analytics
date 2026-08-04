@@ -8,6 +8,7 @@ export default function sitemap() {
     '/nearshore-maroc',
     '/pourquoi-externaliser',
     '/consultants',
+    '/consultants/power-bi',
     '/consultants/data-analyst',
     '/consultants/data-engineer',
     '/consultants/data-scientist',
@@ -20,11 +21,13 @@ export default function sitemap() {
     '/expertises/cloud',
     '/expertises/palantir',
     '/expertises/ia-data-science',
+    '/expertises/data-governance',
     '/notre-process',
     '/cas-usages',
     '/a-propos',
     '/blog',
     '/contact',
+    '/aid-signal',
   ];
 
   const blogRoutes = blogPosts.map((post) => `/blog/${post.slug}`);

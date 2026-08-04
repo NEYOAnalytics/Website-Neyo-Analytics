@@ -28,11 +28,11 @@ export const siteContent = {
       badge: "ESN Spécialisée Nearshore Data & IA — Europe & Golfe (GCC)",
       heroTitlePart1: "Des consultants ",
       heroTitleHighlight: "Data & IA",
-      heroTitlePart2: " experts basés au Maroc pour l'Europe & le Golfe, prêts en 48h",
+      heroTitlePart2: " experts basés au Maroc pour l'Europe & le Golfe, prêts généralement sous 48h",
       heroSubtitle: "Renforcez vos équipes avec des <strong>consultants Data & IA experts basés au Maroc</strong> (Data Engineers, Power BI, Data Scientists) trilingues (Français, Anglais, Arabe), parfaitement alignés sur les fuseaux Europe (0-1h) et Golfe / GCC (2-3h), à des coûts optimisés jusqu'à <strong>-40%</strong>.",
       stats: [
-        { value: "48h", label: "Délai de Short-list", sub: "2 à 3 profils ciblés proposés" },
-        { value: "-40%", label: "Économie de Coût", sub: "vs recrutement direct CDI chargé" },
+        { value: "48h", label: "Délai Moyen de Short-list", sub: "2 à 3 profils ciblés généralement sous 48h" },
+        { value: "Jusqu'à -40%", label: "Économie de Coût", sub: "en moyenne vs CDI chargé Europe" },
         { value: "FR / EN / AR", label: "Trilingues & Alignés", sub: "Europe (0-1h) · Golfe (2-3h)" },
         { value: "1 à 2 w", label: "Démarrage Mission", sub: "Intégration agile immédiate" },
       ],
@@ -53,7 +53,7 @@ export const siteContent = {
         },
         {
           title: "Excellence Technique",
-          desc: "Consultants issus des meilleures écoles d'ingénieurs marocaines (EHTP, EMI, ENSIAS) avec des certifications éditeurs reconnues (Microsoft, Databricks).",
+          desc: "Consultants sélectionnés pour leur excellence technique, avec des profils souvent issus de grandes écoles d'ingénieurs marocaines et certifiés sur les technologies éditeurs (Microsoft, Databricks) selon la mission.",
         },
       ],
       expertisesTitle: "Nos Expertises Techniques Data & IA",
@@ -101,12 +101,12 @@ export const siteContent = {
       processIntro: "De l'expression du besoin au suivi opérationnel de la mission.",
       processSteps: [
         { num: "01", title: "Expression du besoin", desc: "Définition des compétences techniques (must-have / nice-to-have) et du contexte projet." },
-        { num: "02", title: "Sélection & Short-list", desc: "Présélection de 2 à 3 profils sous 48h. Entretien direct avec vous avant toute décision." },
+        { num: "02", title: "Sélection & Short-list", desc: "Présélection de 2 à 3 profils généralement sous 48h. Entretien direct avec vous avant toute décision." },
         { num: "03", title: "Proposition & Démarrage", desc: "Validation de la proposition commerciale et intégration opérationnelle en 1 à 2 semaines." },
         { num: "04", title: "Suivi de Mission", desc: "Accompagnement continu et points de suivi réguliers pour garantir le succès des livrables." },
       ],
       finalCtaTitle: "Prêt à renforcer votre équipe Data & IA ?",
-      finalCtaDesc: "Échangez en 20 minutes avec un expert NEYO Analytics pour évaluer votre besoin et obtenir des profils qualifiés sous 48h.",
+      finalCtaDesc: "Échangez en 20 minutes avec un expert NEYO Analytics pour évaluer votre besoin et obtenir des profils qualifiés généralement sous 48h.",
     },
     nearshore: {
       badge: "Dossier Spécial — Nearshore Data & IA",
@@ -202,7 +202,7 @@ export const siteContent = {
           { q: "Proposez-vous aussi Microsoft Fabric et Direct Lake ?", a: "Oui, nos consultants sont formés sur les architectures Fabric les plus récentes, y compris Direct Lake et OneLake." }
         ],
         ctaTitle: "Demander un consultant Power BI",
-        ctaDesc: "Recevez un profil qualifié sous 48h.",
+        ctaDesc: "Recevez un profil qualifié généralement sous 48h.",
         ctaBtn: "Parler à un expert Power BI"
       },
       biDeveloper: {
@@ -562,11 +562,11 @@ export const siteContent = {
       badge: "Specialized Nearshore Data & AI Firm — Europe & GCC Gulf",
       heroTitlePart1: "Expert ",
       heroTitleHighlight: "Data & AI",
-      heroTitlePart2: " consultants based in Morocco for Europe & GCC, ready in 48h",
+      heroTitlePart2: " consultants based in Morocco for Europe & GCC, ready generally within 48h",
       heroSubtitle: "Scale your teams with trilingual (French, English, Arabic) <strong>Data Engineers, Power BI consultants & Data Scientists</strong> aligned with Europe (0-1h) and GCC Gulf (2-3h) time zones, at costs optimized up to <strong>-40%</strong>.",
       stats: [
-        { value: "48h", label: "Shortlist Turnaround", sub: "2 to 3 targeted profiles proposed" },
-        { value: "-40%", label: "Cost Savings", sub: "vs direct hiring in Europe/GCC" },
+        { value: "48h", label: "Avg. Shortlist Turnaround", sub: "2 to 3 targeted profiles generally proposed within 48h" },
+        { value: "Up to -40%", label: "Cost Savings", sub: "average savings vs European permanent hire" },
         { value: "FR / EN / AR", label: "Trilingual & Aligned", sub: "Europe (0-1h) · GCC Gulf (2-3h)" },
         { value: "1 to 2 w", label: "Mission Onboarding", sub: "Immediate agile integration" },
       ],
@@ -587,7 +587,7 @@ export const siteContent = {
         },
         {
           title: "Technical Excellence",
-          desc: "Consultants from top Moroccan engineering schools (EHTP, EMI, ENSIAS) with recognized vendor certifications (Microsoft, Databricks).",
+          desc: "Consultants selected for technical excellence, with profiles often from top Moroccan engineering schools and certified in vendor technologies (Microsoft, Databricks) depending on the mission.",
         },
       ],
       expertisesTitle: "Our Technical Data & AI Expertise",
@@ -635,12 +635,12 @@ export const siteContent = {
       processIntro: "From requirements gathering to ongoing operational monitoring.",
       processSteps: [
         { num: "01", title: "Requirement Definition", desc: "Defining technical skills (must-have / nice-to-have) and project context." },
-        { num: "02", title: "Selection & Shortlist", desc: "Pre-selecting 2 to 3 profiles within 48h. Direct interview with you before any decision." },
+        { num: "02", title: "Selection & Shortlist", desc: "Pre-selecting 2 to 3 profiles generally within 48h. Direct interview with you before any decision." },
         { num: "03", title: "Proposal & Kickoff", desc: "Validation of the commercial proposal and operational onboarding in 1 to 2 weeks." },
         { num: "04", title: "Mission Monitoring", desc: "Continuous support and regular performance check-ins to guarantee deliverable success." },
       ],
       finalCtaTitle: "Ready to Strengthen Your Data & AI Team?",
-      finalCtaDesc: "Speak for 20 minutes with a NEYO Analytics expert to evaluate your needs and receive qualified profiles within 48 hours.",
+      finalCtaDesc: "Speak for 20 minutes with a NEYO Analytics expert to evaluate your needs and receive qualified profiles generally within 48h.",
     },
     nearshore: {
       badge: "Special Report — Nearshore Data & AI",
@@ -736,7 +736,7 @@ export const siteContent = {
           { q: "Do you also offer Microsoft Fabric and Direct Lake?", a: "Yes, our consultants are trained on the latest Fabric architectures, including Direct Lake and OneLake." }
         ],
         ctaTitle: "Request a Power BI Consultant",
-        ctaDesc: "Receive a qualified profile within 48h.",
+        ctaDesc: "Receive a qualified profile generally within 48h.",
         ctaBtn: "Talk to a Power BI Expert"
       },
       biDeveloper: {

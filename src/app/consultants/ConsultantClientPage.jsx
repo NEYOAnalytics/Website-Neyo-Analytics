@@ -6,39 +6,7 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import styles from './consultants.module.scss';
 import { useLanguage } from '../../components/LanguageProviderClient';
 import { siteContent } from '../../translations/siteContent';
-
-const FAQ = ({ items }) => {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: items.map(({ q, a }) => ({
-      '@type': 'Question',
-      name: q,
-      acceptedAnswer: { '@type': 'Answer', text: a },
-    })),
-  };
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
-      <div style={{ maxWidth: '900px', margin: '0 auto 3rem auto' }}>
-        <h2 style={{ color: 'var(--text-main, white)', marginBottom: '1.5rem' }}>
-          FAQ
-        </h2>
-        <dl style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-          {items.map(({ q, a }, i) => (
-            <div key={i} style={{ borderLeft: '3px solid #38bdf8', paddingLeft: '1rem' }}>
-              <dt style={{ fontWeight: 700, color: 'var(--text-main, white)', marginBottom: '0.4rem' }}>{q}</dt>
-              <dd style={{ color: 'var(--text-secondary, #cbd5e1)', margin: 0 }}>{a}</dd>
-            </div>
-          ))}
-        </dl>
-      </div>
-    </>
-  );
-};
+import { BreadcrumbJsonLd, FAQJsonLd } from '../../components/JsonLd';
 
 export default function ConsultantClientPage({ consultantKey }) {
   const { language } = useLanguage();
@@ -47,13 +15,23 @@ export default function ConsultantClientPage({ consultantKey }) {
 
   if (!content) return null;
 
-  const nearshoreLink = lang === 'fr' ? '/nearshore-maroc' : '/nearshore-maroc';
+  const nearshoreLink = '/nearshore-maroc';
   const outsourceLink = '/pourquoi-externaliser';
   const nearshoreLabel = lang === 'fr' ? 'notre offre Nearshore Maroc' : 'our Nearshore Morocco offer';
   const outsourceLabel = lang === 'fr' ? 'pourquoi externaliser' : 'why outsource';
 
+  const faqItems = content.faq ? content.faq.map(({ q, a }) => ({ question: q, answer: a })) : [];
+
   return (
     <div className={styles.container}>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Consultants', url: '/consultants' },
+          { name: content.badge || consultantKey, url: `/consultants/${consultantKey}` },
+        ]}
+      />
+      {faqItems.length > 0 && <FAQJsonLd faqs={faqItems} />}
+
       <header className={styles.header}>
         <span className={styles.badge}>{content.badge}</span>
         <h1 style={{ color: 'var(--text-main, white)' }}>{content.h1}</h1>
@@ -107,7 +85,21 @@ export default function ConsultantClientPage({ consultantKey }) {
       </div>
 
       {/* FAQ */}
-      {content.faq && <FAQ items={content.faq} />}
+      {content.faq && (
+        <div style={{ maxWidth: '900px', margin: '0 auto 3rem auto' }}>
+          <h2 style={{ color: 'var(--text-main, white)', marginBottom: '1.5rem' }}>
+            FAQ
+          </h2>
+          <dl style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            {content.faq.map(({ q, a }, i) => (
+              <div key={i} style={{ borderLeft: '3px solid #38bdf8', paddingLeft: '1rem' }}>
+                <dt style={{ fontWeight: 700, color: 'var(--text-main, white)', marginBottom: '0.4rem' }}>{q}</dt>
+                <dd style={{ color: 'var(--text-secondary, #cbd5e1)', margin: 0 }}>{a}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      )}
 
       {/* CTA */}
       <section className={styles.ctaBox}>

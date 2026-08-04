@@ -1,16 +1,20 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Award, Globe2, ShieldCheck, HeartHandshake } from 'lucide-react';
+import { BreadcrumbJsonLd } from '../../components/JsonLd';
+import { createMetadata } from '../../lib/metadata';
 import styles from '../consultants/consultants.module.scss';
 
-export const metadata = {
+export const metadata = createMetadata({
   title: 'À propos de NEYO Analytics | Pure Player Nearshore Data & IA',
-  description: 'Découvrez NEYO Analytics, cabinet de conseil spécialisé Nearshore Data & IA ancré au Maroc et tourné vers l\'Europe.',
-};
+  description: 'Découvrez NEYO Analytics, cabinet de conseil spécialisé Nearshore Data & IA ancré au Maroc et tourné vers l\'Europe et le Golfe.',
+  path: '/a-propos',
+});
 
 export default function AProposPage() {
   return (
     <div className={styles.container}>
+      <BreadcrumbJsonLd items={[{ name: 'À propos', url: '/a-propos' }]} />
       <header className={styles.header}>
         <span className={styles.badge}>Notre Histoire & Ambition</span>
         <h1>À propos de NEYO Analytics</h1>

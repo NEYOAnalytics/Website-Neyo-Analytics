@@ -28,8 +28,7 @@ export const metadata = {
   },
   openGraph: {
     title: 'NEYO Analytics | Nearshore Data & IA Maroc',
-    description: 'Consultants experts Data & IA au Maroc (Power BI, Databricks, Azure, Palantir) en régie pour l\'Europe et le Golfe. Coûts optimisés à -40%.',
-    url: 'https://www.neyo-analytics.com',
+    description: 'Consultants experts Data & IA au Maroc (Power BI, Databricks, Azure, Palantir) en régie pour l\'Europe et le Golfe. Coûts optimisés jusqu\'à -40%.',
     siteName: 'NEYO Analytics',
     locale: 'fr_FR',
     type: 'website',
@@ -43,10 +42,10 @@ export const metadata = {
     ],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: 'NEYO Analytics | Nearshore Data & IA Maroc',
-    description: 'Consultants Data & IA francophones au Maroc pour l\'Europe et le Golfe.',
-    images: ['/logo.png'],
+    description: 'Consultants Data & IA francophones au Maroc pour l\'Europe et le Golfe. Coûts optimisés jusqu\'à -40%.',
+    images: ['/logo-square.png'],
   },
   robots: {
     index: true,

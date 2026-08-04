@@ -1,10 +1,12 @@
 import ExpertiseClientPage from '../ExpertiseClientPage';
+import { createMetadata } from '../../../lib/metadata';
 
-export const metadata = {
-  title: 'Expertise Data Engineering & Pipelines',
-  description: 'Architectures Modern Data Stack : Databricks, Snowflake, Airflow, dbt, Spark. Consultants Data Engineering Nearshore.',
-};
+export const metadata = createMetadata({
+  title: 'Expertise Data Engineering Nearshore Maroc — NEYO Analytics',
+  description: 'Consultants Data Engineers au Maroc : pipelines PySpark, Databricks, Snowflake, Airflow, dbt. Architecture moderne et traitement de données à grande échelle.',
+  path: '/expertises/data-engineering',
+});
 
 export default function DataEngineeringExpertisePage() {
-  return <ExpertiseClientPage expertiseKey="dataEng" />;
+  return <ExpertiseClientPage expertiseKey="dataEngineering" expertiseSlug="data-engineering" />;
 }

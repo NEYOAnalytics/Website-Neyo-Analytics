@@ -1,9 +1,11 @@
 import ConsultantClientPage from '../ConsultantClientPage';
+import { createMetadata } from '../../../lib/metadata';
 
-export const metadata = {
-  title: 'Consultant Power BI Nearshore Pas Cher',
-  description: 'Consultant Power BI nearshore au Maroc, francophone, expert DAX et RLS. Jusqu\'à 40% moins cher qu\'un consultant en France. Staffé en 1-2 semaines.',
-};
+export const metadata = createMetadata({
+  title: 'Consultant Power BI Nearshore Maroc — NEYO Analytics',
+  description: 'Consultant Power BI nearshore au Maroc, francophone, expert DAX, Fabric et RLS. Coûts optimisés jusqu\'à -40% vs France. Staffé sous 1 à 2 semaines.',
+  path: '/consultants/power-bi',
+});
 
 export default function PowerBiConsultantPage() {
   return <ConsultantClientPage consultantKey="powerBi" />;

@@ -534,14 +534,14 @@ export const blogPosts = [
     statsBox: {
       fr: [
         { value: '1–2 w', label: 'Délai de staffing Nearshore' },
-        { value: '-40%', label: 'Économie globale de coût' },
-        { value: '48h', label: 'Short-list profils proposés' },
+        { value: 'Jusqu\'à -40%', label: 'Économie globale de coût' },
+        { value: '~48h', label: 'Short-list profils (délai moyen)' },
         { value: '100%', label: 'Flexibilité contractuelle' },
       ],
       en: [
         { value: '1–2 w', label: 'Nearshore staffing lead time' },
-        { value: '-40%', label: 'Overall cost savings' },
-        { value: '48h', label: 'Profile shortlist turnaround' },
+        { value: 'Up to -40%', label: 'Overall cost savings' },
+        { value: '~48h', label: 'Profile shortlist (avg. turnaround)' },
         { value: '100%', label: 'Contractual flexibility' },
       ],
     },
@@ -659,13 +659,13 @@ export const blogPosts = [
       fr: [
         { value: '3', label: 'Métiers Data complémentaires' },
         { value: '100%', label: 'Profils qualifiés & certifiés' },
-        { value: '48h', label: 'Cadrage & Short-list' },
+        { value: '~48h', label: 'Cadrage & Short-list (en moyenne)' },
         { value: 'ETL/BI/IA', label: 'Stack complète couverte' },
       ],
       en: [
         { value: '3', label: 'Complementary Data Roles' },
         { value: '100%', label: 'Qualified & Certified Profiles' },
-        { value: '48h', label: 'Scoping & Shortlist' },
+        { value: '~48h', label: 'Scoping & Shortlist (avg.)' },
         { value: 'ETL/BI/AI', label: 'Full Stack Covered' },
       ],
     },

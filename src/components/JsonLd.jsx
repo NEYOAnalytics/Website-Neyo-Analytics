@@ -33,6 +33,7 @@ export function OrganizationJsonLd() {
 }
 
 export function FAQJsonLd({ faqs }) {
+  if (!faqs || faqs.length === 0) return null;
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -65,6 +66,68 @@ export function ServiceJsonLd({ name, description, providerName = 'NEYO Analytic
     },
     areaServed: ['FR', 'BE', 'CH', 'LU', 'UK', 'AE', 'MA'],
     description: description,
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+export function BreadcrumbJsonLd({ items = [] }) {
+  if (!items || items.length === 0) return null;
+
+  const breadcrumbs = [
+    { name: 'Accueil', url: 'https://www.neyo-analytics.com' },
+    ...items,
+  ];
+
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: item.url.startsWith('http') ? item.url : `https://www.neyo-analytics.com${item.url.startsWith('/') ? item.url : '/' + item.url}`,
+    })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+export function ArticleJsonLd({ title, description, url, datePublished, author = 'NEYO Analytics' }) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: title,
+    description: description,
+    url: url.startsWith('http') ? url : `https://www.neyo-analytics.com${url.startsWith('/') ? url : '/' + url}`,
+    datePublished: datePublished || new Date().toISOString(),
+    dateModified: datePublished || new Date().toISOString(),
+    author: {
+      '@type': 'Person',
+      name: author,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'NEYO Analytics',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.neyo-analytics.com/logo.png',
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': url.startsWith('http') ? url : `https://www.neyo-analytics.com${url.startsWith('/') ? url : '/' + url}`,
+    },
   };
 
   return (
