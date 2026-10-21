@@ -1,4 +1,6 @@
-import { blogPosts } from '../data/blogPosts';
+import { getPublishedPosts } from '../lib/blog';
+
+export const dynamic = 'force-dynamic';
 
 export default function sitemap() {
   const baseUrl = 'https://www.neyo-analytics.com';
@@ -30,14 +32,14 @@ export default function sitemap() {
     '/aid-signal',
   ];
 
-  const blogRoutes = blogPosts.map((post) => `/blog/${post.slug}`);
-
-  const allRoutes = [...staticRoutes, ...blogRoutes];
-
-  return allRoutes.map((route) => ({
+  const routes = staticRoutes.map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date().toISOString().split('T')[0],
     changeFrequency: route === '' ? 'weekly' : route.startsWith('/blog/') ? 'weekly' : 'monthly',
     priority: route === '' ? 1.0 : route === '/nearshore-maroc' ? 0.9 : route.startsWith('/blog/') ? 0.7 : 0.8,
   }));
+  return [...routes, ...getPublishedPosts().map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: post.updatedAt || post.publishedAt,
+    changeFrequency: 'monthly', priority: 0.7,
+  }))];
 }

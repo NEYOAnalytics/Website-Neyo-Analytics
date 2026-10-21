@@ -113,7 +113,7 @@ export function ArticleJsonLd({ title, description, url, datePublished, author =
     datePublished: datePublished || new Date().toISOString(),
     dateModified: datePublished || new Date().toISOString(),
     author: {
-      '@type': 'Person',
+      '@type': 'Organization',
       name: author,
     },
     publisher: {

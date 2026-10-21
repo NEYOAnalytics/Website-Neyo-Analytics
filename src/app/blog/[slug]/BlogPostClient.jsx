@@ -2,25 +2,16 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { useParams, notFound } from 'next/navigation';
 import { useLanguage } from '../../../components/LanguageProviderClient';
-import { blogPosts } from '../../../data/blogPosts';
 import { BreadcrumbJsonLd, ArticleJsonLd } from '../../../components/JsonLd';
 import { ArrowLeft, Calendar, User, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
 import styles from '../../consultants/consultants.module.scss';
 
-export default function BlogPostClient() {
-  const params = useParams();
-  const slug = params?.slug;
+export default function BlogPostClient({ post }) {
+  const slug = post.slug;
   const { language } = useLanguage();
   const lang = language === 'en' ? 'en' : 'fr';
   const isFr = lang === 'fr';
-
-  const post = blogPosts.find((p) => p.slug === slug);
-
-  if (!post) {
-    notFound();
-  }
 
   const title = typeof post.title === 'object' ? post.title[lang] : post.title;
   const excerpt = typeof post.excerpt === 'object' ? post.excerpt[lang] : post.excerpt;
@@ -42,7 +33,7 @@ export default function BlogPostClient() {
         title={title}
         description={excerpt}
         url={`/blog/${slug}`}
-        datePublished={post.date}
+        datePublished={post.publishedAt}
         author={post.author || 'NEYO Analytics'}
       />
 

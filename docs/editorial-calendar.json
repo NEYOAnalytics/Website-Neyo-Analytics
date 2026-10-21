@@ -1,0 +1,182 @@
+[
+  {
+    "slug": "power-bi-guide-debutant",
+    "title": "Power BI : à quoi sert cet outil et comment démarrer ?",
+    "keyword": "power bi",
+    "publishedAt": "2026-10-21T00:00:00+02:00",
+    "words": 970,
+    "titleLength": 61,
+    "descriptionLength": 154
+  },
+  {
+    "slug": "power-bi-vs-excel",
+    "title": "Power BI ou Excel : lequel choisir pour votre reporting ?",
+    "keyword": "power bi vs excel",
+    "publishedAt": "2026-10-21T00:00:00+02:00",
+    "words": 964,
+    "titleLength": 70,
+    "descriptionLength": 159
+  },
+  {
+    "slug": "gcp-google-cloud-guide",
+    "title": "GCP : comprendre Google Cloud pour un projet Data",
+    "keyword": "gcp",
+    "publishedAt": "2026-10-21T00:00:00+02:00",
+    "words": 887,
+    "titleLength": 64,
+    "descriptionLength": 155
+  },
+  {
+    "slug": "palantir-foundry-guide",
+    "title": "Palantir Foundry : à quoi sert la plateforme en entreprise ?",
+    "keyword": "palantir foundry",
+    "publishedAt": "2026-10-21T00:00:00+02:00",
+    "words": 931,
+    "titleLength": 61,
+    "descriptionLength": 158
+  },
+  {
+    "slug": "onshore-offshore-nearshore-differences",
+    "title": "Onshore, offshore, nearshore : les différences pour un projet Data",
+    "keyword": "différence onshore offshore",
+    "publishedAt": "2026-10-21T00:00:00+02:00",
+    "words": 1017,
+    "titleLength": 68,
+    "descriptionLength": 159
+  },
+  {
+    "slug": "power-bi-gratuit-licences",
+    "title": "Power BI est-il gratuit ? Comprendre les licences et le partage",
+    "keyword": "power bi gratuit",
+    "publishedAt": "2026-10-22T09:00:00+02:00",
+    "words": 721,
+    "titleLength": 64,
+    "descriptionLength": 157
+  },
+  {
+    "slug": "creer-tableau-bord-power-bi",
+    "title": "Créer un tableau de bord Power BI : un exemple de ventes vérifiable",
+    "keyword": "créer tableau de bord power bi",
+    "publishedAt": "2026-10-23T09:00:00+02:00",
+    "words": 749,
+    "titleLength": 60,
+    "descriptionLength": 156
+  },
+  {
+    "slug": "bigquery-definition-fonctionnement",
+    "title": "BigQuery : fonctionnement, usages et premiers contrôles de coût",
+    "keyword": "bigquery",
+    "publishedAt": "2026-10-24T09:00:00+02:00",
+    "words": 713,
+    "titleLength": 63,
+    "descriptionLength": 159
+  },
+  {
+    "slug": "migration-cloud-data-checklist",
+    "title": "Migration cloud Data : la checklist avant de déplacer vos pipelines",
+    "keyword": "migration cloud data",
+    "publishedAt": "2026-10-25T09:00:00+01:00",
+    "words": 778,
+    "titleLength": 60,
+    "descriptionLength": 159
+  },
+  {
+    "slug": "dax-power-query-differences",
+    "title": "DAX ou Power Query : où placer vos transformations Power BI ?",
+    "keyword": "dax power query différence",
+    "publishedAt": "2026-10-26T09:00:00+01:00",
+    "words": 781,
+    "titleLength": 70,
+    "descriptionLength": 156
+  },
+  {
+    "slug": "modele-etoile-power-bi",
+    "title": "Modèle en étoile Power BI : concevoir des relations qui donnent les bons totaux",
+    "keyword": "modèle en étoile power bi",
+    "publishedAt": "2026-10-27T09:00:00+01:00",
+    "words": 721,
+    "titleLength": 63,
+    "descriptionLength": 158
+  },
+  {
+    "slug": "etl-vs-elt",
+    "title": "ETL ou ELT : choisir où transformer vos données",
+    "keyword": "etl vs elt",
+    "publishedAt": "2026-10-28T09:00:00+01:00",
+    "words": 738,
+    "titleLength": 62,
+    "descriptionLength": 155
+  },
+  {
+    "slug": "palantir-foundry-vs-databricks",
+    "title": "Palantir Foundry ou Databricks : comparer le processus, pas seulement les fonctions",
+    "keyword": "palantir foundry vs databricks",
+    "publishedAt": "2026-10-29T09:00:00+01:00",
+    "words": 699,
+    "titleLength": 67,
+    "descriptionLength": 160
+  },
+  {
+    "slug": "gouvernance-donnees-plan-action",
+    "title": "Gouvernance des données : démarrer par les décisions qui bloquent",
+    "keyword": "gouvernance des données",
+    "publishedAt": "2026-10-30T09:00:00+01:00",
+    "words": 717,
+    "titleLength": 65,
+    "descriptionLength": 155
+  },
+  {
+    "slug": "finops-cloud-data-couts",
+    "title": "FinOps Data : comprendre et réduire les coûts cloud sans casser les usages",
+    "keyword": "finops data",
+    "publishedAt": "2026-10-31T09:00:00+01:00",
+    "words": 719,
+    "titleLength": 66,
+    "descriptionLength": 158
+  },
+  {
+    "slug": "dbt-transformation-tests-donnees",
+    "title": "dbt : transformer et tester vos données sans multiplier les scripts isolés",
+    "keyword": "dbt data",
+    "publishedAt": "2026-11-01T09:00:00+01:00",
+    "words": 663,
+    "titleLength": 70,
+    "descriptionLength": 158
+  },
+  {
+    "slug": "data-warehouse-data-lake-lakehouse",
+    "title": "Data warehouse, data lake ou lakehouse : choisir selon les usages",
+    "keyword": "data warehouse vs data lake",
+    "publishedAt": "2026-11-02T09:00:00+01:00",
+    "words": 687,
+    "titleLength": 67,
+    "descriptionLength": 158
+  },
+  {
+    "slug": "rag-ia-generative-entreprise",
+    "title": "RAG en entreprise : relier une IA à vos documents avec des réponses évaluables",
+    "keyword": "rag entreprise",
+    "publishedAt": "2026-11-03T09:00:00+01:00",
+    "words": 826,
+    "titleLength": 70,
+    "descriptionLength": 158
+  },
+  {
+    "slug": "qualite-donnees-indicateurs",
+    "title": "Qualité des données : quels indicateurs suivre et comment agir ?",
+    "keyword": "qualité des données",
+    "publishedAt": "2026-11-04T09:00:00+01:00",
+    "words": 697,
+    "titleLength": 69,
+    "descriptionLength": 155
+  },
+  {
+    "slug": "cahier-charges-projet-data-bi",
+    "title": "Cahier des charges Data et BI : le modèle pour obtenir des offres comparables",
+    "keyword": "cahier des charges projet data",
+    "publishedAt": "2026-11-05T09:00:00+01:00",
+    "words": 701,
+    "titleLength": 67,
+    "descriptionLength": 152
+  }
+]
