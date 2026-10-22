@@ -2,8 +2,8 @@ import ConsultantClientPage from '../ConsultantClientPage';
 import { createMetadata } from '../../../lib/metadata';
 
 export const metadata = createMetadata({
-  title: 'Consultant Power BI Nearshore Maroc — NEYO Analytics',
-  description: 'Consultant Power BI nearshore au Maroc, francophone, expert DAX, Fabric et RLS. Coûts optimisés jusqu\'à -40% vs France. Staffé sous 1 à 2 semaines.',
+  title: 'Consultant Power BI',
+  description: "Consultant Power BI : modèles de données, mesures DAX, rapports et diffusion Power BI adaptés à vos indicateurs métier. Accompagnement au Maroc et à.",
   path: '/consultants/power-bi',
 });
 

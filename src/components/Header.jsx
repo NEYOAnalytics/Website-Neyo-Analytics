@@ -30,14 +30,14 @@ const Header = () => {
 
   const navLinks = [
     { label: { fr: 'Accueil', en: 'Home' }, href: '/' },
-    { label: { fr: 'Nearshore', en: 'Nearshore' }, href: '/nearshore-maroc' },
-    { label: { fr: 'Externaliser', en: 'Outsource' }, href: '/pourquoi-externaliser' },
-    { label: { fr: 'Consultants', en: 'Consultants' }, href: '/consultants' },
+    { label: { fr: 'Entreprises au Maroc', en: 'Companies in Morocco' }, href: '/entreprises-maroc' },
+    { label: { fr: 'Nearshore international', en: 'International nearshore' }, href: '/nearshore-maroc' },
     { label: { fr: 'Expertises', en: 'Expertise' }, href: '/expertises' },
-    { label: { fr: 'Process', en: 'Process' }, href: '/notre-process' },
-    { label: { fr: 'Cas d\'Usages', en: 'Use Cases' }, href: '/cas-usages' },
+    { label: { fr: 'Consultants', en: 'Consultants' }, href: '/consultants' },
     { label: { fr: 'Blog', en: 'Blog' }, href: '/blog' },
   ];
+  const contactHref = pathname.startsWith('/entreprises-maroc') ? '/contact?marche=maroc' : ['/nearshore-maroc', '/pourquoi-externaliser'].includes(pathname) ? '/contact?marche=international' : '/contact';
+
 
   const handleThemeClick = (e) => {
     e.preventDefault();
@@ -90,7 +90,7 @@ const Header = () => {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`nav-item ${isActive ? 'active' : ''}`} title={link.label[language]}
+                    className={`nav-item ${isActive ? 'active' : ''}`} aria-current={isActive ? 'page' : undefined} title={link.label[language]}
                   >
                     {link.label[language]}
                   </Link>
@@ -122,7 +122,7 @@ const Header = () => {
                 {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
               </button>
 
-              <Link href="/contact" className="btn-primary-header" title={language === 'fr' ? 'Parler à un expert' : 'Talk to an Expert'}>
+              <Link href={contactHref} className="btn-primary-header" title={language === 'fr' ? 'Parler à un expert' : 'Talk to an Expert'}>
                 <span>{language === 'fr' ? 'Parler à un expert' : 'Talk to an Expert'}</span>
                 <ArrowRight size={14} />
               </Link>
@@ -131,7 +131,8 @@ const Header = () => {
                 type="button"
                 className="mobile-toggle"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                aria-label="Toggle Navigation"
+                aria-label={language === 'fr' ? 'Ouvrir le menu' : 'Open navigation'}
+                aria-expanded={mobileMenuOpen}
               >
                 {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
               </button>
@@ -164,7 +165,7 @@ const Header = () => {
               </button>
             </div>
             <Link
-              href="/contact"
+              href={contactHref}
               className="btn-primary-mobile" title={language === 'fr' ? 'Parler à un expert' : 'Talk to an Expert'}
               onClick={() => setMobileMenuOpen(false)}
             >

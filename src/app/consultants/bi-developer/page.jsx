@@ -2,8 +2,8 @@ import ConsultantClientPage from '../ConsultantClientPage';
 import { createMetadata } from '../../../lib/metadata';
 
 export const metadata = createMetadata({
-  title: 'Développeur BI & Power BI Nearshore Maroc — NEYO Analytics',
-  description: 'Recrutez un Consultant / Développeur Power BI senior basé au Maroc (DAX, Modélisation, Fabric). Francophone, disponible sous 1 à 2 semaines.',
+  title: 'Développeur BI & Power BI',
+  description: "Développeur BI & Power BI : conception de rapports, modèles et migrations entre Tableau, Qlik et Looker selon votre environnement. Accompagnement au Maroc et.",
   path: '/consultants/bi-developer',
 });
 

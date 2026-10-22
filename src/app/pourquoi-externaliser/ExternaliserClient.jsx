@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import InternationalNotice from '../../components/markets/InternationalNotice';
 import Link from 'next/link';
 import { useLanguage } from '../../components/LanguageProviderClient';
 import { siteContent } from '../../translations/siteContent';
@@ -17,6 +18,7 @@ export default function ExternaliserClient() {
   return (
     <div className={styles.container}>
       <BreadcrumbJsonLd items={[{ name: 'Pourquoi Externaliser', url: '/pourquoi-externaliser' }]} />
+      <InternationalNotice />
       <header className={styles.header}>
         <span className={styles.badge}>{e.badge}</span>
         <h1>{e.h1}</h1>
@@ -60,7 +62,7 @@ export default function ExternaliserClient() {
       <div className={styles.ctaBox}>
         <h2>{language === 'fr' ? 'Besoin de renforcer votre équipe Data ?' : 'Need to Strengthen Your Data Team?'}</h2>
         <p>{language === 'fr' ? 'Recevez une présélection de candidats généralement sous 48h.' : 'Receive a pre-selection of candidates generally within 48h.'}</p>
-        <Link href="/contact" className={styles.btnPrimary}>
+        <Link href="/contact?marche=international&besoin=consultant" className={styles.btnPrimary}>
           <span>{c.talkToExpert}</span>
           <ArrowRight size={18} />
         </Link>

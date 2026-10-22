@@ -3,8 +3,8 @@ import ExpertisesHubClient from './ExpertisesHubClient';
 import { createMetadata } from '../../lib/metadata';
 
 export const metadata = createMetadata({
-  title: 'Nos Expertises Data & IA Nearshore — NEYO Analytics',
-  description: 'Power BI, Data Engineering, Cloud Data, IA & Data Science, Gouvernance Data, Palantir. Toutes nos expertises nearshore depuis le Maroc pour l\'Europe et le Golfe.',
+  title: 'Nos Expertises Data & IA',
+  description: "Explorez les expertises techniques Data, BI, IA et Cloud de NEYO Analytics. Des compétences pour vos projets au Maroc et vos équipes internationales.",
   path: '/expertises',
 });
 

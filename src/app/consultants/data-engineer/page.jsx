@@ -2,8 +2,8 @@ import ConsultantClientPage from '../ConsultantClientPage';
 import { createMetadata } from '../../../lib/metadata';
 
 export const metadata = createMetadata({
-  title: 'Consultant Data Engineer Nearshore Maroc — NEYO Analytics',
-  description: 'Recrutez un Consultant Data Engineer senior basé au Maroc (Databricks, Snowflake, Airflow, Spark). Francophone, opérationnel sous 1 à 2 semaines.',
+  title: 'Consultant Data Engineer',
+  description: "Consultant Data Engineer : intégration des sources, pipelines et transformations pour des données contrôlées et réutilisables. Accompagnement au Maroc et à.",
   path: '/consultants/data-engineer',
 });
 

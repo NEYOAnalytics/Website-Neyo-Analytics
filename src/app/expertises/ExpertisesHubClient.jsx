@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import MarketChoice from '../../components/markets/MarketChoice';
 import Link from 'next/link';
 import { useLanguage } from '../../components/LanguageProviderClient';
 import { siteContent } from '../../translations/siteContent';
@@ -56,6 +57,7 @@ export default function ExpertisesHubClient() {
         ))}
       </div>
 
+      <MarketChoice compact />
       <section className={styles.ctaBox}>
         <h2>{language === 'fr' ? "Besoin d'un accompagnement technique ?" : 'Need Technical Guidance?'}</h2>
         <p>{language === 'fr' ? 'Échangez avec nos architectes Data pour définir la meilleure stack pour votre projet.' : 'Speak with our Data architects to define the optimal stack for your project.'}</p>

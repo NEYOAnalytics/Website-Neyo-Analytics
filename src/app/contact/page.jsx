@@ -8,6 +8,10 @@ export const metadata = createMetadata({
   path: '/contact',
 });
 
-export default function ContactPage() {
-  return <ContactClient />;
+export default async function ContactPage({ searchParams }) {
+  const params = await searchParams;
+  const market = ['maroc', 'international'].includes(params?.marche) ? params.marche : '';
+  const need = ['projet', 'consultant', 'suivi'].includes(params?.besoin) ? params.besoin : '';
+  const profile = typeof params?.profil === 'string' ? params.profil.slice(0, 150) : '';
+  return <ContactClient initialMarket={market} initialNeed={need} initialProfile={profile} />;
 }

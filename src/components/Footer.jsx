@@ -22,22 +22,23 @@ const Footer = () => {
             <p className="brand-desc">
               {isFr ? (
                 <>
-                  Société de conseil spécialisée en <strong>Nearshore Data & IA</strong>. Nous mettons à votre disposition des consultants experts (Data Engineer, Power BI, Data Scientist, BI Developer, Architecte) basés au Maroc pour vos projets en Europe et dans le Golfe.
+                  <strong>Conseil Data, BI, IA & Cloud.</strong> Projets et renfort de consultants pour les entreprises au Maroc ; accompagnement nearshore depuis le Maroc pour les clients internationaux.
                 </>
               ) : (
                 <>
-                  Consulting firm specialized in <strong>Nearshore Data & AI</strong>. We provide expert consultants (Data Engineer, Power BI, Data Scientist, BI Developer, Architect) based in Morocco for your projects in Europe and the Gulf region.
+                  <strong>Data, BI, AI & Cloud consulting.</strong> Projects and consultant support for companies in Morocco; nearshore delivery from Morocco for international clients.
                 </>
               )}
             </p>
           </div>
 
           <div className="footer-col">
-            <h4 className="footer-title">{isFr ? 'Nearshore & Process' : 'Nearshore & Process'}</h4>
+            <h4 className="footer-title">{isFr ? 'Nos offres & notre approche' : 'Our offers & approach'}</h4>
             <ul className="footer-links">
-              <li><Link href="/nearshore-maroc" title={isFr ? 'Pourquoi le Nearshore Maroc ?' : 'Why Nearshore Morocco?'}>{isFr ? 'Pourquoi le Nearshore Maroc ?' : 'Why Nearshore Morocco?'}</Link></li>
+              <li><Link href="/entreprises-maroc">{isFr ? 'Entreprises au Maroc' : 'Companies in Morocco'}</Link></li>
+              <li><Link href="/nearshore-maroc" title={isFr ? 'Nearshore international' : 'International nearshore'}>{isFr ? 'Nearshore international' : 'International nearshore'}</Link></li>
               <li><Link href="/pourquoi-externaliser" title={isFr ? 'Pourquoi externaliser vs recruter ?' : 'Why Outsource vs Hire?'}>{isFr ? 'Pourquoi externaliser vs recruter ?' : 'Why Outsource vs Hire?'}</Link></li>
-              <li><Link href="/notre-process" title={isFr ? 'Notre Processus en 4 étapes' : 'Our 4-Step Process'}>{isFr ? 'Notre Processus en 4 étapes' : 'Our 4-Step Process'}</Link></li>
+              <li><Link href="/notre-process" title={isFr ? 'Processus nearshore international' : 'International nearshore process'}>{isFr ? 'Processus nearshore international' : 'International nearshore process'}</Link></li>
               <li><Link href="/cas-usages" title={isFr ? 'Études de cas & Cas d\'usages' : 'Case Studies & Use Cases'}>{isFr ? 'Études de cas & Cas d\'usages' : 'Case Studies & Use Cases'}</Link></li>
             </ul>
           </div>
@@ -71,7 +72,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="footer-container bottom-flex">
           <p>
-            © {new Date().getFullYear()} NEYO Analytics. {isFr ? 'Tous droits réservés. Spécialiste Nearshore Data & IA.' : 'All rights reserved. Nearshore Data & AI Specialist.'}
+            © {new Date().getFullYear()} NEYO Analytics. {isFr ? 'Tous droits réservés. Data, BI, IA & Cloud.' : 'All rights reserved. Data, BI, AI & Cloud.'}
           </p>
           <div className="bottom-links">
             <Link href="/contact" title="Contact">Contact</Link>

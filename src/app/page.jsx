@@ -3,8 +3,8 @@ import HomePageClient from './HomePageClient';
 import { createMetadata } from '../lib/metadata';
 
 export const metadata = createMetadata({
-  title: 'NEYO Analytics | Nearshore Data & IA Maroc',
-  description: 'Société Nearshore Data & IA au Maroc. Consultants Power BI, Data Engineers & Scientists en régie sous 1 à 2 semaines pour l\'Europe et le Golfe. Coûts optimisés jusqu\'à -40%.',
+  title: 'Conseil Data, BI & Cloud au Maroc et à l’international',
+  description: 'NEYO Analytics accompagne vos projets Data, BI, IA et Cloud au Maroc et vos équipes internationales en nearshore. Projets et renfort de consultants spécialisés.',
   path: '/',
 });
 

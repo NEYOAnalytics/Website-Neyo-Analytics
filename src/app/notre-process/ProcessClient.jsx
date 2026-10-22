@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import InternationalNotice from '../../components/markets/InternationalNotice';
 import Link from 'next/link';
 import { useLanguage } from '../../components/LanguageProviderClient';
 import { siteContent } from '../../translations/siteContent';
@@ -44,6 +45,7 @@ export default function ProcessClient() {
   return (
     <div className={styles.container}>
       <BreadcrumbJsonLd items={[{ name: 'Notre Process', url: '/notre-process' }]} />
+      <InternationalNotice />
       <header className={styles.header}>
         <span className={styles.badge}>{p.badge}</span>
         <h1>{p.h1}</h1>
@@ -66,7 +68,7 @@ export default function ProcessClient() {
       <section className={styles.ctaBox}>
         <h2>{language === 'fr' ? 'Prêt à démarrer la sélection ?' : 'Ready to Start Candidate Selection?'}</h2>
         <p>{language === 'fr' ? 'Obtenez votre short-list de candidats qualifiés généralement sous 48h.' : 'Get your shortlist of qualified candidates generally within 48h.'}</p>
-        <Link href="/contact" className={styles.btnPrimary}>
+        <Link href="/contact?marche=international&besoin=consultant" className={styles.btnPrimary}>
           <span>{c.talkToExpert}</span>
           <ArrowRight size={18} />
         </Link>

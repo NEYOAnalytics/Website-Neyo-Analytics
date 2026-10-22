@@ -10,10 +10,10 @@ import '../styles/global.scss';
 export const metadata = {
   metadataBase: new URL('https://www.neyo-analytics.com'),
   title: {
-    default: 'NEYO Analytics | Nearshore Data & IA Maroc',
+    default: 'NEYO Analytics | Data, BI & Cloud',
     template: '%s | NEYO Analytics',
   },
-  description: 'Société Nearshore Data & IA au Maroc. Consultants Power BI, Data Engineers & Scientists en régie sous 1 à 2 semaines pour l\'Europe et le Golfe.',
+  description: 'Conseil, projets et consultants Data, BI, IA et Cloud pour les entreprises au Maroc et les clients internationaux.',
   icons: {
     icon: [
       { url: '/logo-icon.svg', type: 'image/svg+xml' },
@@ -27,8 +27,8 @@ export const metadata = {
     ],
   },
   openGraph: {
-    title: 'NEYO Analytics | Nearshore Data & IA Maroc',
-    description: 'Consultants experts Data & IA au Maroc (Power BI, Databricks, Azure, Palantir) en régie pour l\'Europe et le Golfe. Coûts optimisés jusqu\'à -40%.',
+    title: 'NEYO Analytics | Data, BI & Cloud',
+    description: 'Projets et consultants Data, BI, IA et Cloud au Maroc. Un parcours national et une offre nearshore pour les entreprises internationales.',
     siteName: 'NEYO Analytics',
     locale: 'fr_FR',
     type: 'website',
@@ -43,8 +43,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEYO Analytics | Nearshore Data & IA Maroc',
-    description: 'Consultants Data & IA francophones au Maroc pour l\'Europe et le Golfe. Coûts optimisés jusqu\'à -40%.',
+    title: 'NEYO Analytics | Data, BI & Cloud',
+    description: 'Projets et consultants Data, BI, IA et Cloud au Maroc et à l’international.',
     images: ['/logo-square.png'],
   },
   robots: {

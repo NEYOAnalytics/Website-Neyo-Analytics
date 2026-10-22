@@ -51,14 +51,15 @@ export default function NearshoreClient() {
         description="Mise à disposition de consultants experts Data Engineer, Power BI, Data Scientist basés au Maroc."
       />
 
+      <p style={{padding: '1rem', border: '1px solid var(--card-border, #586174)', borderRadius: '10px'}}>{language === 'fr' ? 'Votre entreprise exerce au Maroc ?' : 'Does your company operate in Morocco?'} <Link href="/entreprises-maroc" style={{color: '#fa9100'}}>{language === 'fr' ? 'Découvrir l’offre nationale Maroc' : 'Explore our domestic Morocco offer'} →</Link></p>
       {/* HERO */}
       <section className={styles.heroSection}>
         <div className={styles.heroContent}>
-          <span className={styles.badge}>{n.badge}</span>
+          <span className={styles.badge}>{language === 'fr' ? 'OFFRE INTERNATIONALE · NEARSHORE DEPUIS LE MAROC' : 'INTERNATIONAL OFFER · NEARSHORE FROM MOROCCO'}</span>
           <h1>{n.h1}</h1>
           <p className={styles.subtitle}>{n.subtitle}</p>
           <div className={styles.ctaGroup}>
-            <Link href="/contact" className={styles.btnPrimary}>
+            <Link href="/contact?marche=international&besoin=consultant" className={styles.btnPrimary}>
               <span>{c.contactUs}</span>
               <ArrowRight size={18} />
             </Link>
@@ -113,7 +114,7 @@ export default function NearshoreClient() {
       <section className={styles.ctaBanner}>
         <h2>{language === 'fr' ? 'Prêt à évaluer vos besoins Nearshore ?' : 'Ready to Evaluate Your Nearshore Needs?'}</h2>
         <p>{language === 'fr' ? 'Contactez nos experts pour une analyse personnalisée sous 48h.' : 'Contact our experts for a personalized analysis within 48h.'}</p>
-        <Link href="/contact" className={styles.btnPrimary}>
+        <Link href="/contact?marche=international&besoin=consultant" className={styles.btnPrimary}>
           <span>{c.talkToExpert}</span>
           <ArrowRight size={18} />
         </Link>

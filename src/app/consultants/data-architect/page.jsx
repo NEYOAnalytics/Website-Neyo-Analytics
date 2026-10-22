@@ -2,8 +2,8 @@ import ConsultantClientPage from '../ConsultantClientPage';
 import { createMetadata } from '../../../lib/metadata';
 
 export const metadata = createMetadata({
-  title: 'Architecte Data Cloud Nearshore Maroc — NEYO Analytics',
-  description: 'Architectes Data Cloud seniors basés au Maroc (Azure, AWS, GCP, Databricks, Data Mesh). Conseils & gouvernance de l\'architecture Data.',
+  title: 'Architecte Data Cloud',
+  description: "Architecte Data Cloud : architecture et exploitation des plateformes Data sur Azure, AWS, Google Cloud et Microsoft Fabric. Accompagnement au Maroc et à.",
   path: '/consultants/data-architect',
 });
 

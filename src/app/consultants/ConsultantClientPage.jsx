@@ -1,6 +1,8 @@
 'use client';
 
 import React from 'react';
+import { sharedOfferContent } from '../../translations/sharedOfferContent';
+import MarketChoice from '../../components/markets/MarketChoice';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import styles from './consultants.module.scss';
@@ -11,13 +13,13 @@ import { BreadcrumbJsonLd, FAQJsonLd } from '../../components/JsonLd';
 export default function ConsultantClientPage({ consultantKey }) {
   const { language } = useLanguage();
   const lang = language === 'en' ? 'en' : 'fr';
-  const content = siteContent[lang].consultantDetails[consultantKey];
+  const consultantSlug = ({dataEngineer: 'data-engineer', powerBi: 'power-bi', biDeveloper: 'bi-developer', dataAnalyst: 'data-analyst', dataScientist: 'data-scientist', dataArchitect: 'data-architect'})[consultantKey] || consultantKey;
+  const original = siteContent[lang].consultantDetails[consultantKey];
+  const content = original ? sharedOfferContent(original, consultantKey, lang, "consultant") : null;
 
   if (!content) return null;
 
-  const nearshoreLink = '/nearshore-maroc';
   const outsourceLink = '/pourquoi-externaliser';
-  const nearshoreLabel = lang === 'fr' ? 'notre offre Nearshore Maroc' : 'our Nearshore Morocco offer';
   const outsourceLabel = lang === 'fr' ? 'pourquoi externaliser' : 'why outsource';
 
   const faqItems = content.faq ? content.faq.map(({ q, a }) => ({ question: q, answer: a })) : [];
@@ -27,7 +29,7 @@ export default function ConsultantClientPage({ consultantKey }) {
       <BreadcrumbJsonLd
         items={[
           { name: 'Consultants', url: '/consultants' },
-          { name: content.badge || consultantKey, url: `/consultants/${consultantKey}` },
+          { name: content.badge || consultantKey, url: `/consultants/${consultantSlug}` },
         ]}
       />
       {faqItems.length > 0 && <FAQJsonLd faqs={faqItems} />}
@@ -43,7 +45,7 @@ export default function ConsultantClientPage({ consultantKey }) {
       {/* Stack */}
       <div style={{ maxWidth: '900px', margin: '0 auto 4rem auto', lineHeight: '1.7' }}>
         <h2 style={{ color: 'var(--text-main, white)', marginBottom: '1rem' }}>{content.sectionTitle}</h2>
-        <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '2.5rem' }}>
+        <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginBottom: '2.5rem' }}>
           {content.items.map((item, idx) => (
             <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary, #cbd5e1)' }}>
               <CheckCircle2 color="#38bdf8" size={18} style={{ flexShrink: 0 }} />
@@ -58,7 +60,7 @@ export default function ConsultantClientPage({ consultantKey }) {
             <h2 style={{ color: 'var(--text-main, white)', marginBottom: '1rem' }}>{content.bodyTitle}</h2>
             <p style={{ color: 'var(--text-secondary, #cbd5e1)', marginBottom: '1rem' }}>
               {content.bodyText1}{' '}
-              <Link href={nearshoreLink} style={{ color: '#38bdf8', textDecoration: 'underline' }}>{nearshoreLabel}</Link>
+
               {content.bodyText1b || ''}
             </p>
             {content.bodyText2 && (
@@ -85,7 +87,7 @@ export default function ConsultantClientPage({ consultantKey }) {
       </div>
 
       {/* FAQ */}
-      {content.faq && (
+      {content.faq?.length > 0 && (
         <div style={{ maxWidth: '900px', margin: '0 auto 3rem auto' }}>
           <h2 style={{ color: 'var(--text-main, white)', marginBottom: '1.5rem' }}>
             FAQ
@@ -100,6 +102,8 @@ export default function ConsultantClientPage({ consultantKey }) {
           </dl>
         </div>
       )}
+
+      <MarketChoice compact />
 
       {/* CTA */}
       <section className={styles.ctaBox}>

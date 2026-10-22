@@ -2,8 +2,8 @@ import ExpertiseClientPage from '../ExpertiseClientPage';
 import { createMetadata } from '../../../lib/metadata';
 
 export const metadata = createMetadata({
-  title: 'Expertise Gouvernance Data & Qualité (RLS, RGPD) — NEYO Analytics',
-  description: 'Sécurisation des accès (RLS/CLS), catalogage de la donnée, contrôle qualité et conformité RGPD. Expertise Gouvernance Data nearshore au Maroc.',
+  title: 'Expertise Gouvernance Data & Qualité (RLS, RGPD)',
+  description: "Gouvernance Data & Qualité (RLS, RGPD) : définitions, responsabilités, qualité et contrôles d’accès pour rendre vos données utilisables par les bonnes.",
   path: '/expertises/data-governance',
 });
 

@@ -13,7 +13,7 @@ export function OrganizationJsonLd() {
       height: 328,
     },
     image: 'https://www.neyo-analytics.com/logo-square.png',
-    description: 'Société de conseil spécialisée en Nearshore Data & IA basée au Maroc pour les entreprises en Europe et dans le Golfe.',
+    description: 'Conseil Data, BI, IA et Cloud : projets et consultants pour les entreprises au Maroc et accompagnement nearshore pour les clients internationaux.',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Casablanca',

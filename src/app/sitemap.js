@@ -8,6 +8,7 @@ export default function sitemap() {
   const staticRoutes = [
     '',
     '/nearshore-maroc',
+    '/entreprises-maroc',
     '/pourquoi-externaliser',
     '/consultants',
     '/consultants/power-bi',

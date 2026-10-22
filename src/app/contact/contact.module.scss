@@ -239,3 +239,9 @@
   .contactWrapper { grid-template-columns: 1fr; }
   .formCol .formRow { grid-template-columns: 1fr; }
 }
+
+.container .infoCol a,
+.container .form a {
+  color: #fa9100;
+  text-underline-offset: 4px;
+}

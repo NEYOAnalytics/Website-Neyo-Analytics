@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import MarketChoice from '../../components/markets/MarketChoice';
 import Link from 'next/link';
 import { useLanguage } from '../../components/LanguageProviderClient';
 import { siteContent } from '../../translations/siteContent';
@@ -26,7 +27,7 @@ export default function ConsultantsHubClient() {
       slug: 'power-bi',
       title: language === 'fr' ? 'Consultant Power BI' : 'Power BI Consultant',
       icon: <BarChart2 size={28} />,
-      desc: language === 'fr' ? 'Expert en modélisation DAX, conception de tableaux de bord décisionnels et gouvernance RLS. Tarifs 30 à 40% inférieurs en moyenne à un consultant en France.' : 'Expert in DAX modeling, executive dashboard design, and RLS governance. Rates 30 to 40% lower on average than France-based consultants.',
+      desc: language === 'fr' ? 'Expert en modélisation DAX, conception de tableaux de bord décisionnels et gouvernance RLS. ' : 'Expert in DAX modeling, executive dashboard design, and RLS governance. ',
       stack: ['Power BI', 'DAX', 'Power Query', 'Fabric', 'Direct Lake'],
     },
     {
@@ -65,7 +66,7 @@ export default function ConsultantsHubClient() {
       <header className={styles.header}>
         <span className={styles.badge}>{cons.badge}</span>
         <h1>{cons.h1}</h1>
-        <p className={styles.lead}>{cons.lead}</p>
+        <p className={styles.lead}>{language === 'fr' ? 'Des compétences Data, BI, IA et Cloud pour vos projets au Maroc et vos équipes internationales. Profil, expérience et disponibilité à préciser selon votre mission.' : 'Data, BI, AI and Cloud expertise for projects in Morocco and international teams. Profile, experience and availability are agreed for each assignment.'}</p>
       </header>
 
       <div className={styles.grid}>
@@ -87,9 +88,10 @@ export default function ConsultantsHubClient() {
         ))}
       </div>
 
+      <MarketChoice compact />
       <section className={styles.ctaBox}>
         <h2>{language === 'fr' ? 'Recherchez-vous un profil spécifique ?' : 'Looking for a Specific Profile?'}</h2>
-        <p>{language === 'fr' ? 'Consultez notre vivier de candidats présélectionnés généralement sous 48h.' : 'Consult our pool of pre-selected candidates generally within 48h.'}</p>
+        <p>{language === 'fr' ? 'Précisez la compétence recherchée, votre stack et le rôle attendu dans votre équipe.' : 'Describe the skills, stack and responsibilities your team needs.'}</p>
         <Link href="/contact" className={styles.btnPrimary}>
           <span>{c.talkToExpert}</span>
           <ArrowRight size={18} />

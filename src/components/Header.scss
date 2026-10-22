@@ -266,7 +266,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
   .site-header {
     width: 92%;
 
@@ -285,3 +285,5 @@
     .mobile-menu-drawer { display: block; }
   }
 }
+
+.site-header .mobile-menu-drawer { max-height: calc(100dvh - 110px); overflow-y: auto; }

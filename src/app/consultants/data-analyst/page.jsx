@@ -2,8 +2,8 @@ import ConsultantClientPage from '../ConsultantClientPage';
 import { createMetadata } from '../../../lib/metadata';
 
 export const metadata = createMetadata({
-  title: 'Consultant Data Analyst Nearshore Maroc — NEYO Analytics',
-  description: 'Trouvez un Consultant Data Analyst senior au Maroc pour vos analyses métriques, SQL, Power BI & reporting décisionnel.',
+  title: 'Consultant Data Analyst',
+  description: "Consultant Data Analyst : analyse métier, définition d’indicateurs et automatisation des reportings pour vos équipes. Accompagnement au Maroc et à.",
   path: '/consultants/data-analyst',
 });
 
