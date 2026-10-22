@@ -16,14 +16,14 @@ export const metadata = {
   description: 'Conseil, projets et consultants Data, BI, IA et Cloud pour les entreprises au Maroc et les clients internationaux.',
   icons: {
     icon: [
-      { url: '/logo-icon.svg', type: 'image/svg+xml' },
-      { url: '/favicon-48.png', sizes: '48x48', type: 'image/png' },
-      { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon-16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-neyo-48.png', sizes: '48x48', type: 'image/png' },
+      { url: '/favicon-neyo-32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-neyo-16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-neyo-192.png', sizes: '192x192', type: 'image/png' },
     ],
-    shortcut: '/favicon-48.png',
+    shortcut: '/favicon-neyo-48.png',
     apple: [
-      { url: '/logo-square.png', sizes: '180x180', type: 'image/png' },
+      { url: '/favicon-neyo-180.png', sizes: '180x180', type: 'image/png' },
     ],
   },
   openGraph: {
